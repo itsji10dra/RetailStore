@@ -10,11 +10,15 @@ import UIKit
 
 class SectionVC: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    // MARK: - Properties
+
+    // MARK: - View Hierarchy
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
-
 }
 

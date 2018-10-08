@@ -1,28 +1,32 @@
-[
-	{
-		"id": 1,
-		"title": "Electronics",
-		"identifier": "electronics",
-	},
-	{
-		"id": 2,
-		"title": "Furniture",
-		"identifier": "furniture",
-	},
-	{
-		"id": 3,
-		"title": "Fashion",
-		"identifier": "fashion",
-	},
-	{
-		"id": 4,
-		"title": "Bikes",
-		"identifier": "bikes",
-	},
-	{
-		"id": 5,
-		"title": "Sports",
-		"identifier": "sports",
-
-	}
-]
+{
+    "page": 0,
+    "pageSize": 15,
+    "totalPageCount": 1,
+    "result": [
+        {
+            "id": 1,
+            "title": "Electronics",
+            "identifier": "electronics",
+        },
+        {
+            "id": 2,
+            "title": "Furniture",
+            "identifier": "furniture",
+        },
+        {
+            "id": 3,
+            "title": "Fashion",
+            "identifier": "fashion",
+        },
+        {
+            "id": 4,
+            "title": "Bikes",
+            "identifier": "bikes",
+        },
+        {
+            "id": 5,
+            "title": "Sports",
+            "identifier": "sports",
+        },
+    ]
+}
