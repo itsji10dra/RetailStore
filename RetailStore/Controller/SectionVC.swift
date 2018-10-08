@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SectionVC.swift
 //  RetailStore
 //
 //  Created by Jitendra on 08/10/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SectionVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
 
