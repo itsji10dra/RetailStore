@@ -21,6 +21,13 @@
 		10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49164216B6F4C00E2DBDD /* SectionCell.swift */; };
 		10A49168216B805100E2DBDD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49167216B805100E2DBDD /* Response.swift */; };
 		10A4916A216B80EE00E2DBDD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49169216B80EE00E2DBDD /* Configuration.swift */; };
+		10A4916E216B84FD00E2DBDD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4916B216B84FC00E2DBDD /* NetworkManager.swift */; };
+		10A4916F216B84FD00E2DBDD /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4916C216B84FC00E2DBDD /* URLManager.swift */; };
+		10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4916D216B84FC00E2DBDD /* EndPoint.swift */; };
+		10A49173216B868400E2DBDD /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49172216B868400E2DBDD /* ProductCell.swift */; };
+		10A49175216B86CD00E2DBDD /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49174216B86CD00E2DBDD /* ProductsVC.swift */; };
+		10A49179216B8B1200E2DBDD /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A49177216B8B1200E2DBDD /* LoadingView.xib */; };
+		10A4917A216B8B1200E2DBDD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49178216B8B1200E2DBDD /* LoadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +59,13 @@
 		10A49164216B6F4C00E2DBDD /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
 		10A49167216B805100E2DBDD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		10A49169216B80EE00E2DBDD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		10A4916B216B84FC00E2DBDD /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		10A4916C216B84FC00E2DBDD /* URLManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		10A4916D216B84FC00E2DBDD /* EndPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		10A49172216B868400E2DBDD /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		10A49174216B86CD00E2DBDD /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
+		10A49177216B8B1200E2DBDD /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
+		10A49178216B8B1200E2DBDD /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 				10A49136216B689F00E2DBDD /* AppDelegate.swift */,
 				10A49169216B80EE00E2DBDD /* Configuration.swift */,
 				10A4913A216B689F00E2DBDD /* Main.storyboard */,
+				10A49171216B850300E2DBDD /* Network */,
 				10A49163216B6F1200E2DBDD /* Views */,
 				10A49158216B6A9400E2DBDD /* Controller */,
 				10A49159216B6B0500E2DBDD /* Models */,
@@ -119,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				10A49138216B689F00E2DBDD /* SectionVC.swift */,
+				10A49174216B86CD00E2DBDD /* ProductsVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -138,7 +154,9 @@
 		10A49163216B6F1200E2DBDD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				10A49176216B8B1200E2DBDD /* LoadingView */,
 				10A49164216B6F4C00E2DBDD /* SectionCell.swift */,
+				10A49172216B868400E2DBDD /* ProductCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -150,6 +168,25 @@
 				10A4913F216B68A100E2DBDD /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		10A49171216B850300E2DBDD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				10A4916D216B84FC00E2DBDD /* EndPoint.swift */,
+				10A4916B216B84FC00E2DBDD /* NetworkManager.swift */,
+				10A4916C216B84FC00E2DBDD /* URLManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		10A49176216B8B1200E2DBDD /* LoadingView */ = {
+			isa = PBXGroup;
+			children = (
+				10A49178216B8B1200E2DBDD /* LoadingView.swift */,
+				10A49177216B8B1200E2DBDD /* LoadingView.xib */,
+			);
+			path = LoadingView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +274,7 @@
 				10A49161216B6CF800E2DBDD /* Product.json in Resources */,
 				10A49157216B68B600E2DBDD /* Requirement.pdf in Resources */,
 				10A4915D216B6C8200E2DBDD /* Section.json in Resources */,
+				10A49179216B8B1200E2DBDD /* LoadingView.xib in Resources */,
 				10A4913E216B68A100E2DBDD /* Assets.xcassets in Resources */,
 				10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */,
 			);
@@ -257,11 +295,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A4915B216B6B1400E2DBDD /* Section.swift in Sources */,
+				10A49173216B868400E2DBDD /* ProductCell.swift in Sources */,
 				10A4915F216B6CE400E2DBDD /* Product.swift in Sources */,
+				10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */,
+				10A4916F216B84FD00E2DBDD /* URLManager.swift in Sources */,
 				10A4916A216B80EE00E2DBDD /* Configuration.swift in Sources */,
 				10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */,
+				10A4916E216B84FD00E2DBDD /* NetworkManager.swift in Sources */,
+				10A49175216B86CD00E2DBDD /* ProductsVC.swift in Sources */,
 				10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */,
 				10A49168216B805100E2DBDD /* Response.swift in Sources */,
+				10A4917A216B8B1200E2DBDD /* LoadingView.swift in Sources */,
 				10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

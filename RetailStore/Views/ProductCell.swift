@@ -1,5 +1,5 @@
 //
-//  SectionCell.swift
+//  ProductCell.swift
 //  RetailStore
 //
 //  Created by Jitendra on 08/10/18.
@@ -8,16 +8,20 @@
 
 import UIKit
 
-class SectionCell: UITableViewCell {
-
+class ProductCell: UITableViewCell {
+    
     // MARK: - IBOutlets
-
+    
     @IBOutlet weak var titleLabel: UILabel?
     
-    // MARK: - View
+    @IBOutlet weak var thumbImageView: UIImageView?
     
+    @IBOutlet weak var priceLabel: UILabel?
+
+    // MARK: - View
+
     override func awakeFromNib() {
         super.awakeFromNib()
-
+        
     }
 }
