@@ -9,19 +9,19 @@
 import Foundation
 
 ///
-/// T: Expected raw result from server
+/// T: Expected array model from server
 /// E: Desired array model object
 ///
 
-class PagingViewModel<T, E> where T:Decodable, T:Collection {
+class PagingViewModel<T, E> where T:Decodable {
     
     typealias PagingDataResult = ((_ data: [E]?, _ error: Error?, _ page: UInt) -> Void)
     
     // MARK: - Private Properties
     
-    private lazy var receivedDatasource: [T] = []
+    private lazy var receivedDataSource: [T] = []
 
-    private lazy var datasource: [E] = []
+    private lazy var dataSource: [E] = []
     
     private var pageInfo: PageInfo = (currentPage: -1, totalPages: 0)
     
@@ -37,7 +37,7 @@ class PagingViewModel<T, E> where T:Decodable, T:Collection {
 
     // MARK: - Public Properties
     
-    private let transform: ((T) -> [E])
+    private let transform: (([T]) -> [E])
     
     private let endPoint: EndPoint
     
@@ -45,7 +45,7 @@ class PagingViewModel<T, E> where T:Decodable, T:Collection {
     
     // MARK: - Initializer
     
-    init(endPoint: EndPoint, parameters: Parameters? = nil, transform block: @escaping ((T) -> [E])) {
+    init(endPoint: EndPoint, parameters: Parameters? = nil, transform block: @escaping (([T]) -> [E])) {
         self.endPoint = endPoint
         self.parameters = parameters
         self.transform = block
@@ -72,9 +72,26 @@ class PagingViewModel<T, E> where T:Decodable, T:Collection {
             (nextPage == 0 ||       //Just load, coz it's first page.
                 nextPage < pageInfo.totalPages) else { return (false, nextPage) }   //Load, only if next page is available.
         
-        loadData(page: UInt(nextPage), completionHandler: handler)
+        if Configuration.useStub {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in  //Adding delay, so that loading view can be shown.
+                self?.loadStubData(page: UInt(nextPage), completionHandler: handler)
+            }
+        } else {
+            loadData(page: UInt(nextPage), completionHandler: handler)
+        }
         
         return (true, nextPage)
+    }
+    
+    public func dataSource(at index: Int) -> T? {
+        
+        return index < receivedDataSource.count ? receivedDataSource[index] : nil
+    }
+    
+    public func clearDataSource() {
+        
+        receivedDataSource.removeAll()
+        dataSource.removeAll()
     }
     
     // MARK: - Private Methods
@@ -83,10 +100,10 @@ class PagingViewModel<T, E> where T:Decodable, T:Collection {
         
         print("Loading Page:", number, " ↔️ Endpoint:", endPoint.rawValue, " ↔️ Parameters: ", parameters ?? "None")
         
-        guard let url = URLManager.getURLForEndpoint(endPoint, page: number, appending: parameters) else { return }
+        guard let url = URLManager.getURLForEndpoint(endpoint: endPoint, page: number, appending: parameters) else { return }
         
         dataTask = networkManager.dataTaskFromURL(url,
-                                                  completion: { [weak self] (result: Result<Response<T>>) in
+                                                  completion: { [weak self] (result: Result<Response<[T]>>) in
                                                     
             switch result {
             case .success(let response):
@@ -102,11 +119,11 @@ class PagingViewModel<T, E> where T:Decodable, T:Collection {
                 
                 guard let data = self?.transform(responseData) else { return completionHandler([], nil, page) }
                 
-                self?.receivedDatasource.append(contentsOf: responseData)
+                self?.receivedDataSource.append(contentsOf: responseData)
 
-                self?.datasource.append(contentsOf: data)
+                self?.dataSource.append(contentsOf: data)
                 
-                completionHandler(self?.datasource, nil, UInt(page))
+                completionHandler(self?.dataSource, nil, UInt(page))
                 
             case .failure(let error):
                 print(" • Page:", number, " failed. Reason: ", error.localizedDescription)
@@ -118,5 +135,26 @@ class PagingViewModel<T, E> where T:Decodable, T:Collection {
         })
         
         dataTask?.resume()
+    }
+    
+    private func loadStubData(page number: UInt = 0, completionHandler: @escaping PagingDataResult) {
+
+        guard let response = StubManager.getStubResponse(endpoint: endPoint, type: T.self) else { return }
+        
+        let page = response.page
+        
+        let totalPages = response.totalPageCount
+        
+        self.pageInfo = (currentPage: Int(page), totalPages: totalPages)
+        
+        let responseData = response.result
+        
+        let data = self.transform(responseData)
+        
+        self.receivedDataSource.append(contentsOf: responseData)
+        
+        self.dataSource.append(contentsOf: data)
+        
+        completionHandler(self.dataSource, nil, UInt(page))
     }
 }

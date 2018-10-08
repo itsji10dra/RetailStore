@@ -8,7 +8,7 @@
 
 struct Configuration {
     
-    static let url              = "http://server-url.com/"
+    static let url              = "https://server-url.com/"
     
     static let pageSize         = 15
     
@@ -19,6 +19,8 @@ struct Configuration {
     static let currencySymbol   = "$"
 
     static let minimumCartValue = 49.99
+
+    static let useStub          = true
 
     static func checkConfiguration() {
         

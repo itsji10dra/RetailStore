@@ -12,7 +12,7 @@ struct URLManager {
     
     // MARK: - Public Methods
     
-    public static func getURLForEndpoint(_ endpoint: EndPoint, page: UInt? = nil, appending parameters: Parameters? = nil) -> URL? {
+    public static func getURLForEndpoint(endpoint: EndPoint, page: UInt? = nil, appending parameters: Parameters? = nil) -> URL? {
         
         let url = Configuration.url + endpoint.rawValue
         
