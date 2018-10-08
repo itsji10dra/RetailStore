@@ -19,6 +19,7 @@ class SectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = Configuration.storeName
     }
 }
 

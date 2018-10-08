@@ -8,10 +8,18 @@
 
 struct Configuration {
     
-    static let url      = "http://server-url.com/"
+    static let url              = "http://server-url.com/"
     
-    static let pageSize = 15
+    static let pageSize         = 15
     
+    static let storeName        = "Fantastic Store"
+
+    static let defaultCurrency  = "USD"
+
+    static let currencySymbol   = "$"
+
+    static let minimumCartValue = 49.99
+
     static func checkConfiguration() {
         
         if url.isEmpty || pageSize < 0 {

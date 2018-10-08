@@ -28,6 +28,11 @@
 		10A49175216B86CD00E2DBDD /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49174216B86CD00E2DBDD /* ProductsVC.swift */; };
 		10A49179216B8B1200E2DBDD /* LoadingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10A49177216B8B1200E2DBDD /* LoadingView.xib */; };
 		10A4917A216B8B1200E2DBDD /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49178216B8B1200E2DBDD /* LoadingView.swift */; };
+		10A4917E216B8BAB00E2DBDD /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4917C216B8BAB00E2DBDD /* Navigation.swift */; };
+		10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4917D216B8BAB00E2DBDD /* ActivityIndicator.swift */; };
+		10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49181216B8DFF00E2DBDD /* PagingViewModel.swift */; };
+		10A49184216B8EF000E2DBDD /* Alias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49183216B8EF000E2DBDD /* Alias.swift */; };
+		10A49186216B924900E2DBDD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49185216B924900E2DBDD /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		10A49174216B86CD00E2DBDD /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 		10A49177216B8B1200E2DBDD /* LoadingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingView.xib; sourceTree = "<group>"; };
 		10A49178216B8B1200E2DBDD /* LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		10A4917C216B8BAB00E2DBDD /* Navigation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		10A4917D216B8BAB00E2DBDD /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		10A49181216B8DFF00E2DBDD /* PagingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingViewModel.swift; sourceTree = "<group>"; };
+		10A49183216B8EF000E2DBDD /* Alias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alias.swift; sourceTree = "<group>"; };
+		10A49185216B924900E2DBDD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +120,16 @@
 				10A49156216B68B600E2DBDD /* Requirement.pdf */,
 				10A49136216B689F00E2DBDD /* AppDelegate.swift */,
 				10A49169216B80EE00E2DBDD /* Configuration.swift */,
+				10A49183216B8EF000E2DBDD /* Alias.swift */,
 				10A4913A216B689F00E2DBDD /* Main.storyboard */,
+				10A49187216B924F00E2DBDD /* Extension */,
+				10A4917B216B8BAB00E2DBDD /* UI */,
 				10A49171216B850300E2DBDD /* Network */,
 				10A49163216B6F1200E2DBDD /* Views */,
 				10A49158216B6A9400E2DBDD /* Controller */,
 				10A49159216B6B0500E2DBDD /* Models */,
+				10A49180216B8DF200E2DBDD /* ViewModel */,
+				10A49188216B936A00E2DBDD /* Stub */,
 				10A49166216B724E00E2DBDD /* Resources */,
 				10A49142216B68A100E2DBDD /* Info.plist */,
 			);
@@ -143,9 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				10A49167216B805100E2DBDD /* Response.swift */,
-				10A4915C216B6C8200E2DBDD /* Section.json */,
 				10A4915A216B6B1400E2DBDD /* Section.swift */,
-				10A49160216B6CF800E2DBDD /* Product.json */,
 				10A4915E216B6CE300E2DBDD /* Product.swift */,
 			);
 			path = Models;
@@ -154,9 +167,9 @@
 		10A49163216B6F1200E2DBDD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				10A49176216B8B1200E2DBDD /* LoadingView */,
 				10A49164216B6F4C00E2DBDD /* SectionCell.swift */,
 				10A49172216B868400E2DBDD /* ProductCell.swift */,
+				10A49176216B8B1200E2DBDD /* LoadingView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -187,6 +200,40 @@
 				10A49177216B8B1200E2DBDD /* LoadingView.xib */,
 			);
 			path = LoadingView;
+			sourceTree = "<group>";
+		};
+		10A4917B216B8BAB00E2DBDD /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				10A4917C216B8BAB00E2DBDD /* Navigation.swift */,
+				10A4917D216B8BAB00E2DBDD /* ActivityIndicator.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		10A49180216B8DF200E2DBDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				10A49181216B8DFF00E2DBDD /* PagingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		10A49187216B924F00E2DBDD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				10A49185216B924900E2DBDD /* UIView+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		10A49188216B936A00E2DBDD /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				10A4915C216B6C8200E2DBDD /* Section.json */,
+				10A49160216B6CF800E2DBDD /* Product.json */,
+			);
+			path = Stub;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A49184216B8EF000E2DBDD /* Alias.swift in Sources */,
 				10A4915B216B6B1400E2DBDD /* Section.swift in Sources */,
+				10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */,
+				10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */,
 				10A49173216B868400E2DBDD /* ProductCell.swift in Sources */,
 				10A4915F216B6CE400E2DBDD /* Product.swift in Sources */,
 				10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */,
@@ -303,6 +353,8 @@
 				10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */,
 				10A4916E216B84FD00E2DBDD /* NetworkManager.swift in Sources */,
 				10A49175216B86CD00E2DBDD /* ProductsVC.swift in Sources */,
+				10A49186216B924900E2DBDD /* UIView+Extension.swift in Sources */,
+				10A4917E216B8BAB00E2DBDD /* Navigation.swift in Sources */,
 				10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */,
 				10A49168216B805100E2DBDD /* Response.swift in Sources */,
 				10A4917A216B8B1200E2DBDD /* LoadingView.swift in Sources */,

@@ -76,7 +76,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Store Name" id="CXx-Am-hfq"/>
+                    <navigationItem key="navigationItem" title="Store Name" id="CXx-Am-hfq">
+                        <barButtonItem key="leftBarButtonItem" title="login" id="FYU-05-qXb"/>
+                    </navigationItem>
                     <connections>
                         <segue destination="A5s-yA-jA4" kind="show" identifier="ProductsSegue" id="BYM-b1-Q8W"/>
                     </connections>

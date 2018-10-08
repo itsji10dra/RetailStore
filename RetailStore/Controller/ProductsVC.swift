@@ -14,6 +14,8 @@ class ProductsVC: UIViewController {
     
     // MARK: - Properties
     
+    var sectionInfo: Section!
+    
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {

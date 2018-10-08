@@ -43,7 +43,6 @@ class LoadingView: UIView {
     private func setup() {
         loadContentView()
         isHidden = true
-        activityIndicator.color = UIConfiguration.activityIndicatorColor
         activityIndicator.hidesWhenStopped = true
     }
 

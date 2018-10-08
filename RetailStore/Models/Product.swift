@@ -6,6 +6,8 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
+import Foundation
+
 struct Product: Decodable {
     
     let id: Int32
