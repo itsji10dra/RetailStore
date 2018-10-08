@@ -1,0 +1,112 @@
+{
+    "page": 1,
+    "pageSize": 15,
+    "totalPageCount": 3,
+    "result": [
+        {
+            "id": 16,
+            "sectionId": 1,
+            "title": "Microwave Oven",
+            "image": "http://www.example.com/image.png",
+            "price": 49.99
+        },
+        {
+            "id": 17,
+            "sectionId": 1,
+            "title": "Television",
+            "image": "http://www.example.com/image.png",
+            "price": 179.99
+        },
+        {
+            "id": 18,
+            "sectionId": 1,
+            "title": "Vaccum Cleaner",
+            "image": "http://www.example.com/image.png",
+            "price": 39.99
+        },
+        {
+            "id": 19,
+            "sectionId": 1,
+            "title": "Table",
+            "image": "http://www.example.com/image.png",
+            "price": 29.99
+        },
+        {
+            "id": 20,
+            "sectionId": 1,
+            "title": "Chair",
+            "image": "http://www.example.com/image.png",
+            "price": 14.99
+        },
+        {
+            "id": 21,
+            "sectionId": 1,
+            "title": "Almirah",
+            "image": "http://www.example.com/image.png",
+            "price": 34.99
+        },
+        {
+            "id": 22,
+            "sectionId": 1,
+            "title": "Air Cooler",
+            "image": "http://www.example.com/image.png",
+            "price": 11.99
+        },
+        {
+            "id": 23,
+            "sectionId": 1,
+            "title": "Microwave Oven",
+            "image": "http://www.example.com/image.png",
+            "price": 49.99
+        },
+        {
+            "id": 24,
+            "sectionId": 1,
+            "title": "Television",
+            "image": "http://www.example.com/image.png",
+            "price": 179.99
+        },
+        {
+            "id": 25,
+            "sectionId": 1,
+            "title": "Vaccum Cleaner",
+            "image": "http://www.example.com/image.png",
+            "price": 39.99
+        },
+        {
+            "id": 26,
+            "sectionId": 1,
+            "title": "Table",
+            "image": "http://www.example.com/image.png",
+            "price": 29.99
+        },
+        {
+            "id": 27,
+            "sectionId": 1,
+            "title": "Chair",
+            "image": "http://www.example.com/image.png",
+            "price": 14.99
+        },
+        {
+            "id": 28,
+            "sectionId": 1,
+            "title": "Almirah",
+            "image": "http://www.example.com/image.png",
+            "price": 34.99
+        },
+        {
+            "id": 29,
+            "sectionId": 1,
+            "title": "Air Cooler",
+            "image": "http://www.example.com/image.png",
+            "price": 11.99
+        },
+        {
+            "id": 30,
+            "sectionId": 1,
+            "title": "Air Cooler",
+            "image": "http://www.example.com/image.png",
+            "price": 11.99
+        },
+    ]
+}

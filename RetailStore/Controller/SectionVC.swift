@@ -18,18 +18,11 @@ class SectionVC: UIViewController {
     
     // MARK: - Data
     
-    struct SectionDisplayInfo {
-        
-        let id: Int32
-        
-        let title: String
-    }
-    
-    internal var sectionInfoArray: [SectionDisplayInfo]?
+    internal var sectionArray: [String]?
     
     internal let cellIdentifier: String = "SectionCell"
     
-    internal var pagingModel: PagingViewModel<Section, SectionDisplayInfo>!
+    internal var pagingModel: PagingViewModel<Section, String>!
     
     internal let cellHeight: CGFloat = 58
 
@@ -41,9 +34,9 @@ class SectionVC: UIViewController {
         title = Configuration.storeName
         tableView.rowHeight = cellHeight
         
-        pagingModel = PagingViewModel<Section, SectionDisplayInfo>(endPoint: .sections,
-                                                                   transform: { result -> [SectionDisplayInfo] in
-            return result.map({ SectionDisplayInfo(id: $0.id, title: $0.title) })
+        pagingModel = PagingViewModel<Section, String>(endPoint: .sections,
+                                                                   transform: { result -> [String] in
+            return result.map { $0.title }
         })
         
         loadSections()
@@ -53,13 +46,13 @@ class SectionVC: UIViewController {
     
     internal func loadSections() {
         
-        let loadingInfo = pagingModel.loadMoreData { [weak self] (data, error, page) in
-            
+        let handler: PagingViewModel<Section, String>.PagingDataResult = { [weak self] (data, error, page) in
+
             ActivityIndicator.stopAnimating()
             
             DispatchQueue.main.async {
                 if let data = data {
-                    self?.sectionInfoArray = data
+                    self?.sectionArray = data
                     self?.tableView.reloadData()
                     self?.loaderView.hide()
                 } else if let error = error {
@@ -71,6 +64,8 @@ class SectionVC: UIViewController {
                 }
             }
         }
+        
+        let loadingInfo = Configuration.useStubData ? pagingModel.loadMoreStubData(handler: handler) : pagingModel.loadMoreData(handler: handler)
         
         if loadingInfo.isLoading {
             if loadingInfo.page == 0 {
@@ -102,10 +97,10 @@ class SectionVC: UIViewController {
     // MARK: - Navigation
     
     internal func pushModelsScene(with info: Section) {
-        guard let modelsVC = Navigation.getViewController(type: ProductsVC.self,
-                                                          identifer: "Products") else { return }
-//        modelsVC.sec = info
-        navigationController?.pushViewController(modelsVC, animated: true)
+        guard let productsVC = Navigation.getViewController(type: ProductsVC.self,
+                                                            identifer: "Products") else { return }
+        productsVC.sectionInfo = info
+        navigationController?.pushViewController(productsVC, animated: true)
     }
 }
 

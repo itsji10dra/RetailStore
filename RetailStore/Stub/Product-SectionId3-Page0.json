@@ -1,0 +1,56 @@
+{
+    "page": 0,
+    "pageSize": 15,
+    "totalPageCount": 1,
+    "result": [
+        {
+            "id": 1,
+            "sectionId": 3,
+            "title": "Microwave Oven",
+            "image": "http://www.example.com/image.png",
+            "price": 49.99
+        },
+        {
+            "id": 2,
+            "sectionId": 3,
+            "title": "Television",
+            "image": "http://www.example.com/image.png",
+            "price": 179.99
+        },
+        {
+            "id": 3,
+            "sectionId": 3,
+            "title": "Vaccum Cleaner",
+            "image": "http://www.example.com/image.png",
+            "price": 39.99
+        },
+        {
+            "id": 4,
+            "sectionId": 3,
+            "title": "Table",
+            "image": "http://www.example.com/image.png",
+            "price": 29.99
+        },
+        {
+            "id": 5,
+            "sectionId": 3,
+            "title": "Chair",
+            "image": "http://www.example.com/image.png",
+            "price": 14.99
+        },
+        {
+            "id": 6,
+            "sectionId": 3,
+            "title": "Almirah",
+            "image": "http://www.example.com/image.png",
+            "price": 34.99
+        },
+        {
+            "id": 7,
+            "sectionId": 3,
+            "title": "Solid Color T-Shirt",
+            "image": "http://www.example.com/image.png",
+            "price": 11.99
+        },
+    ]
+}

@@ -10,15 +10,18 @@ import Foundation
 
 struct StubManager {
     
-    static func getStubResponse<T: Decodable>(endpoint: EndPoint, type: T.Type) -> Response<[T]>? {
-        
+    static func getStubResponse<T: Decodable>(endpoint: EndPoint,
+                                              page: UInt = 0,
+                                              parameters: Parameters,
+                                              type: T.Type) -> Response<[T]>? {
         let fileName: String
         
         switch endpoint {
         case .sections:
             fileName = "Section"
         case .products:
-            fileName = "Product"
+            let sectionId = parameters["sectionId"] ?? ""
+            fileName = "Product-SectionId" + sectionId + "-Page" + "\(page)"
         }
         
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else { return nil }

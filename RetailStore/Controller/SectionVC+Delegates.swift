@@ -13,16 +13,14 @@ extension SectionVC: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sectionInfoArray?.count ?? 0
+        return sectionArray?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SectionCell
-        
-        let infoObj = sectionInfoArray?[indexPath.row]
-        
-        cell?.titleLabel?.text = infoObj?.title
+                
+        cell?.titleLabel?.text = sectionArray?[indexPath.row]
         
         return cell ?? UITableViewCell()
     }

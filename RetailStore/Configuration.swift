@@ -20,7 +20,9 @@ struct Configuration {
 
     static let minimumCartValue = 49.99
 
-    static let useStub          = true
+    static let stubTimerDelay   = 0.8
+    
+    static let useStubData      = true
 
     static func checkConfiguration() {
         

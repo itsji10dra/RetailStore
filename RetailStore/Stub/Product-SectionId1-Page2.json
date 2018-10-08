@@ -1,0 +1,56 @@
+{
+    "page": 2,
+    "pageSize": 15,
+    "totalPageCount": 3,
+    "result": [
+        {
+            "id": 31,
+            "sectionId": 1,
+            "title": "Microwave Oven",
+            "image": "http://www.example.com/image.png",
+            "price": 49.99
+        },
+        {
+            "id": 32,
+            "sectionId": 1,
+            "title": "Television",
+            "image": "http://www.example.com/image.png",
+            "price": 179.99
+        },
+        {
+            "id": 33,
+            "sectionId": 1,
+            "title": "Vaccum Cleaner",
+            "image": "http://www.example.com/image.png",
+            "price": 39.99
+        },
+        {
+            "id": 34,
+            "sectionId": 1,
+            "title": "Table",
+            "image": "http://www.example.com/image.png",
+            "price": 29.99
+        },
+        {
+            "id": 35,
+            "sectionId": 1,
+            "title": "Chair",
+            "image": "http://www.example.com/image.png",
+            "price": 14.99
+        },
+        {
+            "id": 36,
+            "sectionId": 1,
+            "title": "Almirah",
+            "image": "http://www.example.com/image.png",
+            "price": 34.99
+        },
+        {
+            "id": 37,
+            "sectionId": 1,
+            "title": "Air Cooler",
+            "image": "http://www.example.com/image.png",
+            "price": 11.99
+        },
+    ]
+}

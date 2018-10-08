@@ -60,6 +60,21 @@ class PagingViewModel<T, E> where T:Decodable {
     // MARK: - Public Methods
     
     @discardableResult
+    public func loadMoreStubData(handler: @escaping PagingDataResult) -> (isLoading: Bool, page: Int) {
+        
+        let nextPage = pageInfo.currentPage + 1
+
+        guard (nextPage == 0 ||       //Just load, coz it's first page.
+                nextPage < pageInfo.totalPages) else { return (false, nextPage) }   //Load, only if next page is available.
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { [weak self] in  //Adding delay, so that loading view can be shown.
+            self?.loadStubData(page: UInt(nextPage), completionHandler: handler)
+        }
+        
+        return (true, nextPage)
+    }
+    
+    @discardableResult
     public func loadMoreData(handler: @escaping PagingDataResult) -> (isLoading: Bool, page: Int) {
         
         let nextPage = pageInfo.currentPage + 1
@@ -72,13 +87,7 @@ class PagingViewModel<T, E> where T:Decodable {
             (nextPage == 0 ||       //Just load, coz it's first page.
                 nextPage < pageInfo.totalPages) else { return (false, nextPage) }   //Load, only if next page is available.
         
-        if Configuration.useStub {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in  //Adding delay, so that loading view can be shown.
-                self?.loadStubData(page: UInt(nextPage), completionHandler: handler)
-            }
-        } else {
-            loadData(page: UInt(nextPage), completionHandler: handler)
-        }
+        loadData(page: UInt(nextPage), completionHandler: handler)
         
         return (true, nextPage)
     }
@@ -139,7 +148,10 @@ class PagingViewModel<T, E> where T:Decodable {
     
     private func loadStubData(page number: UInt = 0, completionHandler: @escaping PagingDataResult) {
 
-        guard let response = StubManager.getStubResponse(endpoint: endPoint, type: T.self) else { return }
+        guard let response = StubManager.getStubResponse(endpoint: endPoint,
+                                                         page: number,
+                                                         parameters: parameters ?? [:],
+                                                         type: T.self) else { return completionHandler([], nil, number) }
         
         let page = response.page
         

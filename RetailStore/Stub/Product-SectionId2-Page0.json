@@ -5,21 +5,21 @@
     "result": [
         {
             "id": 1,
-            "sectionId": 1,
+            "sectionId": 2,
             "title": "Microwave Oven",
             "image": "http://www.example.com/image.png",
             "price": 49.99
         },
         {
             "id": 2,
-            "sectionId": 1,
+            "sectionId": 2,
             "title": "Television",
             "image": "http://www.example.com/image.png",
             "price": 179.99
         },
         {
             "id": 3,
-            "sectionId": 1,
+            "sectionId": 2,
             "title": "Vaccum Cleaner",
             "image": "http://www.example.com/image.png",
             "price": 39.99
@@ -47,7 +47,7 @@
         },
         {
             "id": 7,
-            "sectionId": 3,
+            "sectionId": 2,
             "title": "Solid Color T-Shirt",
             "image": "http://www.example.com/image.png",
             "price": 11.99

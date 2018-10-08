@@ -16,7 +16,7 @@ struct Product: Decodable {
 
     let title: String
     
-    let imageURL: URL
+    let image: URL
     
     let price: Double
 }

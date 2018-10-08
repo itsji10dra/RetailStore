@@ -17,7 +17,7 @@
 		10A4915B216B6B1400E2DBDD /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4915A216B6B1400E2DBDD /* Section.swift */; };
 		10A4915D216B6C8200E2DBDD /* Section.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A4915C216B6C8200E2DBDD /* Section.json */; };
 		10A4915F216B6CE400E2DBDD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4915E216B6CE300E2DBDD /* Product.swift */; };
-		10A49161216B6CF800E2DBDD /* Product.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A49160216B6CF800E2DBDD /* Product.json */; };
+		10A49161216B6CF800E2DBDD /* Product-SectionId1-Page0.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A49160216B6CF800E2DBDD /* Product-SectionId1-Page0.json */; };
 		10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49164216B6F4C00E2DBDD /* SectionCell.swift */; };
 		10A49168216B805100E2DBDD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49167216B805100E2DBDD /* Response.swift */; };
 		10A4916A216B80EE00E2DBDD /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49169216B80EE00E2DBDD /* Configuration.swift */; };
@@ -35,6 +35,12 @@
 		10A49186216B924900E2DBDD /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49185216B924900E2DBDD /* UIView+Extension.swift */; };
 		10A4918A216BB87900E2DBDD /* SectionVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49189216BB87900E2DBDD /* SectionVC+Delegates.swift */; };
 		10A4918C216BBA8C00E2DBDD /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4918B216BBA8C00E2DBDD /* StubManager.swift */; };
+		10A4918E216BC71A00E2DBDD /* ProductsVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4918D216BC71900E2DBDD /* ProductsVC+Delegates.swift */; };
+		10A49196216BD3F900E2DBDD /* Product-SectionId2-Page0.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A4918F216BD3F800E2DBDD /* Product-SectionId2-Page0.json */; };
+		10A49199216BD3F900E2DBDD /* Product-SectionId4-Page0.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A49192216BD3F800E2DBDD /* Product-SectionId4-Page0.json */; };
+		10A4919A216BD3F900E2DBDD /* Product-SectionId1-Page2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A49193216BD3F800E2DBDD /* Product-SectionId1-Page2.json */; };
+		10A4919B216BD3F900E2DBDD /* Product-SectionId3-Page0.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A49194216BD3F900E2DBDD /* Product-SectionId3-Page0.json */; };
+		10A4919C216BD3F900E2DBDD /* Product-SectionId1-Page1.json in Resources */ = {isa = PBXBuildFile; fileRef = 10A49195216BD3F900E2DBDD /* Product-SectionId1-Page1.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +68,7 @@
 		10A4915A216B6B1400E2DBDD /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		10A4915C216B6C8200E2DBDD /* Section.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Section.json; sourceTree = "<group>"; };
 		10A4915E216B6CE300E2DBDD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
-		10A49160216B6CF800E2DBDD /* Product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product.json; sourceTree = "<group>"; };
+		10A49160216B6CF800E2DBDD /* Product-SectionId1-Page0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId1-Page0.json"; sourceTree = "<group>"; };
 		10A49164216B6F4C00E2DBDD /* SectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionCell.swift; sourceTree = "<group>"; };
 		10A49167216B805100E2DBDD /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		10A49169216B80EE00E2DBDD /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
@@ -80,6 +86,12 @@
 		10A49185216B924900E2DBDD /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		10A49189216BB87900E2DBDD /* SectionVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionVC+Delegates.swift"; sourceTree = "<group>"; };
 		10A4918B216BBA8C00E2DBDD /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
+		10A4918D216BC71900E2DBDD /* ProductsVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsVC+Delegates.swift"; sourceTree = "<group>"; };
+		10A4918F216BD3F800E2DBDD /* Product-SectionId2-Page0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId2-Page0.json"; sourceTree = "<group>"; };
+		10A49192216BD3F800E2DBDD /* Product-SectionId4-Page0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId4-Page0.json"; sourceTree = "<group>"; };
+		10A49193216BD3F800E2DBDD /* Product-SectionId1-Page2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId1-Page2.json"; sourceTree = "<group>"; };
+		10A49194216BD3F900E2DBDD /* Product-SectionId3-Page0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId3-Page0.json"; sourceTree = "<group>"; };
+		10A49195216BD3F900E2DBDD /* Product-SectionId1-Page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId1-Page1.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +167,7 @@
 				10A49138216B689F00E2DBDD /* SectionVC.swift */,
 				10A49189216BB87900E2DBDD /* SectionVC+Delegates.swift */,
 				10A49174216B86CD00E2DBDD /* ProductsVC.swift */,
+				10A4918D216BC71900E2DBDD /* ProductsVC+Delegates.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -237,7 +250,12 @@
 			children = (
 				10A4918B216BBA8C00E2DBDD /* StubManager.swift */,
 				10A4915C216B6C8200E2DBDD /* Section.json */,
-				10A49160216B6CF800E2DBDD /* Product.json */,
+				10A49160216B6CF800E2DBDD /* Product-SectionId1-Page0.json */,
+				10A49195216BD3F900E2DBDD /* Product-SectionId1-Page1.json */,
+				10A49193216BD3F800E2DBDD /* Product-SectionId1-Page2.json */,
+				10A4918F216BD3F800E2DBDD /* Product-SectionId2-Page0.json */,
+				10A49194216BD3F900E2DBDD /* Product-SectionId3-Page0.json */,
+				10A49192216BD3F800E2DBDD /* Product-SectionId4-Page0.json */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -324,9 +342,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A49141216B68A100E2DBDD /* LaunchScreen.storyboard in Resources */,
-				10A49161216B6CF800E2DBDD /* Product.json in Resources */,
+				10A4919B216BD3F900E2DBDD /* Product-SectionId3-Page0.json in Resources */,
+				10A49196216BD3F900E2DBDD /* Product-SectionId2-Page0.json in Resources */,
+				10A49161216B6CF800E2DBDD /* Product-SectionId1-Page0.json in Resources */,
 				10A49157216B68B600E2DBDD /* Requirement.pdf in Resources */,
+				10A4919C216BD3F900E2DBDD /* Product-SectionId1-Page1.json in Resources */,
+				10A4919A216BD3F900E2DBDD /* Product-SectionId1-Page2.json in Resources */,
 				10A4915D216B6C8200E2DBDD /* Section.json in Resources */,
+				10A49199216BD3F900E2DBDD /* Product-SectionId4-Page0.json in Resources */,
 				10A49179216B8B1200E2DBDD /* LoadingView.xib in Resources */,
 				10A4913E216B68A100E2DBDD /* Assets.xcassets in Resources */,
 				10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */,
@@ -349,6 +372,7 @@
 			files = (
 				10A49184216B8EF000E2DBDD /* Alias.swift in Sources */,
 				10A4915B216B6B1400E2DBDD /* Section.swift in Sources */,
+				10A4918E216BC71A00E2DBDD /* ProductsVC+Delegates.swift in Sources */,
 				10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */,
 				10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */,
 				10A4918A216BB87900E2DBDD /* SectionVC+Delegates.swift in Sources */,
