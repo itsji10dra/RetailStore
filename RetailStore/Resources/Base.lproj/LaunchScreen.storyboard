@@ -18,17 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iF6-g2-oLM">
-                                <rect key="frame" x="159" y="319" width="57" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Retail" translatesAutoresizingMaskIntoConstraints="NO" id="reU-ee-my5">
+                                <rect key="frame" x="62.5" y="208.5" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="YNz-mw-SNL"/>
+                                    <constraint firstAttribute="height" constant="250" id="wQ2-vh-3Q0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="iF6-g2-oLM" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="AUH-em-v8w"/>
-                            <constraint firstItem="iF6-g2-oLM" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="cVs-QN-0hR"/>
+                            <constraint firstItem="reU-ee-my5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Ot7-lI-5Df"/>
+                            <constraint firstItem="reU-ee-my5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cNq-i2-vWv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -38,4 +39,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Retail" width="1024" height="1024"/>
+    </resources>
 </document>
