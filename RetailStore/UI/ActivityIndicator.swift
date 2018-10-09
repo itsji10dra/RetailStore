@@ -42,7 +42,14 @@ class ActivityIndicator {
             view.frame = UIScreen.main.bounds
             view.restorationIdentifier = restorationIdentifier
             
-            defer { keyWindow.addSubview(view) }
+            defer {
+                keyWindow.addSubview(view)
+                view.translatesAutoresizingMaskIntoConstraints = false
+                view.topAnchor.constraint(equalTo: keyWindow.topAnchor, constant: 0).isActive = true
+                view.bottomAnchor.constraint(equalTo: keyWindow.bottomAnchor, constant: 0).isActive = true
+                view.leadingAnchor.constraint(equalTo: keyWindow.leadingAnchor, constant: 0).isActive = true
+                view.trailingAnchor.constraint(equalTo: keyWindow.trailingAnchor, constant: 0).isActive = true
+            }
             
             let dimView = UIView()
             dimView.backgroundColor = UIColor.black.withAlphaComponent(0.6)

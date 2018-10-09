@@ -31,7 +31,7 @@ class SectionVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = Configuration.storeName
+        navigationItem.title = Configuration.storeName
         tableView.rowHeight = cellHeight
         
         pagingModel = PagingViewModel<Section, String>(endPoint: .sections,
