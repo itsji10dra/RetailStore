@@ -23,6 +23,7 @@
                     <connections>
                         <segue destination="xRL-9e-LPW" kind="relationship" relationship="viewControllers" id="PWs-qh-CXd"/>
                         <segue destination="LII-3o-jBA" kind="relationship" relationship="viewControllers" id="ceB-1O-8kW"/>
+                        <segue destination="RAZ-eA-tYg" kind="relationship" relationship="viewControllers" id="cLm-MW-qTZ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egb-Ww-pf9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -33,7 +34,7 @@
         <scene sceneID="Uwk-Ln-oIY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xRL-9e-LPW" userLabel="Shop" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shop" id="z3T-ZL-bVX"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="menu" id="z3T-ZL-bVX"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OPd-tH-5fo">
@@ -53,7 +54,7 @@
         <scene sceneID="hQ1-aW-JFj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LII-3o-jBA" userLabel="Cart" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cart" id="mRG-K4-lIe"/>
+                    <tabBarItem key="tabBarItem" title="Cart" image="shopping-cart" id="mRG-K4-lIe"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eWR-ba-UT4">
@@ -68,6 +69,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5SL-c2-MeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="54" y="935"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="xSz-8c-6f3">
+            <objects>
+                <navigationController id="RAZ-eA-tYg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="mGE-qM-EnN"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tea-Ag-qlv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wbZ-dx-Vz1" kind="relationship" relationship="rootViewController" id="mob-zY-c4j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QAh-6P-EU6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="-777"/>
+        </scene>
+        <!--Profile Screen-->
+        <scene sceneID="5NP-Rh-8Wu">
+            <objects>
+                <tableViewController id="wbZ-dx-Vz1" userLabel="Profile Screen" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qSH-VH-aE2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <connections>
+                            <outlet property="dataSource" destination="wbZ-dx-Vz1" id="mgb-Ob-Hkd"/>
+                            <outlet property="delegate" destination="wbZ-dx-Vz1" id="BzB-QQ-b6R"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Profile" id="B3G-NP-Icg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sfp-79-Mlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1932" y="-776"/>
         </scene>
         <!--Shopping Cart-->
         <scene sceneID="L9K-m3-7D1">
@@ -150,9 +187,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Store Name" id="CXx-Am-hfq">
-                        <barButtonItem key="leftBarButtonItem" title="login" id="FYU-05-qXb"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Store Name" id="CXx-Am-hfq"/>
                     <connections>
                         <outlet property="loaderView" destination="1kM-Ca-kay" id="lma-b3-DZx"/>
                         <outlet property="tableView" destination="TWc-ej-1d9" id="VVW-9B-U9S"/>
@@ -187,35 +222,46 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HGn-4H-lnx">
-                                                            <rect key="frame" x="98" y="7.5" width="42" height="21"/>
+                                                            <rect key="frame" x="91" y="7.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qVZ-Ti-veK">
-                                                            <rect key="frame" x="15" y="7.5" width="75" height="75"/>
+                                                            <rect key="frame" x="8" y="7.5" width="75" height="75"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="75" id="J4J-bk-72x"/>
                                                                 <constraint firstAttribute="height" constant="75" id="xsS-cJ-85c"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38f-VT-aYu" userLabel="Price Label">
-                                                            <rect key="frame" x="98" y="61.5" width="42" height="21"/>
+                                                            <rect key="frame" x="91" y="61.5" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8E-OK-3k4" customClass="AddToCartView" customModule="RetailStore" customModuleProvider="target">
+                                                            <rect key="frame" x="267" y="42.5" width="100" height="40"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="AQu-gf-ZeF"/>
+                                                                <constraint firstAttribute="width" constant="100" placeholder="YES" id="uvq-0F-S7f"/>
+                                                            </constraints>
+                                                        </view>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="38f-VT-aYu" firstAttribute="bottom" secondItem="qVZ-Ti-veK" secondAttribute="bottom" id="4sM-Px-PdZ"/>
                                                         <constraint firstItem="HGn-4H-lnx" firstAttribute="leading" secondItem="qVZ-Ti-veK" secondAttribute="trailing" constant="8" id="7WA-6D-tr4"/>
+                                                        <constraint firstAttribute="trailing" secondItem="T8E-OK-3k4" secondAttribute="trailing" constant="8" id="8rU-PT-KTp"/>
                                                         <constraint firstItem="38f-VT-aYu" firstAttribute="leading" secondItem="HGn-4H-lnx" secondAttribute="leading" id="CUR-Mi-Jg9"/>
                                                         <constraint firstItem="HGn-4H-lnx" firstAttribute="top" secondItem="qVZ-Ti-veK" secondAttribute="top" id="FJ8-Ea-l8Q"/>
-                                                        <constraint firstItem="qVZ-Ti-veK" firstAttribute="leading" secondItem="T8Z-Aj-iaU" secondAttribute="leading" constant="15" id="WK8-0S-xln"/>
+                                                        <constraint firstItem="T8E-OK-3k4" firstAttribute="bottom" secondItem="38f-VT-aYu" secondAttribute="bottom" id="UNK-6G-RG1"/>
+                                                        <constraint firstItem="qVZ-Ti-veK" firstAttribute="leading" secondItem="T8Z-Aj-iaU" secondAttribute="leading" constant="8" id="WK8-0S-xln"/>
                                                         <constraint firstItem="qVZ-Ti-veK" firstAttribute="centerY" secondItem="T8Z-Aj-iaU" secondAttribute="centerY" id="Ws3-oM-pa5"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
+                                                    <outlet property="addToCartView" destination="T8E-OK-3k4" id="U5J-wR-P4E"/>
                                                     <outlet property="priceLabel" destination="38f-VT-aYu" id="NTe-AN-ksd"/>
                                                     <outlet property="thumbImageView" destination="qVZ-Ti-veK" id="rHA-B7-sXN"/>
                                                     <outlet property="titleLabel" destination="HGn-4H-lnx" id="U4a-AU-081"/>
@@ -256,4 +302,9 @@
             <point key="canvasLocation" x="2856.8000000000002" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menu" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="profile" width="384" height="384"/>
+        <image name="shopping-cart" width="51.200000762939453" height="51.200000762939453"/>
+    </resources>
 </document>

@@ -18,6 +18,8 @@ class ProductCell: UITableViewCell {
     
     @IBOutlet weak var priceLabel: UILabel?
 
+    @IBOutlet weak var addToCartView: AddToCartView?
+
     // MARK: - View
 
     override func awakeFromNib() {

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9DE216D43FD002EE93F /* AddToCartView.swift */; };
+		1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E0216D4411002EE93F /* AddToCartView.xib */; };
 		10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49136216B689F00E2DBDD /* AppDelegate.swift */; };
 		10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49138216B689F00E2DBDD /* SectionVC.swift */; };
 		10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A4913A216B689F00E2DBDD /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1092F9DE216D43FD002EE93F /* AddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView.swift; sourceTree = "<group>"; };
+		1092F9E0216D4411002EE93F /* AddToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartView.xib; sourceTree = "<group>"; };
 		10A49133216B689F00E2DBDD /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A49136216B689F00E2DBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A49138216B689F00E2DBDD /* SectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVC.swift; sourceTree = "<group>"; };
@@ -114,6 +118,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1092F9E2216D4415002EE93F /* AddToCartView */ = {
+			isa = PBXGroup;
+			children = (
+				1092F9DE216D43FD002EE93F /* AddToCartView.swift */,
+				1092F9E0216D4411002EE93F /* AddToCartView.xib */,
+			);
+			path = AddToCartView;
+			sourceTree = "<group>";
+		};
 		10A4912A216B689F00E2DBDD = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +204,7 @@
 				10A49164216B6F4C00E2DBDD /* SectionCell.swift */,
 				10A49172216B868400E2DBDD /* ProductCell.swift */,
 				10A49176216B8B1200E2DBDD /* LoadingView */,
+				1092F9E2216D4415002EE93F /* AddToCartView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,6 +360,7 @@
 			files = (
 				10A49141216B68A100E2DBDD /* LaunchScreen.storyboard in Resources */,
 				10A4919B216BD3F900E2DBDD /* Product-SectionId3-Page0.json in Resources */,
+				1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */,
 				10A49196216BD3F900E2DBDD /* Product-SectionId2-Page0.json in Resources */,
 				10A49161216B6CF800E2DBDD /* Product-SectionId1-Page0.json in Resources */,
 				10A49157216B68B600E2DBDD /* Requirement.pdf in Resources */,
@@ -375,6 +390,7 @@
 			files = (
 				10A49184216B8EF000E2DBDD /* Alias.swift in Sources */,
 				10A4915B216B6B1400E2DBDD /* Section.swift in Sources */,
+				1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */,
 				10A4918E216BC71A00E2DBDD /* ProductsVC+Delegates.swift in Sources */,
 				10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */,
 				10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */,

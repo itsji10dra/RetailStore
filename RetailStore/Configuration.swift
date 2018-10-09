@@ -8,21 +8,23 @@
 
 struct Configuration {
     
-    static let url              = "https://server-url.com/"
+    static let url                      = "https://server-url.com/"
     
-    static let pageSize         = 15
+    static let pageSize                 = 15
     
-    static let storeName        = "Fantastic Store"
+    static let storeName                = "Fantastic Store"
 
-    static let defaultCurrency  = "USD"
+    static let defaultCurrency          = "USD"
 
-    static let currencySymbol   = "$"
+    static let currencySymbol           = "$"
 
-    static let minimumCartValue = 49.99
+    static let minimumCartValue         = 49.99
 
-    static let stubTimerDelay   = 0.8
+    static let maxQuantityAllowedInCart = 10
+
+    static let stubTimerDelay           = 0.3
     
-    static let useStubData      = true
+    static let useStubData              = true
 
     static func checkConfiguration() {
         
