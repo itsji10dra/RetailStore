@@ -26,7 +26,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWy-nM-OAB">
                             <rect key="frame" x="0.0" y="0.0" width="57" height="67"/>
-                            <state key="normal" title="-" image="subtract"/>
+                            <state key="normal" image="subtract"/>
                             <connections>
                                 <action selector="minusAction:" destination="-1" eventType="touchUpInside" id="O8Z-Yp-awb"/>
                             </connections>
@@ -56,6 +56,7 @@
                     </constraints>
                 </stackView>
             </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="EYK-jJ-UJo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="1IK-M2-bjj"/>
                 <constraint firstAttribute="trailing" secondItem="EYK-jJ-UJo" secondAttribute="trailing" id="5re-gz-bil"/>

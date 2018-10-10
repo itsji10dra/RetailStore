@@ -41,9 +41,7 @@ class ProductDetailsVC: UIViewController {
     
     internal var displayModelInfo: ProductDetailsDisplayModel? {
         didSet {
-            DispatchQueue.main.async { [weak self] in
-                self?.refreshUI()
-            }
+            DispatchQueue.main.async { [weak self] in self?.refreshUI() }
         }
     }
     
