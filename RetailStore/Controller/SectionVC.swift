@@ -96,7 +96,7 @@ class SectionVC: UIViewController {
     
     // MARK: - Navigation
     
-    internal func pushModelsScene(with info: Section) {
+    internal func pushProductsScene(with info: Section) {
         guard let productsVC = Navigation.getViewController(type: ProductsVC.self,
                                                             identifer: "Products") else { return }
         productsVC.sectionInfo = info

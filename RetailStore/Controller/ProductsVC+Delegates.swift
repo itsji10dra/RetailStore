@@ -20,7 +20,7 @@ extension ProductsVC: UIScrollViewDelegate {
     }
 }
 
-extension ProductsVC: UITableViewDataSource {
+extension ProductsVC: UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UITableViewDataSource
     
@@ -39,6 +39,14 @@ extension ProductsVC: UITableViewDataSource {
 //        cell?.imageView?.image = infoObj?.image
 
         return cell ?? UITableViewCell()
+    }
+    
+    // MARK: - UITableViewDelegate
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let infoObj = pagingModel.dataSource(at: indexPath.row) else { return }
+        pushDetailsScene(with: infoObj)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

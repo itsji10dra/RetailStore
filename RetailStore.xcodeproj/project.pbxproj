@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9DE216D43FD002EE93F /* AddToCartView.swift */; };
 		1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E0216D4411002EE93F /* AddToCartView.xib */; };
+		1092F9E4216DDEA1002EE93F /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */; };
 		10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49136216B689F00E2DBDD /* AppDelegate.swift */; };
 		10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49138216B689F00E2DBDD /* SectionVC.swift */; };
 		10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A4913A216B689F00E2DBDD /* Main.storyboard */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		1092F9DE216D43FD002EE93F /* AddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView.swift; sourceTree = "<group>"; };
 		1092F9E0216D4411002EE93F /* AddToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartView.xib; sourceTree = "<group>"; };
+		1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		10A49133216B689F00E2DBDD /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A49136216B689F00E2DBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A49138216B689F00E2DBDD /* SectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVC.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				10A49189216BB87900E2DBDD /* SectionVC+Delegates.swift */,
 				10A49174216B86CD00E2DBDD /* ProductsVC.swift */,
 				10A4918D216BC71900E2DBDD /* ProductsVC+Delegates.swift */,
+				1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */,
 				10A4919D216C626D00E2DBDD /* ShoppingCartVC.swift */,
 			);
 			path = Controller;
@@ -405,6 +408,7 @@
 				10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */,
 				10A4916E216B84FD00E2DBDD /* NetworkManager.swift in Sources */,
 				10A49175216B86CD00E2DBDD /* ProductsVC.swift in Sources */,
+				1092F9E4216DDEA1002EE93F /* ProductDetailsVC.swift in Sources */,
 				10A49186216B924900E2DBDD /* UIView+Extension.swift in Sources */,
 				10A4917E216B8BAB00E2DBDD /* Navigation.swift in Sources */,
 				10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */,

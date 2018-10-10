@@ -29,7 +29,7 @@ extension SectionVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let infoObj = pagingModel.dataSource(at: indexPath.row) else { return }
-        pushModelsScene(with: infoObj)
+        pushProductsScene(with: infoObj)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

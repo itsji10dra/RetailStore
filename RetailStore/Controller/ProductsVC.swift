@@ -109,4 +109,13 @@ class ProductsVC: UIViewController {
         
         present(alertController, animated: true, completion: nil)
     }
+    
+    // MARK: - Navigation
+    
+    internal func pushDetailsScene(with info: Product) {
+        guard let detailsVC = Navigation.getViewController(type: ProductDetailsVC.self,
+                                                           identifer: "ProductDetails") else { return }
+        detailsVC.productInfo = info
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
 }

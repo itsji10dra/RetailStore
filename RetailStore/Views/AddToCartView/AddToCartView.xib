@@ -24,28 +24,28 @@
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYK-jJ-UJo">
                     <rect key="frame" x="0.0" y="0.0" width="130" height="67"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWy-nM-OAB">
-                            <rect key="frame" x="0.0" y="0.0" width="50" height="67"/>
-                            <state key="normal" title="-"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rWy-nM-OAB">
+                            <rect key="frame" x="0.0" y="0.0" width="57" height="67"/>
+                            <state key="normal" title="-" image="subtract"/>
                             <connections>
                                 <action selector="minusAction:" destination="-1" eventType="touchUpInside" id="O8Z-Yp-awb"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45F-NS-WKy">
-                            <rect key="frame" x="50" y="0.0" width="30" height="67"/>
+                            <rect key="frame" x="57" y="0.0" width="16" height="67"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="BjV-Bh-CpT"/>
+                                <constraint firstAttribute="width" constant="16" id="BjV-Bh-CpT"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKh-2U-PeE">
-                            <rect key="frame" x="80" y="0.0" width="50" height="67"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKh-2U-PeE">
+                            <rect key="frame" x="73" y="0.0" width="57" height="67"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="6DG-qT-NT7"/>
                             </constraints>
-                            <state key="normal" title="Add"/>
+                            <state key="normal" image="add"/>
                             <connections>
                                 <action selector="plusAction:" destination="-1" eventType="touchUpInside" id="JLN-3o-Q74"/>
                             </connections>
@@ -69,4 +69,8 @@
             <point key="canvasLocation" x="-27.199999999999999" y="-4.0479760119940034"/>
         </view>
     </objects>
+    <resources>
+        <image name="add" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="subtract" width="51.200000762939453" height="51.200000762939453"/>
+    </resources>
 </document>

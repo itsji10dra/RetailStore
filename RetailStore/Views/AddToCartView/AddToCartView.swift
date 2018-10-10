@@ -50,13 +50,17 @@ class AddToCartView: UIView {
     
     private func setup() {
         loadContentView()
-        shouldResetContent(true)
+        updateQuantity()
     }
     
-    private func shouldResetContent(_ reset: Bool) {
-        minusButton.isHidden = reset
-        quantityLabel.isHidden = reset
-        plusButton.setTitle(reset ? "Add" : "+", for: .normal)
+    // MARK: - Public Methods
+
+    private func updateQuantity(_ quantity: Int = 0) {
+        quantityLabel.text = String(quantity)
+        
+        let isHidden = quantity == 0
+        minusButton.isHidden = isHidden
+        quantityLabel.isHidden = isHidden
     }
     
     // MARK: - IBOutlets Actions
@@ -72,7 +76,7 @@ class AddToCartView: UIView {
             plusAction?()
             
             if newQuantity > 0 {
-                shouldResetContent(false)
+                updateQuantity(newQuantity)
             }
         }
     }
@@ -88,7 +92,7 @@ class AddToCartView: UIView {
             minusAction?()
             
             if newQuantity == 0 {
-                shouldResetContent(true)
+                updateQuantity(newQuantity)
             }
         }
     }
