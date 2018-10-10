@@ -10,23 +10,25 @@ import Foundation
 
 class ProductDetailsViewModel {
     
+    typealias ProductDetailsResult = ((_ data: ProductDetailsVC.ProductDetailsDisplayInfo?, _ error: Error?) -> Void)
+
     // MARK: - Private Properties
 
     private var dataTask: URLSessionDataTask?
     
     private lazy var networkManager = NetworkManager()
 
-    let productInfo: Product
+    private let productInfo: Product
     
     // MARK: - Initializer
     
-    init(product: Product) {
+    public init(product: Product) {
         self.productInfo = product
     }
     
     // MARK: - Public Methods
     
-    public func loadDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayInfo?) -> Void) {
+    public func loadDetails(completionHandler: @escaping ProductDetailsResult) {
         
         let parameter = ["productId": "\(productInfo.id)"]
         
@@ -40,14 +42,14 @@ class ProductDetailsViewModel {
                 let productDetail = response.result
                 
                 let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
-                                                                                            images: productDetail.images,
-                                                                                            quantity: 0,
-                                                                                            description: productDetail.description,
-                                                                                            price: Configuration.currencySymbol + "\(productDetail.price)")
-                completionHandler(productDetailDisplayModel)
+                                                                                           images: productDetail.images,
+                                                                                           quantity: 0,
+                                                                                           description: productDetail.description,
+                                                                                           price: Configuration.currencySymbol + "\(productDetail.price)")
+                completionHandler(productDetailDisplayModel, nil)
             
-            case .failure( _):
-                completionHandler(nil)
+            case .failure(let error):
+                completionHandler(nil, error)
             }
             
             print("--------------------------------------------------------------------------------------")
@@ -56,14 +58,14 @@ class ProductDetailsViewModel {
         dataTask?.resume()
     }
     
-    public func loadStubDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayInfo?) -> Void) {
+    public func loadStubDetails(completionHandler: @escaping ProductDetailsResult) {
 
         //Adding delay, so that loading view can be shown.
         DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { 
 
             guard let response = StubManager.getStubResponse(endpoint: .productDetail,
                                                              parameters: [:],
-                                                             type: ProductDetails.self) else { return completionHandler(nil) }
+                                                             type: ProductDetails.self) else { return completionHandler(nil, nil) }
         
             let productDetail = response.result
 
@@ -73,7 +75,7 @@ class ProductDetailsViewModel {
                                                                                        description: productDetail.description,
                                                                                        price: Configuration.currencySymbol + "\(productDetail.price)")
 
-            completionHandler(productDetailDisplayModel)
+            completionHandler(productDetailDisplayModel, nil)
         }
     }
 }

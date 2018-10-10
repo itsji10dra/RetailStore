@@ -6,51 +6,65 @@
         {
             "id": 1,
             "sectionId": 2,
-            "title": "Microwave Oven",
+            "title": "Table - 1",
             "thumbImage": "http://www.example.com/image.png",
             "price": 49.99
         },
         {
             "id": 2,
             "sectionId": 2,
-            "title": "Television",
+            "title": "Chair - 1",
             "thumbImage": "http://www.example.com/image.png",
             "price": 179.99
         },
         {
             "id": 3,
             "sectionId": 2,
-            "title": "Vaccum Cleaner",
+            "title": "Almirah - 1",
             "thumbImage": "http://www.example.com/image.png",
             "price": 39.99
         },
         {
             "id": 4,
             "sectionId": 2,
-            "title": "Table",
+            "title": "Table - 2",
             "thumbImage": "http://www.example.com/image.png",
             "price": 29.99
         },
         {
             "id": 5,
             "sectionId": 2,
-            "title": "Chair",
+            "title": "Chair - 2",
             "thumbImage": "http://www.example.com/image.png",
             "price": 14.99
         },
         {
             "id": 6,
             "sectionId": 2,
-            "title": "Almirah",
+            "title": "Almirah - 2",
             "thumbImage": "http://www.example.com/image.png",
             "price": 34.99
         },
         {
             "id": 7,
             "sectionId": 2,
-            "title": "Solid Color T-Shirt",
+            "title": "Table - 3",
             "thumbImage": "http://www.example.com/image.png",
             "price": 11.99
+        },
+        {
+            "id": 8,
+            "sectionId": 2,
+            "title": "Chair - 3",
+            "thumbImage": "http://www.example.com/image.png",
+            "price": 14.99
+        },
+        {
+            "id": 9,
+            "sectionId": 2,
+            "title": "Almirah - 3",
+            "thumbImage": "http://www.example.com/image.png",
+            "price": 34.99
         },
     ]
 }

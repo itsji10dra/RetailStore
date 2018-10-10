@@ -20,6 +20,8 @@
 		1092F9F4216E21A4002EE93F /* ShoppingCartVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9F3216E21A4002EE93F /* ShoppingCartVC+Delegates.swift */; };
 		1092F9F8216E37E6002EE93F /* UITabBarItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9F7216E37E6002EE93F /* UITabBarItem+Extension.swift */; };
 		1092F9F9216E39D4002EE93F /* TabBarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9F5216E315B002EE93F /* TabBarManager.swift */; };
+		1092F9FB216E3D7A002EE93F /* CartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9FA216E3D7A002EE93F /* CartManager.swift */; };
+		1092F9FD216E3F73002EE93F /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9FC216E3F73002EE93F /* CartItem.swift */; };
 		10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49136216B689F00E2DBDD /* AppDelegate.swift */; };
 		10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49138216B689F00E2DBDD /* SectionVC.swift */; };
 		10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A4913A216B689F00E2DBDD /* Main.storyboard */; };
@@ -80,6 +82,8 @@
 		1092F9F3216E21A4002EE93F /* ShoppingCartVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingCartVC+Delegates.swift"; sourceTree = "<group>"; };
 		1092F9F5216E315B002EE93F /* TabBarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarManager.swift; sourceTree = "<group>"; };
 		1092F9F7216E37E6002EE93F /* UITabBarItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarItem+Extension.swift"; sourceTree = "<group>"; };
+		1092F9FA216E3D7A002EE93F /* CartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartManager.swift; sourceTree = "<group>"; };
+		1092F9FC216E3F73002EE93F /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		10A49133216B689F00E2DBDD /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A49136216B689F00E2DBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A49138216B689F00E2DBDD /* SectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVC.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				10A49136216B689F00E2DBDD /* AppDelegate.swift */,
 				10A49169216B80EE00E2DBDD /* Configuration.swift */,
 				10A49183216B8EF000E2DBDD /* Alias.swift */,
+				1092F9FA216E3D7A002EE93F /* CartManager.swift */,
 				10A4913A216B689F00E2DBDD /* Main.storyboard */,
 				10A49187216B924F00E2DBDD /* Extension */,
 				10A4917B216B8BAB00E2DBDD /* UI */,
@@ -220,6 +225,7 @@
 				10A49167216B805100E2DBDD /* Response.swift */,
 				10A4915A216B6B1400E2DBDD /* Section.swift */,
 				10A4915E216B6CE300E2DBDD /* Product.swift */,
+				1092F9FC216E3F73002EE93F /* CartItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -433,10 +439,12 @@
 				10A4918C216BBA8C00E2DBDD /* StubManager.swift in Sources */,
 				10A49173216B868400E2DBDD /* ProductCell.swift in Sources */,
 				10A4915F216B6CE400E2DBDD /* Product.swift in Sources */,
+				1092F9FD216E3F73002EE93F /* CartItem.swift in Sources */,
 				1092F9E8216DE564002EE93F /* ProductDetailsVC+Delegates.swift in Sources */,
 				1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */,
 				10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */,
 				1092F9E6216DE3B4002EE93F /* ImagesCell.swift in Sources */,
+				1092F9FB216E3D7A002EE93F /* CartManager.swift in Sources */,
 				10A4916F216B84FD00E2DBDD /* URLManager.swift in Sources */,
 				10A4916A216B80EE00E2DBDD /* Configuration.swift in Sources */,
 				1092F9EE216E1897002EE93F /* ProfileVC.swift in Sources */,

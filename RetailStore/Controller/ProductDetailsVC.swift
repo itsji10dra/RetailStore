@@ -41,7 +41,7 @@ class ProductDetailsVC: UIViewController {
     
     internal var displayModelInfo: ProductDetailsDisplayInfo? {
         didSet {
-            DispatchQueue.main.async { [weak self] in self?.refreshUI() }
+            refreshUI()
         }
     }
     
@@ -66,15 +66,15 @@ class ProductDetailsVC: UIViewController {
             self?.navigationController?.popViewController(animated: true)
         }
         
-        let handler: ((ProductDetailsDisplayInfo?) -> Void) = { [weak self] displayModel in
+        let handler: ProductDetailsViewModel.ProductDetailsResult = { [weak self] (displayModel, error) in
             
             ActivityIndicator.stopAnimating()
-            
-            if let model = displayModel {
-                self?.displayModelInfo = model
-            } else {
-                DispatchQueue.main.async {
-                    self?.showErrorAlert(with: "Unable to fetch details.")
+            DispatchQueue.main.async {
+                if let model = displayModel {
+                    self?.displayModelInfo = model
+                } else {
+                    let message = error?.localizedDescription ?? "Unable to fetch details."
+                    self?.showErrorAlert(with: message)
                 }
             }
         }

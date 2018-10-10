@@ -10,11 +10,13 @@ import UIKit
 
 class TabBarManager {
     
+    // MARK: - Singleton
+
     static let `default`: TabBarManager = { return TabBarManager() }()
     
     // MARK: - Data
     
-    enum TabBarItemIds: String, CaseIterable {
+    enum TabBarItemIds: String {
         case shop   = "Shop"
         case cart   = "Cart"
         case profile = "Profile"
@@ -24,7 +26,7 @@ class TabBarManager {
     
     // MARK: - Initializer
     
-    convenience init() {
+    private convenience init() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let rootVC = appDelegate.window?.rootViewController as? UITabBarController else { fatalError("Default root is not a TabBarControlller") }
         self.init(tabBarController: rootVC)
