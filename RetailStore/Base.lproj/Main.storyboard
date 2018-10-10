@@ -34,7 +34,11 @@
         <scene sceneID="Uwk-Ln-oIY">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xRL-9e-LPW" userLabel="Shop" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Shop" image="menu" id="z3T-ZL-bVX"/>
+                    <tabBarItem key="tabBarItem" title="Shop" image="menu" id="z3T-ZL-bVX">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="Shop"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OPd-tH-5fo">
@@ -54,7 +58,11 @@
         <scene sceneID="hQ1-aW-JFj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LII-3o-jBA" userLabel="Cart" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cart" image="shopping-cart" id="mRG-K4-lIe"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="Cart" image="shopping-cart" id="mRG-K4-lIe">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="Cart"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eWR-ba-UT4">
@@ -74,7 +82,11 @@
         <scene sceneID="xSz-8c-6f3">
             <objects>
                 <navigationController id="RAZ-eA-tYg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="mGE-qM-EnN"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="mGE-qM-EnN">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="identifier" value="Profile"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tea-Ag-qlv">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -37,7 +37,7 @@ class ShoppingCartVC: UIViewController {
     // MARK: - IBOutlets Actions
     
     @IBAction func editAction(_ sender: Any) {
-        tableView.setEditing(!tableView.isEditing, animated: true)
+        tableView.setEditing(tableView.isEditing == false, animated: true)
         editBarButton.title = tableView.isEditing ? "Done" : "Edit"
     }
     
