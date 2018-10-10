@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension ProductDetailsVC: UICollectionViewDataSource {
+extension ProductDetailsVC: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     // MARK: - UICollectionViewDelegate
     
@@ -24,5 +24,12 @@ extension ProductDetailsVC: UICollectionViewDataSource {
 //        cell?.imageView?.image
         
         return cell ?? UICollectionViewCell()
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let isPortrait = traitCollection.horizontalSizeClass == .compact && traitCollection.verticalSizeClass == .regular
+        return isPortrait ? collectionView.bounds.size : .init(width: collectionView.bounds.width/2, height: collectionView.bounds.height)
     }
 }
