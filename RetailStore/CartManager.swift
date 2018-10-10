@@ -18,11 +18,14 @@ class CartManager {
     
     private lazy var cartItems: [CartItem] = []
     
-    
     // MARK: - Public Methods
     
     public func deleteCartItemAt(index: Int) {
         self.cartItems.remove(at: index)
+    }
+    
+    public func clearCart() {
+        self.cartItems.removeAll()
     }
     
     public func updateCartItemQuantity(_ quantity: Int, index: Int) {

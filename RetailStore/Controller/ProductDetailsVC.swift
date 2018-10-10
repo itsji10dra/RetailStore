@@ -58,6 +58,13 @@ class ProductDetailsVC: UIViewController {
         imageCollectionView.flashScrollIndicators()
     }
     
+    // MARK: - ViewController
+    
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        imageCollectionView.collectionViewLayout.invalidateLayout()
+    }
+    
     // MARK: - Private Methods
     
     private func loadDetails() {

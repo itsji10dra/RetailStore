@@ -47,7 +47,8 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            tableView.reloadData()
+            CartManager.default.deleteCartItemAt(index: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
 }
