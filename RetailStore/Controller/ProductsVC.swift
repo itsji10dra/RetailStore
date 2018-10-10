@@ -51,7 +51,7 @@ class ProductsVC: UIViewController {
                                                                    parameters: parameters,
                                                                    transform: { result -> [ProductDisplayInfo] in
             return result.map {
-                ProductDisplayInfo(title: $0.title, image: $0.image, price: Configuration.currencySymbol + "\($0.price)")
+                ProductDisplayInfo(title: $0.title, image: $0.thumbImage, price: Configuration.currencySymbol + "\($0.price)")
             }
         })
         
