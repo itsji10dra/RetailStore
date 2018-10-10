@@ -8,18 +8,18 @@
 
 import UIKit
 
-enum TabBarItemIds: String, CaseIterable {
-    case shop   = "Shop"
-    case cart   = "Cart"
-    case profile = "Profile"
-}
-
 class TabBarManager {
     
     static let `default`: TabBarManager = { return TabBarManager() }()
     
     // MARK: - Data
     
+    enum TabBarItemIds: String, CaseIterable {
+        case shop   = "Shop"
+        case cart   = "Cart"
+        case profile = "Profile"
+    }
+
     private let tabBarController: UITabBarController
     
     // MARK: - Initializer

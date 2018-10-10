@@ -32,7 +32,7 @@ class SectionVC: UIViewController {
         navigationItem.title = Configuration.storeName
         
         pagingModel = PagingViewModel<Section, String>(endPoint: .sections,
-                                                                   transform: { result -> [String] in
+                                                       transform: { result -> [String] in
             return result.map { $0.title }
         })
         
