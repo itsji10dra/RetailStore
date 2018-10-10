@@ -35,16 +35,13 @@ class ProductsVC: UIViewController {
 
     internal var pagingModel: PagingViewModel<Product, ProductDisplayInfo>!
 
-    internal let cellHeight: CGFloat = 90
-
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = sectionInfo.title
-        tableView.rowHeight = cellHeight
-
+        
         let parameters = ["sectionId": "\(sectionInfo.id)"]
         
         pagingModel = PagingViewModel<Product, ProductDisplayInfo>(endPoint: .products,

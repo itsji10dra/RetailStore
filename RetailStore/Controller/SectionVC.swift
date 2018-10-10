@@ -24,15 +24,12 @@ class SectionVC: UIViewController {
     
     internal var pagingModel: PagingViewModel<Section, String>!
     
-    internal let cellHeight: CGFloat = 58
-
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         navigationItem.title = Configuration.storeName
-        tableView.rowHeight = cellHeight
         
         pagingModel = PagingViewModel<Section, String>(endPoint: .sections,
                                                                    transform: { result -> [String] in

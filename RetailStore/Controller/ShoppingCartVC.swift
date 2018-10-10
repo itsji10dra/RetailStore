@@ -10,9 +10,34 @@ import UIKit
 
 class ShoppingCartVC: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var priceLabel: UILabel!
+
+    @IBOutlet weak var minimumValueLabel: UILabel!
+
+    @IBOutlet weak var checkoutButton: UIButton!
+
+    @IBOutlet weak var editBarButton: UIBarButtonItem!
+
+    // MARK: - Data
+
+    internal let cellIdentifier: String = "CartCell"
+
+    // MARK: - View Hierarchy
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        minimumValueLabel.text =  "Minimum cart value must be $\(Configuration.minimumCartValue)"
+    }
+    
+    // MARK: - IBOutlets Actions
+    
+    @IBAction func editAction(_ sender: Any) {
+        tableView.setEditing(!tableView.isEditing, animated: true)
+        editBarButton.title = tableView.isEditing ? "Done" : "Edit"
     }
 }

@@ -16,6 +16,8 @@
 		1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */; };
 		1092F9EE216E1897002EE93F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9ED216E1897002EE93F /* ProfileVC.swift */; };
 		1092F9F0216E1AD7002EE93F /* ProfileVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9EF216E1AD7002EE93F /* ProfileVC+Delegates.swift */; };
+		1092F9F2216E2146002EE93F /* CartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9F1216E2146002EE93F /* CartCell.swift */; };
+		1092F9F4216E21A4002EE93F /* ShoppingCartVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9F3216E21A4002EE93F /* ShoppingCartVC+Delegates.swift */; };
 		10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49136216B689F00E2DBDD /* AppDelegate.swift */; };
 		10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49138216B689F00E2DBDD /* SectionVC.swift */; };
 		10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A4913A216B689F00E2DBDD /* Main.storyboard */; };
@@ -72,6 +74,8 @@
 		1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		1092F9ED216E1897002EE93F /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		1092F9EF216E1AD7002EE93F /* ProfileVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+Delegates.swift"; sourceTree = "<group>"; };
+		1092F9F1216E2146002EE93F /* CartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartCell.swift; sourceTree = "<group>"; };
+		1092F9F3216E21A4002EE93F /* ShoppingCartVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingCartVC+Delegates.swift"; sourceTree = "<group>"; };
 		10A49133216B689F00E2DBDD /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A49136216B689F00E2DBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A49138216B689F00E2DBDD /* SectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVC.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */,
 				1092F9E7216DE564002EE93F /* ProductDetailsVC+Delegates.swift */,
 				10A4919D216C626D00E2DBDD /* ShoppingCartVC.swift */,
+				1092F9F3216E21A4002EE93F /* ShoppingCartVC+Delegates.swift */,
 				1092F9ED216E1897002EE93F /* ProfileVC.swift */,
 				1092F9EF216E1AD7002EE93F /* ProfileVC+Delegates.swift */,
 			);
@@ -221,6 +226,7 @@
 				10A49164216B6F4C00E2DBDD /* SectionCell.swift */,
 				10A49172216B868400E2DBDD /* ProductCell.swift */,
 				1092F9E5216DE3B4002EE93F /* ImagesCell.swift */,
+				1092F9F1216E2146002EE93F /* CartCell.swift */,
 				10A49176216B8B1200E2DBDD /* LoadingView */,
 				1092F9E2216D4415002EE93F /* AddToCartView */,
 			);
@@ -409,9 +415,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A49184216B8EF000E2DBDD /* Alias.swift in Sources */,
+				1092F9F2216E2146002EE93F /* CartCell.swift in Sources */,
 				10A4915B216B6B1400E2DBDD /* Section.swift in Sources */,
 				1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */,
 				10A4918E216BC71A00E2DBDD /* ProductsVC+Delegates.swift in Sources */,
+				1092F9F4216E21A4002EE93F /* ShoppingCartVC+Delegates.swift in Sources */,
 				10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */,
 				10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */,
 				10A4918A216BB87900E2DBDD /* SectionVC+Delegates.swift in Sources */,
