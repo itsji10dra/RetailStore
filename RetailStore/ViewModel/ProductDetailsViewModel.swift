@@ -59,7 +59,7 @@ class ProductDetailsViewModel {
     public func loadStubDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayModel?) -> Void) {
 
         //Adding delay, so that loading view can be shown.
-        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { 
 
             guard let response = StubManager.getStubResponse(endpoint: .productDetail,
                                                          parameters: [:],
