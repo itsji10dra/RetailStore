@@ -25,6 +25,8 @@ class ProductsVC: UIViewController {
         let image: URL
         
         let price: String
+        
+        let quantity: UInt
     }
 
     internal var sectionInfo: Section!
@@ -48,7 +50,11 @@ class ProductsVC: UIViewController {
                                                                    parameters: parameters,
                                                                    transform: { result -> [ProductDisplayInfo] in
             return result.map {
-                ProductDisplayInfo(title: $0.title, image: $0.thumbImage, price: Configuration.currencySymbol + "\($0.price)")
+                let quantity = CartManager.default.quantityForItem($0)
+                return ProductDisplayInfo(title: $0.title,
+                                          image: $0.thumbImage,
+                                          price: Configuration.currencySymbol + "\($0.price)",
+                                          quantity: quantity)
             }
         })
         

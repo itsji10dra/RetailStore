@@ -28,7 +28,7 @@ class ProductDetailsVC: UIViewController {
         
         let images: [URL]
         
-        let quantity: Int
+        let quantity: UInt
         
         let description: String
         

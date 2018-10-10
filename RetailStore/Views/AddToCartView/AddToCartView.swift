@@ -20,9 +20,9 @@ class AddToCartView: UIView {
     
     // MARK: - Data Closure
     
-    internal var plusAction: (() -> Void)?
+    internal var plusAction: ((UInt) -> Void)?
     
-    internal var minusAction: (() -> Void)?
+    internal var minusAction: ((UInt) -> Void)?
 
     // MARK: - View
     
@@ -55,7 +55,7 @@ class AddToCartView: UIView {
     
     // MARK: - Public Methods
 
-    public func updateQuantity(_ quantity: Int = 0) {
+    public func updateQuantity(_ quantity: UInt = 0) {
         quantityLabel.text = String(quantity)
         
         let isHidden = quantity == 0
@@ -68,12 +68,12 @@ class AddToCartView: UIView {
     @IBAction func plusAction(_ sender: Any) {
     
         if let currentQuantityText = quantityLabel.text,
-            let currentQuantity = Int(currentQuantityText),
+            let currentQuantity = UInt(currentQuantityText),
             currentQuantity < Configuration.maxQuantityAllowedInCart {
             
             let newQuantity = currentQuantity + 1
             quantityLabel.text = String(newQuantity)
-            plusAction?()
+            plusAction?(newQuantity)
             
             if newQuantity > 0 {
                 updateQuantity(newQuantity)
@@ -84,12 +84,12 @@ class AddToCartView: UIView {
     @IBAction func minusAction(_ sender: Any) {
         
         if let currentQuantityText = quantityLabel.text,
-            let currentQuantity = Int(currentQuantityText),
+            let currentQuantity = UInt(currentQuantityText),
             currentQuantity > 0 {
             
             let newQuantity = currentQuantity - 1
             quantityLabel.text = String(newQuantity)
-            minusAction?()
+            minusAction?(newQuantity)
             
             if newQuantity == 0 {
                 updateQuantity(newQuantity)

@@ -43,7 +43,7 @@ class ShoppingCartVC: UIViewController {
     
     // MARK: - Navigation
     
-    internal func pushDetailsScene(with info: Product) {
+    internal func pushDetailsScene(with info: Cartable) {
         guard let detailsVC = Navigation.getViewController(type: ProductDetailsVC.self,
                                                            identifer: "ProductDetails") else { return }
         detailsVC.detailsViewModel = ProductDetailsViewModel(product: info)

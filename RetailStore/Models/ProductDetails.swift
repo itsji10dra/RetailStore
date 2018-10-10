@@ -1,20 +1,24 @@
 //
-//  Product.swift
+//  ProductDetails.swift
 //  RetailStore
 //
-//  Created by Jitendra on 08/10/18.
+//  Created by Jitendra on 10/10/18.
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
 import Foundation
 
-struct Product: Cartable, Decodable {
+struct ProductDetails: Cartable, Decodable {
     
     let id: Int32
-    
+        
     let title: String
     
     let thumbImage: URL
     
     let price: Double
+    
+    let images: [URL]
+    
+    let description: String
 }

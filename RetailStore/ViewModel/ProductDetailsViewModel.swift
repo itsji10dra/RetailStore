@@ -18,19 +18,19 @@ class ProductDetailsViewModel {
     
     private lazy var networkManager = NetworkManager()
 
-    private let productInfo: Product
+    private let product: Cartable
     
     // MARK: - Initializer
     
-    public init(product: Product) {
-        self.productInfo = product
+    public init(product: Cartable) {
+        self.product = product
     }
     
     // MARK: - Public Methods
     
     public func loadDetails(completionHandler: @escaping ProductDetailsResult) {
         
-        let parameter = ["productId": "\(productInfo.id)"]
+        let parameter = ["productId": "\(product.id)"]
         
         guard let url = URLManager.getURLForEndpoint(endpoint: .productDetail, appending: parameter) else { return }
         
@@ -41,9 +41,11 @@ class ProductDetailsViewModel {
             case .success(let response):
                 let productDetail = response.result
                 
+                let quantity = CartManager.default.quantityForItem(productDetail)
+
                 let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
                                                                                            images: productDetail.images,
-                                                                                           quantity: 0,
+                                                                                           quantity: quantity,
                                                                                            description: productDetail.description,
                                                                                            price: Configuration.currencySymbol + "\(productDetail.price)")
                 completionHandler(productDetailDisplayModel, nil)
@@ -69,9 +71,11 @@ class ProductDetailsViewModel {
         
             let productDetail = response.result
 
+            let quantity = CartManager.default.quantityForItem(productDetail)
+
             let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
                                                                                        images: productDetail.images,
-                                                                                       quantity: 0,
+                                                                                       quantity: quantity,
                                                                                        description: productDetail.description,
                                                                                        price: Configuration.currencySymbol + "\(productDetail.price)")
 

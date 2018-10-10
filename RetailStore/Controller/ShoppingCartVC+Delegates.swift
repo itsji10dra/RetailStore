@@ -13,27 +13,36 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return CartManager.default.getCartItemsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CartCell
         
-//        let infoObj = productInfoArray?[indexPath.row]
-//
-//        cell?.titleLabel?.text = infoObj?.title
-//        cell?.priceLabel?.text = infoObj?.price
-//        cell?.imageView?.image = infoObj?.image
+        guard let item = CartManager.default.getCartItemsAtIndex(indexPath.row) else { return cell ?? UITableViewCell() }
+
+        cell?.titleLabel?.text = item.title
+        cell?.priceLabel?.text = "\(item.price)"
+//        cell?.imageView?.image = item.thumbImage
+        cell?.addToCartView?.updateQuantity(item.quantity)
         
+        cell?.addToCartView?.plusAction = { quantity in
+            CartManager.default.addCartItem(item, quantity: quantity)
+        }
+        
+        cell?.addToCartView?.minusAction = { quantity in
+            CartManager.default.addCartItem(item, quantity: quantity)
+        }
+
         return cell ?? UITableViewCell()
     }
     
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        guard let infoObj = pagingModel.dataSource(at: indexPath.row) else { return }
-//        pushDetailsScene(with: infoObj)
+        guard let infoObj = CartManager.default.getCartItemsAtIndex(indexPath.row) else { return }
+        pushDetailsScene(with: infoObj)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     

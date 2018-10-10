@@ -8,7 +8,23 @@
 
 import Foundation
 
-struct CartItem {
+struct CartItem: Cartable {
     
+    let id: Int32
+        
+    let title: String
     
+    let thumbImage: URL
+    
+    let price: Double
+
+    var quantity: UInt = 1
+    
+    init(item: Cartable, quantity: UInt) {
+        self.id = item.id
+        self.title = item.title
+        self.thumbImage = item.thumbImage
+        self.price = item.price
+        self.quantity = quantity
+    }
 }

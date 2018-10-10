@@ -4,51 +4,51 @@
     "totalPageCount": 1,
     "result": [
         {
-            "id": 1,
+            "id": 76,
             "sectionId": 4,
             "title": "Bike Model 1",
             "thumbImage": "http://www.example.com/image.png",
             "price": 49.99
         },
         {
-            "id": 2,
+            "id": 77,
             "sectionId": 4,
             "title": "Bike Model 2",
             "thumbImage": "http://www.example.com/image.png",
             "price": 179.99
         },
         {
-            "id": 3,
+            "id": 78,
             "sectionId": 4,
             "title": "Bike Model 3",
             "thumbImage": "http://www.example.com/image.png",
             "price": 39.99
         },
         {
-            "id": 4,
+            "id": 79,
             "sectionId": 4,
             "title": "Bike Model 4",
             "thumbImage": "http://www.example.com/image.png",
             "price": 29.99
         },
         {
-            "id": 5,
+            "id": 80,
             "sectionId": 4,
             "title": "Bike Model 5",
             "thumbImage": "http://www.example.com/image.png",
             "price": 14.99
         },
         {
-            "id": 6,
+            "id": 81,
             "sectionId": 4,
             "title": "Bike Model 6",
             "thumbImage": "http://www.example.com/image.png",
             "price": 34.99
         },
         {
-            "id": 7,
+            "id": 82,
             "sectionId": 4,
-            "title": "Solid Bike Model 7",
+            "title": "Bike Model 7",
             "thumbImage": "http://www.example.com/image.png",
             "price": 11.99
         },

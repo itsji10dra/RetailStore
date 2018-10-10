@@ -16,28 +16,46 @@ class CartManager {
 
     // MARK: - Data
     
-    private lazy var cartItems: [CartItem] = []
+    private var cartItems: [CartItem] = [] {
+        didSet {
+            TabBarManager.default.updateCartBadge(value: "\(getCartItemsCount())")
+        }
+    }
     
     // MARK: - Public Methods
     
     public func deleteCartItemAt(index: Int) {
-        self.cartItems.remove(at: index)
+        cartItems.remove(at: index)
     }
     
     public func clearCart() {
-        self.cartItems.removeAll()
+        cartItems.removeAll()
     }
     
-    public func updateCartItemQuantity(_ quantity: Int, index: Int) {
-        var item = self.cartItems.remove(at: index)
-        
-        //Update quantity
-        
-        self.cartItems.insert(item, at: index)
+    public func updateCartItemQuantity(_ quantity: UInt, index: Int) {
+        var item = cartItems.remove(at: index)
+        item.quantity = quantity
+        cartItems.insert(item, at: index)
     }
     
-    public func addCartItem(_ item: CartItem) {
-        
-        self.cartItems.append(item)
+    public func addCartItem(_ item: Cartable, quantity: UInt) {
+        if let index = cartItems.firstIndex(where: { $0.id == item.id }) {
+            updateCartItemQuantity(quantity, index: index)
+        } else {
+            let cartItem = CartItem(item: item, quantity: quantity)
+            cartItems.append(cartItem)
+        }
+    }
+    
+    public func quantityForItem(_ item: Cartable) -> UInt {
+        return cartItems.first(where: { $0.id == item.id })?.quantity ?? 0
+    }
+    
+    public func getCartItemsAtIndex(_ index: Int) -> CartItem? {
+        return index < getCartItemsCount() ? cartItems[index] : nil
+    }
+    
+    public func getCartItemsCount() -> Int {
+        return cartItems.count
     }
 }
