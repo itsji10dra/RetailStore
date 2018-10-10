@@ -18,7 +18,9 @@ class CartManager {
     
     private var cartItems: [CartItem] = [] {
         didSet {
-            TabBarManager.default.updateCartBadge(value: "\(getCartItemsCount())")
+            let count = getCartItemsCount()
+            let badgeValue: String? = count == 0 ? nil : "\(count)"
+            TabBarManager.default.updateCartBadge(value: badgeValue)
         }
     }
     
@@ -34,6 +36,7 @@ class CartManager {
     
     public func updateCartItemQuantity(_ quantity: UInt, index: Int) {
         var item = cartItems.remove(at: index)
+        guard quantity > 0 else { return }
         item.quantity = quantity
         cartItems.insert(item, at: index)
     }

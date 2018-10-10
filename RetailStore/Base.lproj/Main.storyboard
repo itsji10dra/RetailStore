@@ -257,7 +257,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="msm-cj-v3R" customClass="AddToCartView" customModule="RetailStore" customModuleProvider="target">
-                                                    <rect key="frame" x="548" y="49.5" width="100" height="40"/>
+                                                    <rect key="frame" x="256" y="49.5" width="100" height="40"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="OJQ-Hg-IYH"/>
@@ -346,14 +346,20 @@
                         <viewLayoutGuide key="safeArea" id="svE-YF-k8n"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping Cart" id="ltb-tm-rHL">
+                        <barButtonItem key="leftBarButtonItem" title="Clear" id="TSo-l0-pSR">
+                            <connections>
+                                <action selector="clearAllAction:" destination="xVG-d1-L4T" id="RVR-QW-77j"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Edit" id="ZhK-eu-hKv">
                             <connections>
-                                <action selector="editAction:" destination="xVG-d1-L4T" id="hp6-4G-mjL"/>
+                                <action selector="editAction" destination="xVG-d1-L4T" id="Fn0-Dt-oIc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="checkoutButton" destination="fgf-EI-MXv" id="uJl-xK-UDd"/>
+                        <outlet property="clearBarButton" destination="TSo-l0-pSR" id="o2D-dv-DFe"/>
                         <outlet property="editBarButton" destination="ZhK-eu-hKv" id="e88-LY-0yM"/>
                         <outlet property="minimumValueLabel" destination="D7r-fz-gbT" id="vnc-E8-aUw"/>
                         <outlet property="priceLabel" destination="hWL-HE-nN7" id="UxS-et-egT"/>
@@ -488,7 +494,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8E-OK-3k4" customClass="AddToCartView" customModule="RetailStore" customModuleProvider="target">
-                                                            <rect key="frame" x="548" y="49.5" width="100" height="40"/>
+                                                            <rect key="frame" x="256" y="49.5" width="100" height="40"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="AQu-gf-ZeF"/>

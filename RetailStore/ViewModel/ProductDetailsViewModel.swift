@@ -18,7 +18,7 @@ class ProductDetailsViewModel {
     
     private lazy var networkManager = NetworkManager()
 
-    private let product: Cartable
+    internal let product: Cartable
     
     // MARK: - Initializer
     

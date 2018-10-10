@@ -98,6 +98,14 @@ class ProductDetailsVC: UIViewController {
         addToCartView.updateQuantity(info.quantity)
         descriptionLabel.text = info.description
         priceLabel.text = info.price
+        
+        addToCartView.plusAction = { [unowned self] quantity in
+            CartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
+        }
+        
+        addToCartView.minusAction = { [unowned self] quantity in
+            CartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
+        }
     }
     
     // MARK: - Alerts
