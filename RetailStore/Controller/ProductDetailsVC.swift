@@ -22,7 +22,7 @@ class ProductDetailsVC: UIViewController {
 
     // MARK: - Data
 
-    struct ProductDetailsDisplayModel {
+    struct ProductDetailsDisplayInfo {
         
         let title: String
         
@@ -39,7 +39,7 @@ class ProductDetailsVC: UIViewController {
     
     internal var detailsViewModel: ProductDetailsViewModel!
     
-    internal var displayModelInfo: ProductDetailsDisplayModel? {
+    internal var displayModelInfo: ProductDetailsDisplayInfo? {
         didSet {
             DispatchQueue.main.async { [weak self] in self?.refreshUI() }
         }
@@ -50,22 +50,7 @@ class ProductDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ActivityIndicator.startAnimating { [weak self] in
-            self?.navigationController?.popViewController(animated: true)
-        }
-        
-        let handler: ((ProductDetailsDisplayModel?) -> Void) = { displayModel in
-            
-            ActivityIndicator.stopAnimating()
-            
-            if let model = displayModel {
-                self.displayModelInfo = model
-            } else {
-                //Show Error
-            }
-        }
-        
-        Configuration.useStubData ? detailsViewModel.loadStubDetails(completionHandler: handler) : detailsViewModel.loadDetails(completionHandler: handler)
+        loadDetails()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -74,6 +59,28 @@ class ProductDetailsVC: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func loadDetails() {
+        
+        ActivityIndicator.startAnimating { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
+        let handler: ((ProductDetailsDisplayInfo?) -> Void) = { [weak self] displayModel in
+            
+            ActivityIndicator.stopAnimating()
+            
+            if let model = displayModel {
+                self?.displayModelInfo = model
+            } else {
+                DispatchQueue.main.async {
+                    self?.showErrorAlert(with: "Unable to fetch details.")
+                }
+            }
+        }
+        
+        Configuration.useStubData ? detailsViewModel.loadStubDetails(completionHandler: handler) : detailsViewModel.loadDetails(completionHandler: handler)
+    }
     
     private func refreshUI() {
         
@@ -84,5 +91,26 @@ class ProductDetailsVC: UIViewController {
         addToCartView.updateQuantity(info.quantity)
         descriptionLabel.text = info.description
         priceLabel.text = info.price
+    }
+    
+    // MARK: - Alerts
+    
+    private func showErrorAlert(with message: String) {
+        
+        let alertController = UIAlertController(title: "Error",
+                                                message: message,
+                                                preferredStyle: .alert)
+        
+        let backAction = UIAlertAction(title: "Back", style: .destructive) { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        alertController.addAction(backAction)
+        
+        let retryAction = UIAlertAction(title: "Retry", style: .default) { [weak self] _ in
+            self?.loadDetails()
+        }
+        alertController.addAction(retryAction)
+
+        present(alertController, animated: true, completion: nil)
     }
 }

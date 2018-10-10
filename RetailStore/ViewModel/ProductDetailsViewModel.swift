@@ -26,7 +26,7 @@ class ProductDetailsViewModel {
     
     // MARK: - Public Methods
     
-    public func loadDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayModel?) -> Void) {
+    public func loadDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayInfo?) -> Void) {
         
         let parameter = ["productId": "\(productInfo.id)"]
         
@@ -39,7 +39,7 @@ class ProductDetailsViewModel {
             case .success(let response):
                 let productDetail = response.result
                 
-                let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayModel(title: productDetail.title,
+                let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
                                                                                             images: productDetail.images,
                                                                                             quantity: 0,
                                                                                             description: productDetail.description,
@@ -56,22 +56,22 @@ class ProductDetailsViewModel {
         dataTask?.resume()
     }
     
-    public func loadStubDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayModel?) -> Void) {
+    public func loadStubDetails(completionHandler: @escaping (ProductDetailsVC.ProductDetailsDisplayInfo?) -> Void) {
 
         //Adding delay, so that loading view can be shown.
         DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { 
 
             guard let response = StubManager.getStubResponse(endpoint: .productDetail,
-                                                         parameters: [:],
-                                                         type: ProductDetails.self) else { return completionHandler(nil) }
+                                                             parameters: [:],
+                                                             type: ProductDetails.self) else { return completionHandler(nil) }
         
             let productDetail = response.result
 
-            let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayModel(title: productDetail.title,
-                                                                                        images: productDetail.images,
-                                                                                        quantity: 0,
-                                                                                        description: productDetail.description,
-                                                                                        price: Configuration.currencySymbol + "\(productDetail.price)")
+            let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
+                                                                                       images: productDetail.images,
+                                                                                       quantity: 0,
+                                                                                       description: productDetail.description,
+                                                                                       price: Configuration.currencySymbol + "\(productDetail.price)")
 
             completionHandler(productDetailDisplayModel)
         }
