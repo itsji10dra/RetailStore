@@ -10,7 +10,7 @@ struct Configuration {
     
     static let url                      = "https://server-url.com/"
     
-    static let pageSize                 = 15
+    static let pageSize                 = 15        //Stub will be using page-size 15.
     
     static let storeName                = "Fantastic Store"
 

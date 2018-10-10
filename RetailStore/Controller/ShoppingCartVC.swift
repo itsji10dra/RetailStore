@@ -40,4 +40,13 @@ class ShoppingCartVC: UIViewController {
         tableView.setEditing(!tableView.isEditing, animated: true)
         editBarButton.title = tableView.isEditing ? "Done" : "Edit"
     }
+    
+    // MARK: - Navigation
+    
+    internal func pushDetailsScene(with info: Product) {
+        guard let detailsVC = Navigation.getViewController(type: ProductDetailsVC.self,
+                                                           identifer: "ProductDetails") else { return }
+        detailsVC.detailsViewModel = ProductDetailsViewModel(product: info)
+        navigationController?.pushViewController(detailsVC, animated: true)
+    }
 }
