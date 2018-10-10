@@ -10,19 +10,23 @@ import UIKit
 
 enum EndPoint: String {
     
-    case sections   = "v1/sections/"
+    case sections       = "v1/sections/"
     
-    case products   = "v1/products/"
+    case products       = "v1/products/"
+    
+    case productDetail  = "v1/product-details/"
 }
 
 extension EndPoint {
     
     private var mandatoryQueryItems: [String] {              //This includes array of `mandatory` parameters, for status code 200.
         switch self {
+        case .sections:
+            return []
         case .products:
             return ["sectionId"]
-        default:
-            return []
+        case .productDetail:
+            return ["productId"]
         }
     }
     

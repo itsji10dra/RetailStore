@@ -55,7 +55,7 @@ class AddToCartView: UIView {
     
     // MARK: - Public Methods
 
-    private func updateQuantity(_ quantity: Int = 0) {
+    public func updateQuantity(_ quantity: Int = 0) {
         quantityLabel.text = String(quantity)
         
         let isHidden = quantity == 0

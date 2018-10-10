@@ -151,7 +151,7 @@ class PagingViewModel<T, E> where T:Decodable {
         guard let response = StubManager.getStubResponse(endpoint: endPoint,
                                                          page: number,
                                                          parameters: parameters ?? [:],
-                                                         type: T.self) else { return completionHandler([], nil, number) }
+                                                         type: [T].self) else { return completionHandler([], nil, number) }
         
         let page = response.page
         

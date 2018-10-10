@@ -85,7 +85,9 @@ class ProductsVC: UIViewController {
         
         if loadingInfo.isLoading {
             if loadingInfo.page == 0 {
-                ActivityIndicator.startAnimating()
+                ActivityIndicator.startAnimating { [weak self] in
+                    self?.navigationController?.popViewController(animated: true)
+                }
             } else {
                 loaderView.showMessage("Loading...", animateLoader: true)
             }
@@ -115,7 +117,7 @@ class ProductsVC: UIViewController {
     internal func pushDetailsScene(with info: Product) {
         guard let detailsVC = Navigation.getViewController(type: ProductDetailsVC.self,
                                                            identifer: "ProductDetails") else { return }
-        detailsVC.productInfo = info
+        detailsVC.detailsViewModel = ProductDetailsViewModel(product: info)
         navigationController?.pushViewController(detailsVC, animated: true)
     }
 }

@@ -13,7 +13,7 @@ struct StubManager {
     static func getStubResponse<T: Decodable>(endpoint: EndPoint,
                                               page: UInt = 0,
                                               parameters: Parameters,
-                                              type: T.Type) -> Response<[T]>? {
+                                              type: T.Type) -> Response<T>? {
         let fileName: String
         
         switch endpoint {
@@ -22,13 +22,15 @@ struct StubManager {
         case .products:
             let sectionId = parameters["sectionId"] ?? ""
             fileName = "Product-SectionId" + sectionId + "-Page" + "\(page)"
+        case .productDetail:
+            fileName = "ProductDetails"
         }
         
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else { return nil }
         
         guard let data = try? Data(contentsOf: fileURL) else { return nil }
 
-        let response = try? JSONDecoder().decode(Response<[T]>.self, from: data)
+        let response = try? JSONDecoder().decode(Response<T>.self, from: data)
 
         return response
     }

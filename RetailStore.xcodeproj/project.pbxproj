@@ -12,6 +12,8 @@
 		1092F9E4216DDEA1002EE93F /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */; };
 		1092F9E6216DE3B4002EE93F /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E5216DE3B4002EE93F /* ImagesCell.swift */; };
 		1092F9E8216DE564002EE93F /* ProductDetailsVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E7216DE564002EE93F /* ProductDetailsVC+Delegates.swift */; };
+		1092F9EA216DFD78002EE93F /* ProductDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E9216DFD78002EE93F /* ProductDetails.json */; };
+		1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */; };
 		10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49136216B689F00E2DBDD /* AppDelegate.swift */; };
 		10A49139216B689F00E2DBDD /* SectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A49138216B689F00E2DBDD /* SectionVC.swift */; };
 		10A4913C216B689F00E2DBDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10A4913A216B689F00E2DBDD /* Main.storyboard */; };
@@ -64,6 +66,8 @@
 		1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		1092F9E5216DE3B4002EE93F /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		1092F9E7216DE564002EE93F /* ProductDetailsVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailsVC+Delegates.swift"; sourceTree = "<group>"; };
+		1092F9E9216DFD78002EE93F /* ProductDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductDetails.json; sourceTree = "<group>"; };
+		1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		10A49133216B689F00E2DBDD /* RetailStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A49136216B689F00E2DBDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10A49138216B689F00E2DBDD /* SectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionVC.swift; sourceTree = "<group>"; };
@@ -258,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				10A49181216B8DFF00E2DBDD /* PagingViewModel.swift */,
+				1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				10A4918F216BD3F800E2DBDD /* Product-SectionId2-Page0.json */,
 				10A49194216BD3F900E2DBDD /* Product-SectionId3-Page0.json */,
 				10A49192216BD3F800E2DBDD /* Product-SectionId4-Page0.json */,
+				1092F9E9216DFD78002EE93F /* ProductDetails.json */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -368,6 +374,7 @@
 			files = (
 				10A49141216B68A100E2DBDD /* LaunchScreen.storyboard in Resources */,
 				10A4919B216BD3F900E2DBDD /* Product-SectionId3-Page0.json in Resources */,
+				1092F9EA216DFD78002EE93F /* ProductDetails.json in Resources */,
 				1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */,
 				10A49196216BD3F900E2DBDD /* Product-SectionId2-Page0.json in Resources */,
 				10A49161216B6CF800E2DBDD /* Product-SectionId1-Page0.json in Resources */,
@@ -406,6 +413,7 @@
 				10A49173216B868400E2DBDD /* ProductCell.swift in Sources */,
 				10A4915F216B6CE400E2DBDD /* Product.swift in Sources */,
 				1092F9E8216DE564002EE93F /* ProductDetailsVC+Delegates.swift in Sources */,
+				1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */,
 				10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */,
 				1092F9E6216DE3B4002EE93F /* ImagesCell.swift in Sources */,
 				10A4916F216B84FD00E2DBDD /* URLManager.swift in Sources */,
