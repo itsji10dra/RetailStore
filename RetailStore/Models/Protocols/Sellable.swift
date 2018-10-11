@@ -1,5 +1,5 @@
 //
-//  Shopable.swift
+//  Sellable.swift
 //  RetailStore
 //
 //  Created by Jitendra on 10/10/18.
@@ -17,11 +17,4 @@ protocol Sellable {
     var thumbImage: URL { get }
     
     var price: Double { get }
-}
-
-protocol Cartable: Sellable {
-    
-    var quantity: UInt { get set }
-    
-    init(item: Sellable, quantity: UInt)
 }

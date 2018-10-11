@@ -49,9 +49,8 @@
 		10A4918C216BBA8C00E2DBDD /* StubManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4918B216BBA8C00E2DBDD /* StubManager.swift */; };
 		10A4918E216BC71A00E2DBDD /* ProductsVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4918D216BC71900E2DBDD /* ProductsVC+Delegates.swift */; };
 		10A4919E216C626D00E2DBDD /* ShoppingCartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A4919D216C626D00E2DBDD /* ShoppingCartVC.swift */; };
-		10CF34F7216E794300CA464F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34F6216E794300CA464F /* Protocols.swift */; };
+		10CF34F7216E794300CA464F /* Sellable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34F6216E794300CA464F /* Sellable.swift */; };
 		10CF34F9216E796300CA464F /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34F8216E796300CA464F /* ProductDetails.swift */; };
-		10CF34FB216F6A8500CA464F /* StoreCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34FA216F6A8500CA464F /* StoreCartManager.swift */; };
 		10CF34FE216F85CF00CA464F /* UIView+Constraints+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */; };
 		10CF3635216FB95000CA464F /* Product-SectionId1-Page2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10CF35F2216FB94F00CA464F /* Product-SectionId1-Page2.json */; };
 		10CF3636216FB95000CA464F /* Product-SectionId2-Page0.json in Resources */ = {isa = PBXBuildFile; fileRef = 10CF35F3216FB94F00CA464F /* Product-SectionId2-Page0.json */; };
@@ -125,6 +124,12 @@
 		10CF3681216FD2DF00CA464F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF367E216FD2DE00CA464F /* ImageCache.swift */; };
 		10CF3682216FD2DF00CA464F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF367F216FD2DE00CA464F /* ImageDownloader.swift */; };
 		10CF3683216FD2DF00CA464F /* ImageDownloadCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3680216FD2DE00CA464F /* ImageDownloadCacheManager.swift */; };
+		10CF368C216FDB8600CA464F /* StoredCartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3688216FDB8500CA464F /* StoredCartItem.swift */; };
+		10CF3690216FE12200CA464F /* Cartable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF368F216FE12200CA464F /* Cartable.swift */; };
+		10CF3692216FE40400CA464F /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF368A216FDB8500CA464F /* Storable.swift */; };
+		10CF3693216FE9EA00CA464F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3687216FDB8500CA464F /* RealmManager.swift */; };
+		37496E90828CBF7B114D0316 /* Pods_RetailStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B409E0735B85913E6F77DA54 /* Pods_RetailStore.framework */; };
+		69FB841E5BDC2E1BC6C58319 /* Pods_RetailStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A78C15D3EB8EE048BE78B98 /* Pods_RetailStoreTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,9 +190,8 @@
 		10A4918B216BBA8C00E2DBDD /* StubManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StubManager.swift; sourceTree = "<group>"; };
 		10A4918D216BC71900E2DBDD /* ProductsVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductsVC+Delegates.swift"; sourceTree = "<group>"; };
 		10A4919D216C626D00E2DBDD /* ShoppingCartVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartVC.swift; sourceTree = "<group>"; };
-		10CF34F6216E794300CA464F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		10CF34F6216E794300CA464F /* Sellable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sellable.swift; sourceTree = "<group>"; };
 		10CF34F8216E796300CA464F /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
-		10CF34FA216F6A8500CA464F /* StoreCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCartManager.swift; sourceTree = "<group>"; };
 		10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints+Extension.swift"; sourceTree = "<group>"; };
 		10CF35F2216FB94F00CA464F /* Product-SectionId1-Page2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId1-Page2.json"; sourceTree = "<group>"; };
 		10CF35F3216FB94F00CA464F /* Product-SectionId2-Page0.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Product-SectionId2-Page0.json"; sourceTree = "<group>"; };
@@ -261,6 +265,16 @@
 		10CF367E216FD2DE00CA464F /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		10CF367F216FD2DE00CA464F /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		10CF3680216FD2DE00CA464F /* ImageDownloadCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadCacheManager.swift; sourceTree = "<group>"; };
+		10CF3687216FDB8500CA464F /* RealmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		10CF3688216FDB8500CA464F /* StoredCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredCartItem.swift; sourceTree = "<group>"; };
+		10CF368A216FDB8500CA464F /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
+		10CF368F216FE12200CA464F /* Cartable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartable.swift; sourceTree = "<group>"; };
+		1A78C15D3EB8EE048BE78B98 /* Pods_RetailStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetailStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A0ED19ADD185A7AB17004A /* Pods-RetailStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore.release.xcconfig"; sourceTree = "<group>"; };
+		9C0C5AA474417FB53EA3F369 /* Pods-RetailStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStoreTests/Pods-RetailStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B409E0735B85913E6F77DA54 /* Pods_RetailStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetailStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B600DB2390ADB7A68C62E11F /* Pods-RetailStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStoreTests/Pods-RetailStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE9D6D0D5C6F7A4144CE4A68 /* Pods-RetailStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +282,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37496E90828CBF7B114D0316 /* Pods_RetailStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69FB841E5BDC2E1BC6C58319 /* Pods_RetailStoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +312,8 @@
 				10A49135216B689F00E2DBDD /* RetailStore */,
 				10A4914A216B68A100E2DBDD /* RetailStoreTests */,
 				10A49134216B689F00E2DBDD /* Products */,
+				E671BF7FA24624AE277A8D33 /* Pods */,
+				AF6A969D09A42E2E825849EE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,6 +334,7 @@
 				10A49169216B80EE00E2DBDD /* Configuration.swift */,
 				10A49183216B8EF000E2DBDD /* Alias.swift */,
 				10A4913A216B689F00E2DBDD /* Main.storyboard */,
+				10CF3686216FDB8500CA464F /* Realm */,
 				10CF367D216FD2DE00CA464F /* Caching */,
 				10CF34FC216F6A8F00CA464F /* CartManager */,
 				10A49187216B924F00E2DBDD /* Extension */,
@@ -361,7 +380,7 @@
 		10A49159216B6B0500E2DBDD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				10CF34F6216E794300CA464F /* Protocols.swift */,
+				10CF3691216FE12F00CA464F /* Protocols */,
 				10A49167216B805100E2DBDD /* Response.swift */,
 				10A4915A216B6B1400E2DBDD /* Section.swift */,
 				10A4915E216B6CE300E2DBDD /* Product.swift */,
@@ -436,8 +455,8 @@
 			isa = PBXGroup;
 			children = (
 				10A49185216B924900E2DBDD /* UIView+Extension.swift */,
-				10CF367B216FD2B300CA464F /* UIImageView+Extension.swift */,
 				10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */,
+				10CF367B216FD2B300CA464F /* UIImageView+Extension.swift */,
 				1092F9F7216E37E6002EE93F /* UITabBarItem+Extension.swift */,
 			);
 			path = Extension;
@@ -456,7 +475,6 @@
 			isa = PBXGroup;
 			children = (
 				1092F9FA216E3D7A002EE93F /* CartManager.swift */,
-				10CF34FA216F6A8500CA464F /* StoreCartManager.swift */,
 			);
 			path = CartManager;
 			sourceTree = "<group>";
@@ -562,6 +580,45 @@
 			path = Caching;
 			sourceTree = "<group>";
 		};
+		10CF3686216FDB8500CA464F /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				10CF368A216FDB8500CA464F /* Storable.swift */,
+				10CF3687216FDB8500CA464F /* RealmManager.swift */,
+				10CF3688216FDB8500CA464F /* StoredCartItem.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		10CF3691216FE12F00CA464F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				10CF34F6216E794300CA464F /* Sellable.swift */,
+				10CF368F216FE12200CA464F /* Cartable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AF6A969D09A42E2E825849EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B409E0735B85913E6F77DA54 /* Pods_RetailStore.framework */,
+				1A78C15D3EB8EE048BE78B98 /* Pods_RetailStoreTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E671BF7FA24624AE277A8D33 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE9D6D0D5C6F7A4144CE4A68 /* Pods-RetailStore.debug.xcconfig */,
+				37A0ED19ADD185A7AB17004A /* Pods-RetailStore.release.xcconfig */,
+				9C0C5AA474417FB53EA3F369 /* Pods-RetailStoreTests.debug.xcconfig */,
+				B600DB2390ADB7A68C62E11F /* Pods-RetailStoreTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -569,9 +626,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10A49150216B68A100E2DBDD /* Build configuration list for PBXNativeTarget "RetailStore" */;
 			buildPhases = (
+				E8CD51CA0FE1BE9B18096B47 /* [CP] Check Pods Manifest.lock */,
 				10A4912F216B689F00E2DBDD /* Sources */,
 				10A49130216B689F00E2DBDD /* Frameworks */,
 				10A49131216B689F00E2DBDD /* Resources */,
+				CE120CC572C84F7F2D06C432 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -586,6 +645,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10A49153216B68A100E2DBDD /* Build configuration list for PBXNativeTarget "RetailStoreTests" */;
 			buildPhases = (
+				1E5BB3F8B49A2A871E61EDA8 /* [CP] Check Pods Manifest.lock */,
 				10A49143216B68A100E2DBDD /* Sources */,
 				10A49144216B68A100E2DBDD /* Frameworks */,
 				10A49145216B68A100E2DBDD /* Resources */,
@@ -728,6 +788,65 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1E5BB3F8B49A2A871E61EDA8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetailStoreTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE120CC572C84F7F2D06C432 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8CD51CA0FE1BE9B18096B47 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RetailStore-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10A4912F216B689F00E2DBDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -742,19 +861,20 @@
 				1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */,
 				10A4918E216BC71A00E2DBDD /* ProductsVC+Delegates.swift in Sources */,
 				1092F9F4216E21A4002EE93F /* ShoppingCartVC+Delegates.swift in Sources */,
-				10CF34FB216F6A8500CA464F /* StoreCartManager.swift in Sources */,
 				10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */,
 				10CF3682216FD2DF00CA464F /* ImageDownloader.swift in Sources */,
 				10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */,
 				10CF3681216FD2DF00CA464F /* ImageCache.swift in Sources */,
 				10A4918A216BB87900E2DBDD /* SectionVC+Delegates.swift in Sources */,
 				10A4918C216BBA8C00E2DBDD /* StubManager.swift in Sources */,
-				10CF34F7216E794300CA464F /* Protocols.swift in Sources */,
+				10CF34F7216E794300CA464F /* Sellable.swift in Sources */,
 				10A49173216B868400E2DBDD /* ProductCell.swift in Sources */,
 				10A4915F216B6CE400E2DBDD /* Product.swift in Sources */,
 				1092F9FD216E3F73002EE93F /* CartItem.swift in Sources */,
 				1092F9E8216DE564002EE93F /* ProductDetailsVC+Delegates.swift in Sources */,
+				10CF3692216FE40400CA464F /* Storable.swift in Sources */,
 				1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */,
+				10CF3690216FE12200CA464F /* Cartable.swift in Sources */,
 				10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */,
 				10CF34F9216E796300CA464F /* ProductDetails.swift in Sources */,
 				10CF3683216FD2DF00CA464F /* ImageDownloadCacheManager.swift in Sources */,
@@ -772,10 +892,12 @@
 				10A49186216B924900E2DBDD /* UIView+Extension.swift in Sources */,
 				1092F9F9216E39D4002EE93F /* TabBarManager.swift in Sources */,
 				10A4917E216B8BAB00E2DBDD /* Navigation.swift in Sources */,
+				10CF3693216FE9EA00CA464F /* RealmManager.swift in Sources */,
 				10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */,
 				10CF367A216FBFB800CA464F /* CartViewModel.swift in Sources */,
 				10A49168216B805100E2DBDD /* Response.swift in Sources */,
 				10A4917A216B8B1200E2DBDD /* LoadingView.swift in Sources */,
+				10CF368C216FDB8600CA464F /* StoredCartItem.swift in Sources */,
 				10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -869,7 +991,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -924,7 +1046,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -936,6 +1058,7 @@
 		};
 		10A49151216B68A100E2DBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE9D6D0D5C6F7A4144CE4A68 /* Pods-RetailStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -954,6 +1077,7 @@
 		};
 		10A49152216B68A100E2DBDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37A0ED19ADD185A7AB17004A /* Pods-RetailStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -972,6 +1096,7 @@
 		};
 		10A49154216B68A100E2DBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C0C5AA474417FB53EA3F369 /* Pods-RetailStoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -992,6 +1117,7 @@
 		};
 		10A49155216B68A100E2DBDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B600DB2390ADB7A68C62E11F /* Pods-RetailStoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
