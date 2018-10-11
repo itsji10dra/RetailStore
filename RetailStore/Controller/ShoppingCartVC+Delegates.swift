@@ -24,9 +24,9 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
 
         cell?.titleLabel?.text = item.title
         cell?.priceLabel?.text = Configuration.currencySymbol + " \(item.price)"
-//        cell?.imageView?.image = item.thumbImage
         cell?.addToCartView?.updateQuantity(item.quantity)
-        
+        cell?.thumbImageView?.setImage(with: item.thumbImage, placeholder: #imageLiteral(resourceName: "placeholder-small"), useDiskCache: true)
+
         cell?.addToCartView?.plusAction = { quantity in
             StoreCartManager.default.addCartItem(item, quantity: quantity)
             return true

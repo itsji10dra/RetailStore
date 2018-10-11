@@ -21,8 +21,9 @@ class CartCell: UITableViewCell {
     @IBOutlet weak var addToCartView: AddToCartView?
 
     // MARK: - View
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        thumbImageView?.image = nil
     }
 }

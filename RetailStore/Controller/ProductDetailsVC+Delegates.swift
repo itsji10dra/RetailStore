@@ -20,8 +20,7 @@ extension ProductDetailsVC: UICollectionViewDataSource, UICollectionViewDelegate
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? ImagesCell
         
         let url = images[indexPath.row]
-
-//        cell?.imageView?.image
+        cell?.imageView?.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder-big"), useDiskCache: true)
         
         return cell ?? UICollectionViewCell()
     }

@@ -36,9 +36,12 @@ extension ProductsVC: UITableViewDataSource, UITableViewDelegate {
         
         cell?.titleLabel?.text = infoObj?.title
         cell?.priceLabel?.text = infoObj?.price
-//        cell?.imageView?.image = infoObj?.image
         cell?.addToCartView?.updateQuantity(infoObj?.quantity ?? 0)
 
+        if let url = infoObj?.image {
+            cell?.thumbImageView?.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder-small"), useDiskCache: true)
+        }
+        
         cell?.addToCartView?.plusAction = { [unowned self] quantity in
             guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return false }
             StoreCartManager.default.addCartItem(infoObj, quantity: quantity)

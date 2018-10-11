@@ -13,4 +13,11 @@ class ImagesCell: UICollectionViewCell {
     // MARK: - IBOutlets
     
     @IBOutlet weak var imageView: UIImageView?
+    
+    // MARK: - View
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView?.image = nil
+    }
 }

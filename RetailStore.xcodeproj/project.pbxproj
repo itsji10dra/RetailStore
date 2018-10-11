@@ -121,6 +121,10 @@
 		10CF3676216FB95000CA464F /* ProductDetails-Id18.json in Resources */ = {isa = PBXBuildFile; fileRef = 10CF3634216FB94F00CA464F /* ProductDetails-Id18.json */; };
 		10CF3678216FB97500CA464F /* stub_generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 10CF3677216FB97500CA464F /* stub_generator.py */; };
 		10CF367A216FBFB800CA464F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3679216FBFB800CA464F /* CartViewModel.swift */; };
+		10CF367C216FD2B300CA464F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF367B216FD2B300CA464F /* UIImageView+Extension.swift */; };
+		10CF3681216FD2DF00CA464F /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF367E216FD2DE00CA464F /* ImageCache.swift */; };
+		10CF3682216FD2DF00CA464F /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF367F216FD2DE00CA464F /* ImageDownloader.swift */; };
+		10CF3683216FD2DF00CA464F /* ImageDownloadCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3680216FD2DE00CA464F /* ImageDownloadCacheManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -253,6 +257,10 @@
 		10CF3634216FB94F00CA464F /* ProductDetails-Id18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ProductDetails-Id18.json"; sourceTree = "<group>"; };
 		10CF3677216FB97500CA464F /* stub_generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = stub_generator.py; sourceTree = "<group>"; usesTabs = 1; };
 		10CF3679216FBFB800CA464F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		10CF367B216FD2B300CA464F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		10CF367E216FD2DE00CA464F /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		10CF367F216FD2DE00CA464F /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		10CF3680216FD2DE00CA464F /* ImageDownloadCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloadCacheManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,6 +316,7 @@
 				10A49169216B80EE00E2DBDD /* Configuration.swift */,
 				10A49183216B8EF000E2DBDD /* Alias.swift */,
 				10A4913A216B689F00E2DBDD /* Main.storyboard */,
+				10CF367D216FD2DE00CA464F /* Caching */,
 				10CF34FC216F6A8F00CA464F /* CartManager */,
 				10A49187216B924F00E2DBDD /* Extension */,
 				10A4917B216B8BAB00E2DBDD /* UI */,
@@ -427,6 +436,7 @@
 			isa = PBXGroup;
 			children = (
 				10A49185216B924900E2DBDD /* UIView+Extension.swift */,
+				10CF367B216FD2B300CA464F /* UIImageView+Extension.swift */,
 				10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */,
 				1092F9F7216E37E6002EE93F /* UITabBarItem+Extension.swift */,
 			);
@@ -540,6 +550,16 @@
 				10CF3601216FB94F00CA464F /* ProductDetails-Id82.json */,
 			);
 			path = ProductDetails;
+			sourceTree = "<group>";
+		};
+		10CF367D216FD2DE00CA464F /* Caching */ = {
+			isa = PBXGroup;
+			children = (
+				10CF367E216FD2DE00CA464F /* ImageCache.swift */,
+				10CF367F216FD2DE00CA464F /* ImageDownloader.swift */,
+				10CF3680216FD2DE00CA464F /* ImageDownloadCacheManager.swift */,
+			);
+			path = Caching;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -713,6 +733,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10CF367C216FD2B300CA464F /* UIImageView+Extension.swift in Sources */,
 				1092F9F8216E37E6002EE93F /* UITabBarItem+Extension.swift in Sources */,
 				10A49184216B8EF000E2DBDD /* Alias.swift in Sources */,
 				10CF34FE216F85CF00CA464F /* UIView+Constraints+Extension.swift in Sources */,
@@ -723,7 +744,9 @@
 				1092F9F4216E21A4002EE93F /* ShoppingCartVC+Delegates.swift in Sources */,
 				10CF34FB216F6A8500CA464F /* StoreCartManager.swift in Sources */,
 				10A4917F216B8BAB00E2DBDD /* ActivityIndicator.swift in Sources */,
+				10CF3682216FD2DF00CA464F /* ImageDownloader.swift in Sources */,
 				10A49182216B8DFF00E2DBDD /* PagingViewModel.swift in Sources */,
+				10CF3681216FD2DF00CA464F /* ImageCache.swift in Sources */,
 				10A4918A216BB87900E2DBDD /* SectionVC+Delegates.swift in Sources */,
 				10A4918C216BBA8C00E2DBDD /* StubManager.swift in Sources */,
 				10CF34F7216E794300CA464F /* Protocols.swift in Sources */,
@@ -734,6 +757,7 @@
 				1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */,
 				10A49170216B84FD00E2DBDD /* EndPoint.swift in Sources */,
 				10CF34F9216E796300CA464F /* ProductDetails.swift in Sources */,
+				10CF3683216FD2DF00CA464F /* ImageDownloadCacheManager.swift in Sources */,
 				1092F9E6216DE3B4002EE93F /* ImagesCell.swift in Sources */,
 				1092F9FB216E3D7A002EE93F /* CartManager.swift in Sources */,
 				10A4916F216B84FD00E2DBDD /* URLManager.swift in Sources */,
