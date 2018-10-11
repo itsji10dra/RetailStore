@@ -32,7 +32,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
             return true
         }
         
-        cell?.addToCartView?.minusAction = { quantity in
+        cell?.addToCartView?.minusAction = { [unowned self] quantity in
             if quantity == 0 {
                 self.showDeleteAlertForItemAtIndexPath(indexPath)
                 return false
@@ -63,8 +63,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            StoreCartManager.default.deleteCartItemAt(index: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .automatic)
+            showDeleteAlertForItemAtIndexPath(indexPath)
         }
     }
 }

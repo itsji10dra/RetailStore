@@ -59,6 +59,7 @@
 		10CF34F7216E794300CA464F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34F6216E794300CA464F /* Protocols.swift */; };
 		10CF34F9216E796300CA464F /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34F8216E796300CA464F /* ProductDetails.swift */; };
 		10CF34FB216F6A8500CA464F /* StoreCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34FA216F6A8500CA464F /* StoreCartManager.swift */; };
+		10CF34FE216F85CF00CA464F /* UIView+Constraints+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		10CF34F6216E794300CA464F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		10CF34F8216E796300CA464F /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		10CF34FA216F6A8500CA464F /* StoreCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCartManager.swift; sourceTree = "<group>"; };
+		10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -302,6 +304,7 @@
 			isa = PBXGroup;
 			children = (
 				10A49185216B924900E2DBDD /* UIView+Extension.swift */,
+				10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */,
 				1092F9F7216E37E6002EE93F /* UITabBarItem+Extension.swift */,
 			);
 			path = Extension;
@@ -445,6 +448,7 @@
 			files = (
 				1092F9F8216E37E6002EE93F /* UITabBarItem+Extension.swift in Sources */,
 				10A49184216B8EF000E2DBDD /* Alias.swift in Sources */,
+				10CF34FE216F85CF00CA464F /* UIView+Constraints+Extension.swift in Sources */,
 				1092F9F2216E2146002EE93F /* CartCell.swift in Sources */,
 				10A4915B216B6B1400E2DBDD /* Section.swift in Sources */,
 				1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */,

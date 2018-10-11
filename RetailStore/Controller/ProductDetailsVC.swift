@@ -39,11 +39,7 @@ class ProductDetailsVC: UIViewController {
     
     internal var detailsViewModel: ProductDetailsViewModel!
     
-    internal var displayModelInfo: ProductDetailsDisplayInfo? {
-        didSet {
-            refreshUI()
-        }
-    }
+    internal lazy var images: [URL] = []
     
     // MARK: - View Hierarchy
 
@@ -80,7 +76,7 @@ class ProductDetailsVC: UIViewController {
             ActivityIndicator.stopAnimating()
             DispatchQueue.main.async {
                 if let model = displayModel {
-                    self?.displayModelInfo = model
+                    self?.refreshUI(displayModelInfo: model)
                 } else {
                     let message = error?.localizedDescription ?? "Unable to fetch details."
                     self?.showErrorAlert(with: message)
@@ -91,11 +87,15 @@ class ProductDetailsVC: UIViewController {
         Configuration.useStubData ? detailsViewModel.loadStubDetails(completionHandler: handler) : detailsViewModel.loadDetails(completionHandler: handler)
     }
     
-    private func refreshUI() {
+    private func refreshUI(displayModelInfo: ProductDetailsDisplayInfo?) {
         
         guard let info = displayModelInfo else { return }
         
         navigationItem.title = info.title
+
+        self.images = info.images
+        imageCollectionView.reloadData()
+        
         imageCollectionView.reloadData()
         addToCartView.updateQuantity(info.quantity)
         descriptionLabel.text = info.description

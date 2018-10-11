@@ -13,13 +13,13 @@ extension ProductDetailsVC: UICollectionViewDataSource, UICollectionViewDelegate
     // MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return displayModelInfo?.images.count ?? 0
+        return images.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? ImagesCell
         
-        let url = displayModelInfo?.images[indexPath.row]
+        let url = images[indexPath.row]
 
 //        cell?.imageView?.image
         

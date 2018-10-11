@@ -364,12 +364,42 @@
                         <outlet property="checkoutButton" destination="fgf-EI-MXv" id="uJl-xK-UDd"/>
                         <outlet property="clearBarButton" destination="TSo-l0-pSR" id="o2D-dv-DFe"/>
                         <outlet property="editBarButton" destination="ZhK-eu-hKv" id="e88-LY-0yM"/>
+                        <outlet property="emptyCartView" destination="af7-u5-wp9" id="To5-e4-ekK"/>
                         <outlet property="minimumValueLabel" destination="D7r-fz-gbT" id="vnc-E8-aUw"/>
                         <outlet property="priceLabel" destination="hWL-HE-nN7" id="UxS-et-egT"/>
                         <outlet property="tableView" destination="zMz-9t-ERt" id="bCs-0T-On3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lfT-zI-CDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="af7-u5-wp9">
+                    <rect key="frame" x="0.0" y="0.0" width="365" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-I5-Wxa">
+                            <rect key="frame" x="65.5" y="-26.5" width="234.5" height="181"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-cart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Eh-naE" userLabel="Empty">
+                                    <rect key="frame" x="42" y="0.0" width="150" height="150.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="i6A-9b-ue0"/>
+                                        <constraint firstAttribute="width" constant="150" id="r2q-eY-HXG"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no items in your cart." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjz-12-tUw">
+                                    <rect key="frame" x="0.0" y="160.5" width="234.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="TJO-I5-Wxa" firstAttribute="centerX" secondItem="af7-u5-wp9" secondAttribute="centerX" id="5rM-Jj-6Fn"/>
+                        <constraint firstItem="TJO-I5-Wxa" firstAttribute="centerY" secondItem="af7-u5-wp9" secondAttribute="centerY" id="6HQ-Sz-o0r"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="1014" y="934"/>
         </scene>
@@ -736,6 +766,7 @@
         <image name="profile" width="384" height="384"/>
         <image name="share" width="51.200000762939453" height="51.200000762939453"/>
         <image name="shopping-cart" width="51.200000762939453" height="51.200000762939453"/>
+        <image name="shopping-cart-empty" width="204.80000305175781" height="204.80000305175781"/>
         <image name="user" width="42.421173095703125" height="42.421173095703125"/>
     </resources>
 </document>

@@ -24,6 +24,8 @@ class ShoppingCartVC: UIViewController {
 
     @IBOutlet weak var clearBarButton: UIBarButtonItem!
 
+    @IBOutlet var emptyCartView: UIView!
+    
     // MARK: - Data
 
     internal let cellIdentifier: String = "CartCell"
@@ -37,9 +39,10 @@ class ShoppingCartVC: UIViewController {
         minimumValueLabel.text =  "Minimum cart value must be $\(Configuration.minimumCartValue)"
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
+        checkForEmptyCart()
     }
     
     // MARK: - IBOutlets Actions
@@ -72,6 +75,7 @@ class ShoppingCartVC: UIViewController {
             StoreCartManager.default.clearCart()
             self.tableView.reloadData()
             self.editAction()
+            self.checkForEmptyCart()
         }
         alertController.addAction(clearAction)
         
@@ -92,10 +96,28 @@ class ShoppingCartVC: UIViewController {
         let clearAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
             StoreCartManager.default.deleteCartItemAt(index: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            self.checkForEmptyCart()
         }
         alertController.addAction(clearAction)
         
         present(alertController, animated: true, completion: nil)
+    }
+    
+    // MARK: - Private Methods
+    
+    private func checkForEmptyCart() {
+        
+        let isNotEmpty = StoreCartManager.default.getCartItemsCount() > 0
+        
+        defer {
+            editBarButton.isEnabled = isNotEmpty
+            emptyCartView.isHidden = isNotEmpty
+        }
+        
+        if emptyCartView.isDescendant(of: view) == false {
+            view.addSubview(emptyCartView)
+            emptyCartView.alignWithSuperView()
+        }
     }
     
     // MARK: - Navigation
