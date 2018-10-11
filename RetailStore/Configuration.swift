@@ -8,30 +8,30 @@
 
 struct Configuration {
     
-    static let url                      = "https://server-url.com/"
+    static let url                      = "https://replace-me-with-server-url.com/"
     
-    static let pageSize                 = 15        //Stub will be using page-size 15.
+    static let pageSize                 = 15                //Stub will be using page-size 15.
     
-    static let storeName                = "Fantastic Store"
+    static let storeName                = "Fantastic Store" //Name of store.
 
-    static let defaultCurrency          = "USD"
+    static let defaultCurrency          = "USD"             //Currency to be used for products
 
-    static let currencySymbol           = "$"
+    static let currencySymbol           = "$"               //Currency symbol of `defaultCurreny`
 
-    static let minimumCartValue         = 49.99
+    static let minimumCartValue         = 49.99             //Minimum total price value for checkout
 
-    static let maxQuantityAllowedInCart = 10
+    static let maxQuantityAllowedInCart = 10                //Per item
 
-    static let stubTimerDelay           = 0.3
+    static let stubTimerDelay           = 0.3               //Loader to be shown while loading stub.
     
-    static let useStubData              = true
+    static let useStubData              = true              //Will use, data from stub folder
 
+    // Mark: - Methods
+    
     static func checkConfiguration() {
-        
-        if url.isEmpty || pageSize < 0 {
-            fatalError("""
-                Invalid configuration found.
-            """)
+        if (useStubData == false && stubTimerDelay < 0.3) ||
+            (url.isEmpty || pageSize < 0) {
+            fatalError("Invalid configuration found.")
         }
     }
 }
