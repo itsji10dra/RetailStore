@@ -23,7 +23,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         guard let item = StoreCartManager.default.getCartItemsAtIndex(indexPath.row) else { return cell ?? UITableViewCell() }
 
         cell?.titleLabel?.text = item.title
-        cell?.priceLabel?.text = "$\(item.price)"
+        cell?.priceLabel?.text = Configuration.currencySymbol + " \(item.price)"
 //        cell?.imageView?.image = item.thumbImage
         cell?.addToCartView?.updateQuantity(item.quantity)
         
@@ -51,10 +51,6 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         guard let infoObj = StoreCartManager.default.getCartItemsAtIndex(indexPath.row) else { return }
         pushDetailsScene(with: infoObj)
         tableView.deselectRow(at: indexPath, animated: true)
-    }
-    
-    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
     }
     
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {

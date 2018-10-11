@@ -80,7 +80,7 @@ class ProductDetailsViewModel {
                                                                                    images: productDetail.images,
                                                                                    quantity: quantity,
                                                                                    description: productDetail.description,
-                                                                                   price: Configuration.currencySymbol + "\(productDetail.price)")
+                                                                                   price: Configuration.defaultCurrency + " \(productDetail.price)")
         
         return productDetailDisplayModel
     }

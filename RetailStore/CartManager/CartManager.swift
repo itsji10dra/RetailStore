@@ -61,4 +61,8 @@ class CartManager<T> where T: Cartable {
     public final func getCartItemsCount() -> Int {
         return cartItems.count
     }
+    
+    public final func getTotalPrice() -> Double {
+        return cartItems.map { $0.price }.reduce(0, +)
+    }
 }

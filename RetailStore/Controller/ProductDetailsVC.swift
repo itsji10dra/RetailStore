@@ -49,11 +49,15 @@ class ProductDetailsVC: UIViewController {
         loadDetails()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let quantity = StoreCartManager.default.quantityForItem(detailsViewModel.product)
+        addToCartView.updateQuantity(quantity)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         imageCollectionView.flashScrollIndicators()
-        let quantity = StoreCartManager.default.quantityForItem(detailsViewModel.product)
-        addToCartView.updateQuantity(quantity)
     }
     
     // MARK: - ViewController

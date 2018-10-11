@@ -42,7 +42,7 @@ class ShoppingCartVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
-        checkForEmptyCart()
+        refreshUI()
     }
     
     // MARK: - IBOutlets Actions
@@ -58,6 +58,14 @@ class ShoppingCartVC: UIViewController {
     }
     
     @IBAction func checkoutAction() {
+        
+        let totalPrice = StoreCartManager.default.getTotalPrice()
+
+        if totalPrice < Configuration.minimumCartValue {
+            //Show Alert
+            return
+        }
+        
         //Show payment options
     }
     
@@ -75,7 +83,7 @@ class ShoppingCartVC: UIViewController {
             StoreCartManager.default.clearCart()
             self.tableView.reloadData()
             self.editAction()
-            self.checkForEmptyCart()
+            self.refreshUI()
         }
         alertController.addAction(clearAction)
         
@@ -96,7 +104,7 @@ class ShoppingCartVC: UIViewController {
         let clearAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
             StoreCartManager.default.deleteCartItemAt(index: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .automatic)
-            self.checkForEmptyCart()
+            self.refreshUI()
         }
         alertController.addAction(clearAction)
         
@@ -104,6 +112,16 @@ class ShoppingCartVC: UIViewController {
     }
     
     // MARK: - Private Methods
+    
+    private func refreshUI() {
+        updateTotal()
+        checkForEmptyCart()
+    }
+    
+    private func updateTotal() {
+        let totalPrice = StoreCartManager.default.getTotalPrice()
+        priceLabel.text = Configuration.defaultCurrency + " " + String(format: "%.2f", totalPrice)
+    }
     
     private func checkForEmptyCart() {
         
