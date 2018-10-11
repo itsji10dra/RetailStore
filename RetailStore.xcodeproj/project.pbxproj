@@ -12,7 +12,7 @@
 		1092F9E4216DDEA1002EE93F /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */; };
 		1092F9E6216DE3B4002EE93F /* ImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E5216DE3B4002EE93F /* ImagesCell.swift */; };
 		1092F9E8216DE564002EE93F /* ProductDetailsVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E7216DE564002EE93F /* ProductDetailsVC+Delegates.swift */; };
-		1092F9EA216DFD78002EE93F /* ProductDetails.json in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E9216DFD78002EE93F /* ProductDetails.json */; };
+		1092F9EA216DFD78002EE93F /* ProductDetails-Id1.json in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E9216DFD78002EE93F /* ProductDetails-Id1.json */; };
 		1092F9EC216E03D5002EE93F /* ProductDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */; };
 		1092F9EE216E1897002EE93F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9ED216E1897002EE93F /* ProfileVC.swift */; };
 		1092F9F0216E1AD7002EE93F /* ProfileVC+Delegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9EF216E1AD7002EE93F /* ProfileVC+Delegates.swift */; };
@@ -60,6 +60,7 @@
 		10CF34F9216E796300CA464F /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34F8216E796300CA464F /* ProductDetails.swift */; };
 		10CF34FB216F6A8500CA464F /* StoreCartManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34FA216F6A8500CA464F /* StoreCartManager.swift */; };
 		10CF34FE216F85CF00CA464F /* UIView+Constraints+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */; };
+		10CF3501216F934E00CA464F /* ProductDetails-Id2.json in Resources */ = {isa = PBXBuildFile; fileRef = 10CF3500216F934E00CA464F /* ProductDetails-Id2.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,7 +79,7 @@
 		1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
 		1092F9E5216DE3B4002EE93F /* ImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCell.swift; sourceTree = "<group>"; };
 		1092F9E7216DE564002EE93F /* ProductDetailsVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductDetailsVC+Delegates.swift"; sourceTree = "<group>"; };
-		1092F9E9216DFD78002EE93F /* ProductDetails.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductDetails.json; sourceTree = "<group>"; };
+		1092F9E9216DFD78002EE93F /* ProductDetails-Id1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ProductDetails-Id1.json"; sourceTree = "<group>"; };
 		1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewModel.swift; sourceTree = "<group>"; };
 		1092F9ED216E1897002EE93F /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		1092F9EF216E1AD7002EE93F /* ProfileVC+Delegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileVC+Delegates.swift"; sourceTree = "<group>"; };
@@ -131,6 +132,7 @@
 		10CF34F8216E796300CA464F /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		10CF34FA216F6A8500CA464F /* StoreCartManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCartManager.swift; sourceTree = "<group>"; };
 		10CF34FD216F85CF00CA464F /* UIView+Constraints+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Constraints+Extension.swift"; sourceTree = "<group>"; };
+		10CF3500216F934E00CA464F /* ProductDetails-Id2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ProductDetails-Id2.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -314,14 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				10A4918B216BBA8C00E2DBDD /* StubManager.swift */,
-				10A4915C216B6C8200E2DBDD /* Section.json */,
-				10A49160216B6CF800E2DBDD /* Product-SectionId1-Page0.json */,
-				10A49195216BD3F900E2DBDD /* Product-SectionId1-Page1.json */,
-				10A49193216BD3F800E2DBDD /* Product-SectionId1-Page2.json */,
-				10A4918F216BD3F800E2DBDD /* Product-SectionId2-Page0.json */,
-				10A49194216BD3F900E2DBDD /* Product-SectionId3-Page0.json */,
-				10A49192216BD3F800E2DBDD /* Product-SectionId4-Page0.json */,
-				1092F9E9216DFD78002EE93F /* ProductDetails.json */,
+				10CF34FF216F932D00CA464F /* JSON */,
 			);
 			path = Stub;
 			sourceTree = "<group>";
@@ -333,6 +328,22 @@
 				10CF34FA216F6A8500CA464F /* StoreCartManager.swift */,
 			);
 			path = CartManager;
+			sourceTree = "<group>";
+		};
+		10CF34FF216F932D00CA464F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				10A4915C216B6C8200E2DBDD /* Section.json */,
+				10A49160216B6CF800E2DBDD /* Product-SectionId1-Page0.json */,
+				10A49195216BD3F900E2DBDD /* Product-SectionId1-Page1.json */,
+				10A49193216BD3F800E2DBDD /* Product-SectionId1-Page2.json */,
+				10A4918F216BD3F800E2DBDD /* Product-SectionId2-Page0.json */,
+				10A49194216BD3F900E2DBDD /* Product-SectionId3-Page0.json */,
+				10A49192216BD3F800E2DBDD /* Product-SectionId4-Page0.json */,
+				1092F9E9216DFD78002EE93F /* ProductDetails-Id1.json */,
+				10CF3500216F934E00CA464F /* ProductDetails-Id2.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,7 +429,8 @@
 			files = (
 				10A49141216B68A100E2DBDD /* LaunchScreen.storyboard in Resources */,
 				10A4919B216BD3F900E2DBDD /* Product-SectionId3-Page0.json in Resources */,
-				1092F9EA216DFD78002EE93F /* ProductDetails.json in Resources */,
+				10CF3501216F934E00CA464F /* ProductDetails-Id2.json in Resources */,
+				1092F9EA216DFD78002EE93F /* ProductDetails-Id1.json in Resources */,
 				1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */,
 				10A49196216BD3F900E2DBDD /* Product-SectionId2-Page0.json in Resources */,
 				10A49161216B6CF800E2DBDD /* Product-SectionId1-Page0.json in Resources */,

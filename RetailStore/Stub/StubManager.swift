@@ -23,7 +23,8 @@ struct StubManager {
             let sectionId = parameters["sectionId"] ?? ""
             fileName = "Product-SectionId" + sectionId + "-Page" + "\(page)"
         case .productDetail:
-            fileName = "ProductDetails"
+            let productId = parameters["productId"] ?? ""
+            fileName = "ProductDetails-Id" + "\(productId)"
         }
         
         guard let fileURL = Bundle.main.url(forResource: fileName, withExtension: "json") else { return nil }
