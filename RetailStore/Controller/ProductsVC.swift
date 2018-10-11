@@ -16,6 +16,8 @@ class ProductsVC: UIViewController {
     
     @IBOutlet weak var loaderView: LoadingView!
     
+    @IBOutlet var noProductsView: UIView!
+    
     // MARK: - Data
     
     struct ProductDisplayInfo {
@@ -79,6 +81,7 @@ class ProductsVC: UIViewController {
                     self?.productInfoArray = data
                     self?.tableView.reloadData()
                     self?.loaderView.hide()
+                    self?.showNoProductsViewIfNeeded()
                 } else if let error = error {
                     if page == 0 {
                         self?.showErrorAlert(with: error.localizedDescription)
@@ -111,6 +114,14 @@ class ProductsVC: UIViewController {
         }
     }
     
+    // MARK: - UI
+    
+    private func showNoProductsViewIfNeeded() {
+        guard productInfoArray?.isEmpty == true else { return }
+        view.addSubview(noProductsView)
+        noProductsView.alignWithSuperView()
+    }
+
     // MARK: - Alerts
     
     private func showErrorAlert(with message: String) {

@@ -376,17 +376,17 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TJO-I5-Wxa">
-                            <rect key="frame" x="65.5" y="-26.5" width="234.5" height="181"/>
+                            <rect key="frame" x="52" y="-26.5" width="261.5" height="181"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shopping-cart-empty" translatesAutoresizingMaskIntoConstraints="NO" id="qQH-Eh-naE" userLabel="Empty">
-                                    <rect key="frame" x="42" y="0.0" width="150" height="150.5"/>
+                                    <rect key="frame" x="55.5" y="0.0" width="150" height="150.5"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="150" id="i6A-9b-ue0"/>
                                         <constraint firstAttribute="width" constant="150" id="r2q-eY-HXG"/>
                                     </constraints>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no items in your cart." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjz-12-tUw">
-                                    <rect key="frame" x="0.0" y="160.5" width="234.5" height="20.5"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no products in your cart." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjz-12-tUw">
+                                    <rect key="frame" x="0.0" y="160.5" width="261.5" height="20.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -582,11 +582,41 @@
                     </view>
                     <connections>
                         <outlet property="loaderView" destination="Xth-Bh-e7P" id="Bt4-KX-xfA"/>
+                        <outlet property="noProductsView" destination="SO8-gg-Q7t" id="tuA-Jg-nso"/>
                         <outlet property="tableView" destination="iso-pg-ZD3" id="PqS-UT-0j4"/>
                         <segue destination="gzE-FP-rG0" kind="show" identifier="ProductDetailsSegue" id="Wwy-ai-aO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hmd-lW-gK1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SO8-gg-Q7t">
+                    <rect key="frame" x="0.0" y="0.0" width="365" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l5C-dY-IoD">
+                            <rect key="frame" x="97.5" y="-26.5" width="170" height="181"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="prohibited" translatesAutoresizingMaskIntoConstraints="NO" id="Fv5-lT-dhD" userLabel="Empty">
+                                    <rect key="frame" x="10" y="0.0" width="150" height="150.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="150" id="12G-bg-uge"/>
+                                        <constraint firstAttribute="width" constant="150" id="JZf-Do-qno"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No products available." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wES-Bj-1KB">
+                                    <rect key="frame" x="0.0" y="160.5" width="170" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="l5C-dY-IoD" firstAttribute="centerY" secondItem="SO8-gg-Q7t" secondAttribute="centerY" id="cJN-Vm-Q04"/>
+                        <constraint firstItem="l5C-dY-IoD" firstAttribute="centerX" secondItem="SO8-gg-Q7t" secondAttribute="centerX" id="sgN-t9-0I2"/>
+                    </constraints>
+                </view>
             </objects>
             <point key="canvasLocation" x="2856.8000000000002" y="26.53673163418291"/>
         </scene>
@@ -764,6 +794,7 @@
         <image name="placeholder-big" width="1024" height="1024"/>
         <image name="placeholder-small" width="255" height="255"/>
         <image name="profile" width="384" height="384"/>
+        <image name="prohibited" width="204.80000305175781" height="204.80000305175781"/>
         <image name="share" width="51.200000762939453" height="51.200000762939453"/>
         <image name="shopping-cart" width="51.200000762939453" height="51.200000762939453"/>
         <image name="shopping-cart-empty" width="204.80000305175781" height="204.80000305175781"/>
