@@ -35,7 +35,6 @@ class ShoppingCartVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        clearBarButton.isEnabled = false
         minimumValueLabel.text =  "Minimum cart value must be $\(Configuration.minimumCartValue)"
     }
     
@@ -125,9 +124,8 @@ class ShoppingCartVC: UIViewController {
     
     private func checkForEmptyCart() {
         
-        let isNotEmpty = StoreCartManager.default.getCartItemsCount() > 0
-        
         defer {
+            let isNotEmpty = StoreCartManager.default.getCartItemsCount() > 0
             editBarButton.isEnabled = isNotEmpty
             emptyCartView.isHidden = isNotEmpty
         }
@@ -140,7 +138,7 @@ class ShoppingCartVC: UIViewController {
     
     // MARK: - Navigation
     
-    internal func pushDetailsScene(with info: Cartable) {
+    internal func pushDetailsScene(with info: CartItem) {
         guard let detailsVC = Navigation.getViewController(type: ProductDetailsVC.self,
                                                            identifer: "ProductDetails") else { return }
         detailsVC.detailsViewModel = ProductDetailsViewModel(product: info)

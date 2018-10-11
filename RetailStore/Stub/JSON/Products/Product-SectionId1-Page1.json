@@ -6,105 +6,105 @@
         {
             "id": 16,
             "sectionId": 1,
-            "title": "Microwave Oven",
+            "title": "Microwave Oven - 6",
             "thumbImage": "http://www.example.com/image.png",
             "price": 49.99
         },
         {
             "id": 17,
             "sectionId": 1,
-            "title": "Television",
+            "title": "Television - 6",
             "thumbImage": "http://www.example.com/image.png",
             "price": 179.99
         },
         {
             "id": 18,
             "sectionId": 1,
-            "title": "Vaccum Cleaner",
+            "title": "Vaccum Cleaner - 6",
             "thumbImage": "http://www.example.com/image.png",
             "price": 39.99
         },
         {
             "id": 19,
             "sectionId": 1,
-            "title": "Table",
+            "title": "Microwave Oven - 7",
             "thumbImage": "http://www.example.com/image.png",
             "price": 29.99
         },
         {
             "id": 20,
             "sectionId": 1,
-            "title": "Chair",
+            "title": "Television - 7",
             "thumbImage": "http://www.example.com/image.png",
             "price": 14.99
         },
         {
             "id": 21,
             "sectionId": 1,
-            "title": "Almirah",
+            "title": "Vaccum Cleaner - 7",
             "thumbImage": "http://www.example.com/image.png",
             "price": 34.99
         },
         {
             "id": 22,
             "sectionId": 1,
-            "title": "Air Cooler",
+            "title": "Microwave Oven - 8",
             "thumbImage": "http://www.example.com/image.png",
             "price": 11.99
         },
         {
             "id": 23,
             "sectionId": 1,
-            "title": "Microwave Oven",
+            "title": "Television - 8",
             "thumbImage": "http://www.example.com/image.png",
             "price": 49.99
         },
         {
             "id": 24,
             "sectionId": 1,
-            "title": "Television",
+            "title": "Vaccum Cleaner - 8",
             "thumbImage": "http://www.example.com/image.png",
             "price": 179.99
         },
         {
             "id": 25,
             "sectionId": 1,
-            "title": "Vaccum Cleaner",
+            "title": "Microwave Oven - 9",
             "thumbImage": "http://www.example.com/image.png",
             "price": 39.99
         },
         {
             "id": 26,
             "sectionId": 1,
-            "title": "Table",
+            "title": "Television - 9",
             "thumbImage": "http://www.example.com/image.png",
             "price": 29.99
         },
         {
             "id": 27,
             "sectionId": 1,
-            "title": "Chair",
+            "title": "Vaccum Cleaner - 9",
             "thumbImage": "http://www.example.com/image.png",
             "price": 14.99
         },
         {
             "id": 28,
             "sectionId": 1,
-            "title": "Almirah",
+            "title": "Microwave Oven - 10",
             "thumbImage": "http://www.example.com/image.png",
             "price": 34.99
         },
         {
             "id": 29,
             "sectionId": 1,
-            "title": "Air Cooler",
+            "title": "Television - 10",
             "thumbImage": "http://www.example.com/image.png",
             "price": 11.99
         },
         {
             "id": 30,
             "sectionId": 1,
-            "title": "Air Cooler",
+            "title": "Vaccum Cleaner - 10",
             "thumbImage": "http://www.example.com/image.png",
             "price": 11.99
         }

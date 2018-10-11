@@ -349,7 +349,7 @@
                         <viewLayoutGuide key="safeArea" id="svE-YF-k8n"/>
                     </view>
                     <navigationItem key="navigationItem" title="Shopping Cart" id="ltb-tm-rHL">
-                        <barButtonItem key="leftBarButtonItem" title="Clear" id="TSo-l0-pSR">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Clear" id="TSo-l0-pSR">
                             <connections>
                                 <action selector="clearAllAction:" destination="xVG-d1-L4T" id="RVR-QW-77j"/>
                             </connections>

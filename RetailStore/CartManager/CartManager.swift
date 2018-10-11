@@ -6,8 +6,6 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
-import Foundation
-
 class CartManager<T> where T: Cartable {
     
     // MARK: - Data

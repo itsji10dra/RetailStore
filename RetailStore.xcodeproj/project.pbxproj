@@ -120,6 +120,7 @@
 		10CF3675216FB95000CA464F /* ProductDetails-Id7.json in Resources */ = {isa = PBXBuildFile; fileRef = 10CF3633216FB94F00CA464F /* ProductDetails-Id7.json */; };
 		10CF3676216FB95000CA464F /* ProductDetails-Id18.json in Resources */ = {isa = PBXBuildFile; fileRef = 10CF3634216FB94F00CA464F /* ProductDetails-Id18.json */; };
 		10CF3678216FB97500CA464F /* stub_generator.py in Resources */ = {isa = PBXBuildFile; fileRef = 10CF3677216FB97500CA464F /* stub_generator.py */; };
+		10CF367A216FBFB800CA464F /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3679216FBFB800CA464F /* CartViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,7 +251,8 @@
 		10CF3632216FB94F00CA464F /* ProductDetails-Id34.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ProductDetails-Id34.json"; sourceTree = "<group>"; };
 		10CF3633216FB94F00CA464F /* ProductDetails-Id7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ProductDetails-Id7.json"; sourceTree = "<group>"; };
 		10CF3634216FB94F00CA464F /* ProductDetails-Id18.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "ProductDetails-Id18.json"; sourceTree = "<group>"; };
-		10CF3677216FB97500CA464F /* stub_generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = stub_generator.py; sourceTree = "<group>"; };
+		10CF3677216FB97500CA464F /* stub_generator.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = stub_generator.py; sourceTree = "<group>"; usesTabs = 1; };
+		10CF3679216FBFB800CA464F /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,6 +418,7 @@
 			children = (
 				10A49181216B8DFF00E2DBDD /* PagingViewModel.swift */,
 				1092F9EB216E03D5002EE93F /* ProductDetailsViewModel.swift */,
+				10CF3679216FBFB800CA464F /* CartViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				1092F9F9216E39D4002EE93F /* TabBarManager.swift in Sources */,
 				10A4917E216B8BAB00E2DBDD /* Navigation.swift in Sources */,
 				10A49165216B6F4D00E2DBDD /* SectionCell.swift in Sources */,
+				10CF367A216FBFB800CA464F /* CartViewModel.swift in Sources */,
 				10A49168216B805100E2DBDD /* Response.swift in Sources */,
 				10A4917A216B8B1200E2DBDD /* LoadingView.swift in Sources */,
 				10A49137216B689F00E2DBDD /* AppDelegate.swift in Sources */,
