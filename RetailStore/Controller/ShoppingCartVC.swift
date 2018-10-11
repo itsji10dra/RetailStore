@@ -54,6 +54,10 @@ class ShoppingCartVC: UIViewController {
         clearAllAlert()
     }
     
+    @IBAction func checkoutAction() {
+        //Show payment options
+    }
+    
     // MARK: - Alert
 
     private func clearAllAlert() {
@@ -74,9 +78,9 @@ class ShoppingCartVC: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    internal func showDeleteAlertForItemAtIndex(_ index: Int) {
+    internal func showDeleteAlertForItemAtIndexPath(_ indexPath: IndexPath) {
         
-        let name = StoreCartManager.default.getCartItemsAtIndex(index)?.title ?? "item"
+        let name = StoreCartManager.default.getCartItemsAtIndex(indexPath.row)?.title ?? "item"
         
         let alertController = UIAlertController(title: "Delete Item",
                                                 message: "Are you sure you want to remove this \(name) from your cart?",
@@ -86,8 +90,8 @@ class ShoppingCartVC: UIViewController {
         alertController.addAction(cancelAction)
         
         let clearAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
-            StoreCartManager.default.deleteCartItemAt(index: index)
-            self.tableView.reloadData()
+            StoreCartManager.default.deleteCartItemAt(index: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .automatic)
         }
         alertController.addAction(clearAction)
         

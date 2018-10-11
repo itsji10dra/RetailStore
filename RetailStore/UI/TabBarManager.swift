@@ -32,7 +32,7 @@ class TabBarManager {
         self.init(tabBarController: rootVC)
     }
     
-    private init(tabBarController: UITabBarController) {
+    public init(tabBarController: UITabBarController) {
         self.tabBarController = tabBarController
     }
     

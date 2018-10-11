@@ -23,7 +23,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         guard let item = StoreCartManager.default.getCartItemsAtIndex(indexPath.row) else { return cell ?? UITableViewCell() }
 
         cell?.titleLabel?.text = item.title
-        cell?.priceLabel?.text = "\(item.price)"
+        cell?.priceLabel?.text = "$\(item.price)"
 //        cell?.imageView?.image = item.thumbImage
         cell?.addToCartView?.updateQuantity(item.quantity)
         
@@ -34,7 +34,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         
         cell?.addToCartView?.minusAction = { quantity in
             if quantity == 0 {
-                self.showDeleteAlertForItemAtIndex(indexPath.row)
+                self.showDeleteAlertForItemAtIndexPath(indexPath)
                 return false
             } else {
                 StoreCartManager.default.addCartItem(item, quantity: quantity)

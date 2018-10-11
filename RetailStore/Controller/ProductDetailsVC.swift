@@ -56,6 +56,8 @@ class ProductDetailsVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         imageCollectionView.flashScrollIndicators()
+        let quantity = StoreCartManager.default.quantityForItem(detailsViewModel.product)
+        addToCartView.updateQuantity(quantity)
     }
     
     // MARK: - ViewController

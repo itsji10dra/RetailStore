@@ -35,19 +35,14 @@ class ProductDetailsViewModel {
         guard let url = URLManager.getURLForEndpoint(endpoint: .productDetail, appending: parameter) else { return }
         
         dataTask = networkManager.dataTaskFromURL(url,
-                                                  completion: { (result: Result<Response<ProductDetails>>) in
+                                                  completion: { [weak self] (result: Result<Response<ProductDetails>>) in
                                                     
             switch result {
             case .success(let response):
                 let productDetail = response.result
                 
-                let quantity = StoreCartManager.default.quantityForItem(productDetail)
-
-                let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
-                                                                                           images: productDetail.images,
-                                                                                           quantity: quantity,
-                                                                                           description: productDetail.description,
-                                                                                           price: Configuration.currencySymbol + "\(productDetail.price)")
+                let productDetailDisplayModel = self?.transform(productDetail: productDetail)
+                
                 completionHandler(productDetailDisplayModel, nil)
             
             case .failure(let error):
@@ -61,7 +56,7 @@ class ProductDetailsViewModel {
     public func loadStubDetails(completionHandler: @escaping ProductDetailsResult) {
 
         //Adding delay, so that loading view can be shown.
-        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { 
+        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { [weak self] in
 
             guard let response = StubManager.getStubResponse(endpoint: .productDetail,
                                                              parameters: [:],
@@ -69,14 +64,24 @@ class ProductDetailsViewModel {
         
             let productDetail = response.result
 
-            let quantity = StoreCartManager.default.quantityForItem(productDetail)
-
-            let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
-                                                                                       images: productDetail.images,
-                                                                                       quantity: quantity,
-                                                                                       description: productDetail.description,
-                                                                                       price: Configuration.currencySymbol + "\(productDetail.price)")
+            let productDetailDisplayModel = self?.transform(productDetail: productDetail)
+            
             completionHandler(productDetailDisplayModel, nil)
         }
+    }
+    
+    // MARK: - Private Methods (Data-Binding)
+    
+    private func transform(productDetail: ProductDetails) -> ProductDetailsVC.ProductDetailsDisplayInfo {
+        
+        let quantity = StoreCartManager.default.quantityForItem(productDetail)
+        
+        let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
+                                                                                   images: productDetail.images,
+                                                                                   quantity: quantity,
+                                                                                   description: productDetail.description,
+                                                                                   price: Configuration.currencySymbol + "\(productDetail.price)")
+        
+        return productDetailDisplayModel
     }
 }
