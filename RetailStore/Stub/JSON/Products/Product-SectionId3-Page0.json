@@ -4,53 +4,53 @@
     "totalPageCount": 1,
     "result": [
         {
-            "id": 76,
-            "sectionId": 4,
-            "title": "Bike Model 1",
+            "id": 61,
+            "sectionId": 3,
+            "title": "Fashion Item 1",
             "thumbImage": "http://www.example.com/image.png",
             "price": 49.99
         },
         {
-            "id": 77,
-            "sectionId": 4,
-            "title": "Bike Model 2",
+            "id": 62,
+            "sectionId": 3,
+            "title": "Fashion Item 2",
             "thumbImage": "http://www.example.com/image.png",
             "price": 179.99
         },
         {
-            "id": 78,
-            "sectionId": 4,
-            "title": "Bike Model 3",
+            "id": 63,
+            "sectionId": 3,
+            "title": "Fashion Item 3",
             "thumbImage": "http://www.example.com/image.png",
             "price": 39.99
         },
         {
-            "id": 79,
-            "sectionId": 4,
-            "title": "Bike Model 4",
+            "id": 64,
+            "sectionId": 3,
+            "title": "Fashion Item 4",
             "thumbImage": "http://www.example.com/image.png",
             "price": 29.99
         },
         {
-            "id": 80,
-            "sectionId": 4,
-            "title": "Bike Model 5",
+            "id": 65,
+            "sectionId": 3,
+            "title": "Fashion Item 5",
             "thumbImage": "http://www.example.com/image.png",
             "price": 14.99
         },
         {
-            "id": 81,
-            "sectionId": 4,
-            "title": "Bike Model 6",
+            "id": 66,
+            "sectionId": 3,
+            "title": "Fashion Item 6",
             "thumbImage": "http://www.example.com/image.png",
             "price": 34.99
         },
         {
-            "id": 82,
-            "sectionId": 4,
-            "title": "Bike Model 7",
+            "id": 67,
+            "sectionId": 3,
+            "title": "Fashion Item 7",
             "thumbImage": "http://www.example.com/image.png",
             "price": 11.99
-        },
+        }
     ]
 }

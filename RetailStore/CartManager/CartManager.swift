@@ -54,7 +54,7 @@ class CartManager<T> where T: Cartable {
         return cartItems.first(where: { $0.id == item.id })?.quantity ?? 0
     }
     
-    public final func getCartItemsAtIndex(_ index: Int) -> Cartable? {
+    public final func getCartItemsAtIndex(_ index: Int) -> T? {
         return index < getCartItemsCount() ? cartItems[index] : nil
     }
     
