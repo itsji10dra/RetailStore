@@ -9,7 +9,7 @@
 import Foundation
 
 struct CartItem: Cartable {
-    
+
     let id: Int32
         
     let title: String
@@ -20,7 +20,7 @@ struct CartItem: Cartable {
 
     var quantity: UInt = 1
     
-    init(item: Cartable, quantity: UInt) {
+    init(item: Sellable, quantity: UInt) {
         self.id = item.id
         self.title = item.title
         self.thumbImage = item.thumbImage

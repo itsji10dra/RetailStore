@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Product: Cartable, Decodable {
+struct Product: Sellable, Decodable {
     
     let id: Int32
     

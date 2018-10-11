@@ -100,12 +100,12 @@ class ProductDetailsVC: UIViewController {
         priceLabel.text = info.price
         
         addToCartView.plusAction = { [unowned self] quantity in
-            CartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
+            StoreCartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
             return true
         }
         
         addToCartView.minusAction = { [unowned self] quantity in
-            CartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
+            StoreCartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
             return true
         }
     }

@@ -8,57 +8,57 @@
 
 import Foundation
 
-class CartManager {
+class CartManager<T> where T: Cartable {
     
-    // MARK: - Singleton
-    
-    static let `default`: CartManager = { return CartManager() }()
-
     // MARK: - Data
     
-    private var cartItems: [CartItem] = [] {
+    private var cartItems: [T] = [] {
         didSet {
-            let count = getCartItemsCount()
-            let badgeValue: String? = count == 0 ? nil : "\(count)"
-            TabBarManager.default.updateCartBadge(value: badgeValue)
+            cartItemsDidUpdate()
         }
+    }
+    
+    // Mark: - Open Methods
+    
+    open func cartItemsDidUpdate() {
+        //Nothing to do internally
     }
     
     // MARK: - Public Methods
     
-    public func deleteCartItemAt(index: Int) {
+    public final func deleteCartItemAt(index: Int) {
         cartItems.remove(at: index)
     }
     
-    public func clearCart() {
+    public final func clearCart() {
         cartItems.removeAll()
     }
     
-    public func updateCartItemQuantity(_ quantity: UInt, index: Int) {
+    public final func updateCartItemQuantity(_ quantity: UInt, index: Int) {
         var item = cartItems.remove(at: index)
         guard quantity > 0 else { return }
         item.quantity = quantity
         cartItems.insert(item, at: index)
     }
     
-    public func addCartItem(_ item: Cartable, quantity: UInt) {
+    public final func addCartItem(_ item: Sellable, quantity: UInt) {
         if let index = cartItems.firstIndex(where: { $0.id == item.id }) {
             updateCartItemQuantity(quantity, index: index)
         } else {
-            let cartItem = CartItem(item: item, quantity: quantity)
+            let cartItem = T(item: item, quantity: quantity)
             cartItems.append(cartItem)
         }
     }
     
-    public func quantityForItem(_ item: Cartable) -> UInt {
+    public final func quantityForItem(_ item: Sellable) -> UInt {
         return cartItems.first(where: { $0.id == item.id })?.quantity ?? 0
     }
     
-    public func getCartItemsAtIndex(_ index: Int) -> CartItem? {
+    public final func getCartItemsAtIndex(_ index: Int) -> Cartable? {
         return index < getCartItemsCount() ? cartItems[index] : nil
     }
     
-    public func getCartItemsCount() -> Int {
+    public final func getCartItemsCount() -> Int {
         return cartItems.count
     }
 }

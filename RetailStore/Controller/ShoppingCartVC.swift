@@ -65,7 +65,7 @@ class ShoppingCartVC: UIViewController {
         alertController.addAction(cancelAction)
         
         let clearAction = UIAlertAction(title: "Clear", style: .destructive) { [unowned self] _ in
-            CartManager.default.clearCart()
+            StoreCartManager.default.clearCart()
             self.tableView.reloadData()
             self.editAction()
         }
@@ -76,7 +76,7 @@ class ShoppingCartVC: UIViewController {
     
     internal func showDeleteAlertForItemAtIndex(_ index: Int) {
         
-        let name = CartManager.default.getCartItemsAtIndex(index)?.title ?? "item"
+        let name = StoreCartManager.default.getCartItemsAtIndex(index)?.title ?? "item"
         
         let alertController = UIAlertController(title: "Delete Item",
                                                 message: "Are you sure you want to remove this \(name) from your cart?",
@@ -86,7 +86,7 @@ class ShoppingCartVC: UIViewController {
         alertController.addAction(cancelAction)
         
         let clearAction = UIAlertAction(title: "Delete", style: .destructive) { [unowned self] _ in
-            CartManager.default.deleteCartItemAt(index: index)
+            StoreCartManager.default.deleteCartItemAt(index: index)
             self.tableView.reloadData()
         }
         alertController.addAction(clearAction)

@@ -8,13 +8,20 @@
 
 import Foundation
 
-protocol Cartable {
+protocol Sellable {
     
     var id: Int32 { get }
-        
+    
     var title: String { get }
     
     var thumbImage: URL { get }
     
     var price: Double { get }
+}
+
+protocol Cartable: Sellable {
+    
+    var quantity: UInt { get set }
+    
+    init(item: Sellable, quantity: UInt)
 }

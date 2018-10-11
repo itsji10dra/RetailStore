@@ -18,11 +18,11 @@ class ProductDetailsViewModel {
     
     private lazy var networkManager = NetworkManager()
 
-    internal let product: Cartable
+    internal let product: Sellable
     
     // MARK: - Initializer
     
-    public init(product: Cartable) {
+    public init(product: Sellable) {
         self.product = product
     }
     
@@ -41,7 +41,7 @@ class ProductDetailsViewModel {
             case .success(let response):
                 let productDetail = response.result
                 
-                let quantity = CartManager.default.quantityForItem(productDetail)
+                let quantity = StoreCartManager.default.quantityForItem(productDetail)
 
                 let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
                                                                                            images: productDetail.images,
@@ -69,7 +69,7 @@ class ProductDetailsViewModel {
         
             let productDetail = response.result
 
-            let quantity = CartManager.default.quantityForItem(productDetail)
+            let quantity = StoreCartManager.default.quantityForItem(productDetail)
 
             let productDetailDisplayModel = ProductDetailsVC.ProductDetailsDisplayInfo(title: productDetail.title,
                                                                                        images: productDetail.images,

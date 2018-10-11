@@ -13,14 +13,14 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return CartManager.default.getCartItemsCount()
+        return StoreCartManager.default.getCartItemsCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? CartCell
         
-        guard let item = CartManager.default.getCartItemsAtIndex(indexPath.row) else { return cell ?? UITableViewCell() }
+        guard let item = StoreCartManager.default.getCartItemsAtIndex(indexPath.row) else { return cell ?? UITableViewCell() }
 
         cell?.titleLabel?.text = item.title
         cell?.priceLabel?.text = "\(item.price)"
@@ -28,7 +28,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         cell?.addToCartView?.updateQuantity(item.quantity)
         
         cell?.addToCartView?.plusAction = { quantity in
-            CartManager.default.addCartItem(item, quantity: quantity)
+            StoreCartManager.default.addCartItem(item, quantity: quantity)
             return true
         }
         
@@ -37,7 +37,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
                 self.showDeleteAlertForItemAtIndex(indexPath.row)
                 return false
             } else {
-                CartManager.default.addCartItem(item, quantity: quantity)
+                StoreCartManager.default.addCartItem(item, quantity: quantity)
                 return true
             }
         }
@@ -48,7 +48,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let infoObj = CartManager.default.getCartItemsAtIndex(indexPath.row) else { return }
+        guard let infoObj = StoreCartManager.default.getCartItemsAtIndex(indexPath.row) else { return }
         pushDetailsScene(with: infoObj)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -63,7 +63,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            CartManager.default.deleteCartItemAt(index: indexPath.row)
+            StoreCartManager.default.deleteCartItemAt(index: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
