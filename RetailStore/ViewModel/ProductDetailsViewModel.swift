@@ -53,8 +53,6 @@ class ProductDetailsViewModel {
             case .failure(let error):
                 completionHandler(nil, error)
             }
-            
-            print("--------------------------------------------------------------------------------------")
         })
         
         dataTask?.resume()
@@ -78,7 +76,6 @@ class ProductDetailsViewModel {
                                                                                        quantity: quantity,
                                                                                        description: productDetail.description,
                                                                                        price: Configuration.currencySymbol + "\(productDetail.price)")
-
             completionHandler(productDetailDisplayModel, nil)
         }
     }

@@ -61,6 +61,11 @@ class ProductsVC: UIViewController {
         loadProducts()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateProducts()
+    }
+    
     // MARK: - Loader Method
     
     internal func loadProducts() {
@@ -96,6 +101,13 @@ class ProductsVC: UIViewController {
             }
         } else {
             loaderView.hide()
+        }
+    }
+    
+    internal func updateProducts() {
+        pagingModel.updateResult { [weak self] data in
+            self?.productInfoArray = data
+            self?.tableView.reloadData()
         }
     }
     

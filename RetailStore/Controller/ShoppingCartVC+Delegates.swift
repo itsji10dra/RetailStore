@@ -29,10 +29,17 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         
         cell?.addToCartView?.plusAction = { quantity in
             CartManager.default.addCartItem(item, quantity: quantity)
+            return true
         }
         
         cell?.addToCartView?.minusAction = { quantity in
-            CartManager.default.addCartItem(item, quantity: quantity)
+            if quantity == 0 {
+                self.showDeleteAlertForItemAtIndex(indexPath.row)
+                return false
+            } else {
+                CartManager.default.addCartItem(item, quantity: quantity)
+                return true
+            }
         }
 
         return cell ?? UITableViewCell()

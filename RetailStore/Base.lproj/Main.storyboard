@@ -566,10 +566,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhV-zs-7aZ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eqB-ty-3L0">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" prefetchingEnabled="NO" springLoaded="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hci-3n-9wd">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="375"/>
@@ -625,7 +625,7 @@
                                                 </connections>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g9T-RC-yNp">
-                                                <rect key="frame" x="0.0" y="375" width="375" height="243"/>
+                                                <rect key="frame" x="0.0" y="375" width="375" height="199"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kXJ-yi-LPe">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
@@ -655,10 +655,10 @@
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5KT-rz-wOB">
-                                                        <rect key="frame" x="0.0" y="55" width="375" height="188"/>
+                                                        <rect key="frame" x="0.0" y="55" width="375" height="144"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTW-s3-IpC">
-                                                                <rect key="frame" x="8" y="8" width="359" height="172"/>
+                                                                <rect key="frame" x="8" y="8" width="359" height="128"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -709,6 +709,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ize-oZ-Ogw"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="l4Y-dv-rF3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="share" id="qGp-uu-Ggs"/>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addToCartView" destination="mAg-xV-87y" id="5hl-oW-yk5"/>
                         <outlet property="descriptionLabel" destination="xTW-s3-IpC" id="ima-ix-7IF"/>
@@ -726,6 +731,7 @@
         <image name="placeholder-big" width="1024" height="1024"/>
         <image name="placeholder-small" width="255" height="255"/>
         <image name="profile" width="384" height="384"/>
+        <image name="share" width="51.200000762939453" height="51.200000762939453"/>
         <image name="shopping-cart" width="51.200000762939453" height="51.200000762939453"/>
         <image name="user" width="42.421173095703125" height="42.421173095703125"/>
     </resources>

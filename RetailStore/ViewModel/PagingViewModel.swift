@@ -67,7 +67,8 @@ class PagingViewModel<T, E> where T:Decodable {
         guard (nextPage == 0 ||       //Just load, coz it's first page.
                 nextPage < pageInfo.totalPages) else { return (false, nextPage) }   //Load, only if next page is available.
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { [weak self] in  //Adding delay, so that loading view can be shown.
+        //Adding delay, so that loading view can be shown.
+        DispatchQueue.main.asyncAfter(deadline: .now() + Configuration.stubTimerDelay) { [weak self] in
             self?.loadStubData(page: UInt(nextPage), completionHandler: handler)
         }
         
@@ -101,6 +102,10 @@ class PagingViewModel<T, E> where T:Decodable {
         
         receivedDataSource.removeAll()
         dataSource.removeAll()
+    }
+    
+    public func updateResult(_ handler: (([E]) -> Void)) {
+        handler(transform(receivedDataSource))
     }
     
     // MARK: - Private Methods

@@ -40,13 +40,17 @@ extension ProductsVC: UITableViewDataSource, UITableViewDelegate {
         cell?.addToCartView?.updateQuantity(infoObj?.quantity ?? 0)
 
         cell?.addToCartView?.plusAction = { [unowned self] quantity in
-            guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return }
+            guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return false }
             CartManager.default.addCartItem(infoObj, quantity: quantity)
+            self.updateProducts()
+            return true
         }
         
         cell?.addToCartView?.minusAction = { [unowned self] quantity in
-            guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return }
+            guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return false }
             CartManager.default.addCartItem(infoObj, quantity: quantity)
+            self.updateProducts()
+            return true
         }
 
         return cell ?? UITableViewCell()

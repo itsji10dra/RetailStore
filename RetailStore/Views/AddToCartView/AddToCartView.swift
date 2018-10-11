@@ -20,9 +20,9 @@ class AddToCartView: UIView {
     
     // MARK: - Data Closure
     
-    internal var plusAction: ((UInt) -> Void)?
+    internal var plusAction: ((UInt) -> Bool)?
     
-    internal var minusAction: ((UInt) -> Void)?
+    internal var minusAction: ((UInt) -> Bool)?
 
     // MARK: - View
     
@@ -72,8 +72,10 @@ class AddToCartView: UIView {
             currentQuantity < Configuration.maxQuantityAllowedInCart {
             
             let newQuantity = currentQuantity + 1
+
+            guard plusAction?(newQuantity) == true else { return }
+            
             quantityLabel.text = String(newQuantity)
-            plusAction?(newQuantity)
             
             if newQuantity > 0 {
                 updateQuantity(newQuantity)
@@ -88,8 +90,10 @@ class AddToCartView: UIView {
             currentQuantity > 0 {
             
             let newQuantity = currentQuantity - 1
+
+            guard minusAction?(newQuantity) == true else { return }
+            
             quantityLabel.text = String(newQuantity)
-            minusAction?(newQuantity)
             
             if newQuantity == 0 {
                 updateQuantity(newQuantity)
