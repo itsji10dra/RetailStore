@@ -6,6 +6,10 @@
 //  Copyright © 2018 Jitendra Gandhi. All rights reserved.
 //
 
+//-------------------------------------------------------------------------------------------------------------
+// MARK: - StoreCartManager
+//-------------------------------------------------------------------------------------------------------------
+
 class StoreCartManager: CartManager<CartItem> {
     
     static let `default`: StoreCartManager = { return StoreCartManager() }()
@@ -53,6 +57,10 @@ class StoreCartManager: CartManager<CartItem> {
     }
 }
 
+//-------------------------------------------------------------------------------------------------------------
+// MARK: - CartManager
+//-------------------------------------------------------------------------------------------------------------
+
 class CartManager<T> where T: Cartable {
     
     // MARK: - Data
@@ -77,31 +85,30 @@ class CartManager<T> where T: Cartable {
         cartItems.removeAll()
     }
     
-    // MARK: - Public Methods
-
-    public final func updateCartItemQuantity(_ quantity: UInt, index: Int) {
+    open func updateCartItemQuantity(_ quantity: UInt, index: Int) {
         var item = cartItems.remove(at: index)
         guard quantity > 0 else { return }
         item.quantity = quantity
         cartItems.insert(item, at: index)
     }
     
-    public final func addCartItem(_ item: Sellable, quantity: UInt) {
+    open func addCartItem(_ item: T) {
         if let index = cartItems.firstIndex(where: { $0.id == item.id }) {
-            updateCartItemQuantity(quantity, index: index)
+            updateCartItemQuantity(item.quantity, index: index)
         } else {
-            let cartItem = T(item: item, quantity: quantity)
-            cartItems.append(cartItem)
+            cartItems.append(item)
         }
     }
     
-    public final func quantityForItem(_ item: Sellable) -> UInt {
+    open func quantityForItem(_ item: Sellable) -> UInt {
         return cartItems.first(where: { $0.id == item.id })?.quantity ?? 0
     }
     
-    public final func getCartItemsAtIndex(_ index: Int) -> T? {
+    open func getCartItemsAtIndex(_ index: Int) -> T? {
         return index < getCartItemsCount() ? cartItems[index] : nil
     }
+    
+    // Mark: - Final Methods
     
     public final func getCartItemsCount() -> Int {
         return cartItems.count

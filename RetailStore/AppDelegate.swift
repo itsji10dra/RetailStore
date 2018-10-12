@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         Configuration.checkConfiguration()
-        _ = StoreCartManager.default
+        _ = StoreCartManager.default            //This will add badge on cart (if any)
+        RealmManager.shared.printRealmPath()
         return true
     }
 }

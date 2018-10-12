@@ -42,18 +42,20 @@ extension ProductsVC: UITableViewDataSource, UITableViewDelegate {
             cell?.thumbImageView?.setImage(with: url, placeholder: #imageLiteral(resourceName: "placeholder-small"), useDiskCache: true)
         }
         
-        cell?.addToCartView?.plusAction = { [unowned self] quantity in
-            guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return false }
-            StoreCartManager.default.addCartItem(infoObj, quantity: quantity)
-            self.updateProducts()
+        func adjustCartItemAtIndex(_ index: Int, quantity: UInt) -> Bool {
+            guard let info = pagingModel.dataSource(at: index) else { return false }
+            let cartItem = CartItem(item: info, quantity: quantity)
+            StoreCartManager.default.addCartItem(cartItem)
+            updateProducts()
             return true
         }
         
-        cell?.addToCartView?.minusAction = { [unowned self] quantity in
-            guard let infoObj = self.pagingModel.dataSource(at: indexPath.row) else { return false }
-            StoreCartManager.default.addCartItem(infoObj, quantity: quantity)
-            self.updateProducts()
-            return true
+        cell?.addToCartView?.plusAction = { quantity in
+            return adjustCartItemAtIndex(indexPath.row, quantity: quantity)
+        }
+        
+        cell?.addToCartView?.minusAction = { quantity in
+            return adjustCartItemAtIndex(indexPath.row, quantity: quantity)
         }
 
         return cell ?? UITableViewCell()

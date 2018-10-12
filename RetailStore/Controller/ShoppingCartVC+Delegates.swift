@@ -27,9 +27,14 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         cell?.addToCartView?.updateQuantity(item.quantity)
         cell?.thumbImageView?.setImage(with: item.thumbImage, placeholder: #imageLiteral(resourceName: "placeholder-small"), useDiskCache: true)
 
-        cell?.addToCartView?.plusAction = { quantity in
-            StoreCartManager.default.addCartItem(item, quantity: quantity)
+        func adjustQuantity(_ quantity: UInt) -> Bool {
+            let updatedItem = CartItem(item: item, quantity: quantity)
+            StoreCartManager.default.addCartItem(updatedItem)
             return true
+        }
+
+        cell?.addToCartView?.plusAction = { quantity in
+            return adjustQuantity(quantity)
         }
         
         cell?.addToCartView?.minusAction = { [unowned self] quantity in
@@ -37,8 +42,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
                 self.showDeleteAlertForItemAtIndexPath(indexPath)
                 return false
             } else {
-                StoreCartManager.default.addCartItem(item, quantity: quantity)
-                return true
+                return adjustQuantity(quantity)
             }
         }
 

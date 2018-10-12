@@ -105,14 +105,18 @@ class ProductDetailsVC: UIViewController {
         descriptionLabel.text = info.description
         priceLabel.text = info.price
         
-        addToCartView.plusAction = { [unowned self] quantity in
-            StoreCartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
+        func adjustQuantity(_ quantity: UInt) -> Bool {
+            let cartItem = CartItem(item: detailsViewModel.product, quantity: quantity)
+            StoreCartManager.default.addCartItem(cartItem)
             return true
         }
+
+        addToCartView.plusAction = { quantity in
+            return adjustQuantity(quantity)
+        }
         
-        addToCartView.minusAction = { [unowned self] quantity in
-            StoreCartManager.default.addCartItem(self.detailsViewModel.product, quantity: quantity)
-            return true
+        addToCartView.minusAction = { quantity in
+            return adjustQuantity(quantity)
         }
     }
     
