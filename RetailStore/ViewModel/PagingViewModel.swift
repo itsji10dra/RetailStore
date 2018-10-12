@@ -93,7 +93,7 @@ class PagingViewModel<T, E> where T:Decodable {
         return (true, nextPage)
     }
     
-    public func dataSource(at index: Int) -> T? {        
+    public func dataSource(at index: Int) -> T? {
         return index < receivedDataSource.count ? receivedDataSource[index] : nil
     }
     
@@ -103,7 +103,9 @@ class PagingViewModel<T, E> where T:Decodable {
     }
     
     public func updateResult(_ handler: (([E]) -> Void)) {
-        handler(transform(receivedDataSource))
+        let updatedDataSource = transform(receivedDataSource)
+        self.dataSource = updatedDataSource
+        handler(updatedDataSource)
     }
     
     // MARK: - Private Methods
