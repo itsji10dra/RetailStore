@@ -215,7 +215,9 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2cP-ez-O3f"/>
+                                    <constraint firstAttribute="height" constant="30" id="2cP-ez-O3f">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="D7r-fz-gbT" secondAttribute="trailing" constant="8" id="QGj-Kv-PRb"/>
                                     <constraint firstItem="D7r-fz-gbT" firstAttribute="centerY" secondItem="KGg-lm-JEl" secondAttribute="centerY" id="Spz-c5-mK9"/>
                                     <constraint firstItem="D7r-fz-gbT" firstAttribute="leading" secondItem="KGg-lm-JEl" secondAttribute="leading" constant="8" id="Wto-dV-inW"/>
@@ -313,7 +315,9 @@
                                     <constraint firstItem="hWL-HE-nN7" firstAttribute="centerY" secondItem="HVh-YU-51W" secondAttribute="centerY" id="AjD-ZE-Myn"/>
                                     <constraint firstAttribute="trailing" secondItem="hWL-HE-nN7" secondAttribute="trailing" constant="8" id="ZNM-R2-xir"/>
                                     <constraint firstItem="hWL-HE-nN7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P1u-BO-fvy" secondAttribute="trailing" constant="8" symbolic="YES" id="lfc-eY-jrr"/>
-                                    <constraint firstAttribute="height" constant="55" id="sbS-xU-Zej"/>
+                                    <constraint firstAttribute="height" constant="55" id="sbS-xU-Zej">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="30"/>
+                                    </constraint>
                                     <constraint firstItem="P1u-BO-fvy" firstAttribute="centerY" secondItem="HVh-YU-51W" secondAttribute="centerY" id="uP0-H4-rbG"/>
                                 </constraints>
                             </view>
@@ -321,7 +325,9 @@
                                 <rect key="frame" x="0.0" y="563" width="375" height="55"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="QSy-Kv-pPl"/>
+                                    <constraint firstAttribute="height" constant="55" id="QSy-Kv-pPl">
+                                        <variation key="heightClass=compact-widthClass=compact" constant="45"/>
+                                    </constraint>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Checkout"/>
