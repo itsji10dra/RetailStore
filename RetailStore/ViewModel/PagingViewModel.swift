@@ -93,13 +93,11 @@ class PagingViewModel<T, E> where T:Decodable {
         return (true, nextPage)
     }
     
-    public func dataSource(at index: Int) -> T? {
-        
+    public func dataSource(at index: Int) -> T? {        
         return index < receivedDataSource.count ? receivedDataSource[index] : nil
     }
     
     public func clearDataSource() {
-        
         receivedDataSource.removeAll()
         dataSource.removeAll()
     }

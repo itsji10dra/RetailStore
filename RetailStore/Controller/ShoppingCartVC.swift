@@ -27,15 +27,27 @@ class ShoppingCartVC: UIViewController {
     @IBOutlet var emptyCartView: UIView!
     
     // MARK: - Data
+    
+    struct CartDisplayInfo {
+        
+        let totalPriceValue: Double
+        
+        let totalPrice: String
+
+        let minimumCartPriceMessage: String
+        
+        let cartIsEmpty: Bool
+    }
 
     internal let cellIdentifier: String = "CartCell"
 
+    internal let cartViewModel = CartViewModel()
+    
     // MARK: - View Hierarchy
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        minimumValueLabel.text =  "Minimum cart value must be $\(Configuration.minimumCartValue)"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,24 +122,21 @@ class ShoppingCartVC: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    // MARK: - Private Methods
+    // MARK: - UI Methods
     
-    private func refreshUI() {
-        updateTotal()
-        checkForEmptyCart()
+    internal func refreshUI() {
+        cartViewModel.loadData { [weak self] info in
+            self?.priceLabel.text = info.totalPrice
+            self?.minimumValueLabel.text =  info.minimumCartPriceMessage
+            self?.configureEmptyCartUI(info.cartIsEmpty == false)
+        }
     }
     
-    private func updateTotal() {
-        let totalPrice = StoreCartManager.default.getTotalPrice()
-        priceLabel.text = Configuration.defaultCurrency + " " + String(format: "%.2f", totalPrice)
-    }
-    
-    private func checkForEmptyCart() {
+    private func configureEmptyCartUI(_ emptyCart: Bool) {
         
         defer {
-            let isNotEmpty = StoreCartManager.default.getCartItemsCount() > 0
-            editBarButton.isEnabled = isNotEmpty
-            emptyCartView.isHidden = isNotEmpty
+            editBarButton.isEnabled = emptyCart
+            emptyCartView.isHidden = emptyCart
         }
         
         if emptyCartView.isDescendant(of: view) == false {

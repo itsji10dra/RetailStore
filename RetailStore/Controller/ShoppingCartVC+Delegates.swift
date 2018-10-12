@@ -30,6 +30,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         func adjustQuantity(_ quantity: UInt) -> Bool {
             let updatedItem = CartItem(item: item, quantity: quantity)
             StoreCartManager.default.addCartItem(updatedItem)
+            self.refreshUI()
             return true
         }
 
