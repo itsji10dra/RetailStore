@@ -19,6 +19,10 @@ struct CartItem: Cartable {
     let price: Double
 
     var quantity: UInt = 1
+    
+    var totalPrice: Double {
+        return price * Double(quantity)
+    }
 
     init(id: Int32, title: String, thumbImage: URL, price: Double, quantity: UInt = 1) {
         self.id = id

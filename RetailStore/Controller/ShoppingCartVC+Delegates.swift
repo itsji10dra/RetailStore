@@ -23,7 +23,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
         guard let item = StoreCartManager.default.getCartItemsAtIndex(indexPath.row) else { return cell ?? UITableViewCell() }
 
         cell?.titleLabel?.text = item.title
-        cell?.priceLabel?.text = Configuration.currencySymbol + " \(item.price)"
+        cell?.priceLabel?.text = Configuration.currencySymbol + String(format: "%.2f", item.totalPrice) 
         cell?.addToCartView?.updateQuantity(item.quantity)
         cell?.thumbImageView?.setImage(with: item.thumbImage, placeholder: #imageLiteral(resourceName: "placeholder-small"), useDiskCache: true)
 
@@ -31,6 +31,7 @@ extension ShoppingCartVC: UITableViewDataSource, UITableViewDelegate {
             let updatedItem = CartItem(item: item, quantity: quantity)
             StoreCartManager.default.addCartItem(updatedItem)
             self.refreshUI()
+            tableView.reloadRows(at: [indexPath], with: .none)
             return true
         }
 
