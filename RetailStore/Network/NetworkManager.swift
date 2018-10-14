@@ -20,15 +20,15 @@ class NetworkManager {
     private var session: URLSession!
     
     // MARK: - Initializer
-
-    init() {
-        session = URLSession(configuration: .ephemeral)
+    
+    init(session: URLSession = URLSession(configuration: .ephemeral)) {
+        self.session = session
     }
     
     deinit {
         cancelAllTask()
     }
-    
+
     // MARK: - Public Methods
 
     public func dataTaskFromURL<T: Decodable>(_ url: URL, completion: @escaping ((Result<T>) -> Void)) -> URLSessionDataTask {

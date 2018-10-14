@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		1060AF0321735B5400240D39 /* RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0221735B5300240D39 /* RealmTests.swift */; };
 		1060AF0721735FA300240D39 /* StoredCartItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0521735B6600240D39 /* StoredCartItemsTests.swift */; };
+		1060AF0F2173652C00240D39 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF092173652C00240D39 /* NetworkManagerTests.swift */; };
+		1060AF102173652C00240D39 /* Success.json in Resources */ = {isa = PBXBuildFile; fileRef = 1060AF0B2173652C00240D39 /* Success.json */; };
+		1060AF112173652C00240D39 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0C2173652C00240D39 /* URLSessionMock.swift */; };
+		1060AF122173652C00240D39 /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0D2173652C00240D39 /* URLSessionDataTaskMock.swift */; };
+		1060AF142173678700240D39 /* URLManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0E2173652C00240D39 /* URLManagerTests.swift */; };
 		1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9DE216D43FD002EE93F /* AddToCartView.swift */; };
 		1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E0216D4411002EE93F /* AddToCartView.xib */; };
 		1092F9E4216DDEA1002EE93F /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */; };
@@ -147,6 +152,11 @@
 /* Begin PBXFileReference section */
 		1060AF0221735B5300240D39 /* RealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTests.swift; sourceTree = "<group>"; };
 		1060AF0521735B6600240D39 /* StoredCartItemsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredCartItemsTests.swift; sourceTree = "<group>"; };
+		1060AF092173652C00240D39 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		1060AF0B2173652C00240D39 /* Success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Success.json; sourceTree = "<group>"; };
+		1060AF0C2173652C00240D39 /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		1060AF0D2173652C00240D39 /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
+		1060AF0E2173652C00240D39 /* URLManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLManagerTests.swift; sourceTree = "<group>"; };
 		1092F9DE216D43FD002EE93F /* AddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView.swift; sourceTree = "<group>"; };
 		1092F9E0216D4411002EE93F /* AddToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartView.xib; sourceTree = "<group>"; };
 		1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
@@ -310,6 +320,26 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		1060AF082173652C00240D39 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1060AF0A2173652C00240D39 /* Mock */,
+				1060AF092173652C00240D39 /* NetworkManagerTests.swift */,
+				1060AF0E2173652C00240D39 /* URLManagerTests.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1060AF0A2173652C00240D39 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				1060AF0B2173652C00240D39 /* Success.json */,
+				1060AF0C2173652C00240D39 /* URLSessionMock.swift */,
+				1060AF0D2173652C00240D39 /* URLSessionDataTaskMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
 		1092F9E2216D4415002EE93F /* AddToCartView */ = {
 			isa = PBXGroup;
 			children = (
@@ -368,6 +398,7 @@
 			isa = PBXGroup;
 			children = (
 				1060AF0421735B5C00240D39 /* Realm */,
+				1060AF082173652C00240D39 /* Network */,
 				10A4914B216B68A100E2DBDD /* RetailStoreTests.swift */,
 				10A4914D216B68A100E2DBDD /* Info.plist */,
 			);
@@ -798,6 +829,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1060AF102173652C00240D39 /* Success.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -941,9 +973,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1060AF112173652C00240D39 /* URLSessionMock.swift in Sources */,
+				1060AF142173678700240D39 /* URLManagerTests.swift in Sources */,
+				1060AF0F2173652C00240D39 /* NetworkManagerTests.swift in Sources */,
 				10A4914C216B68A100E2DBDD /* RetailStoreTests.swift in Sources */,
 				1060AF0321735B5400240D39 /* RealmTests.swift in Sources */,
 				1060AF0721735FA300240D39 /* StoredCartItemsTests.swift in Sources */,
+				1060AF122173652C00240D39 /* URLSessionDataTaskMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
