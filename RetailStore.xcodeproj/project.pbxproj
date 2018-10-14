@@ -1225,7 +1225,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D34A2C28E5C925FC05931728 /* Pods-App-RetailStoreTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RetailStoreTests/Info.plist;
@@ -1246,7 +1245,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 58F485D5D04343C9D9EABFA2 /* Pods-App-RetailStoreTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RetailStoreTests/Info.plist;
