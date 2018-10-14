@@ -1,0 +1,15 @@
+{
+    "id": 1,
+    "sectionId": 1,
+    "title": "Product Title",
+    "thumbImage": "https://www.example.com/image.png",
+    "price": 49.99,
+    "images": [
+        "https://www.example.com/big-image-1.png",
+        "https://www.example.com/big-image-2.png",
+        "https://www.example.com/big-image-3.png",
+        "https://www.example.com/big-image-4.png",
+        "https://www.example.com/big-image-5.png"
+    ],
+    "description": "Lorem ipsum dolor sit amet."
+}
