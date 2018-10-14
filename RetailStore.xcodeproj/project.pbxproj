@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1060AF0321735B5400240D39 /* RealmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0221735B5300240D39 /* RealmTests.swift */; };
+		1060AF0721735FA300240D39 /* StoredCartItemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1060AF0521735B6600240D39 /* StoredCartItemsTests.swift */; };
 		1092F9DF216D43FD002EE93F /* AddToCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9DE216D43FD002EE93F /* AddToCartView.swift */; };
 		1092F9E1216D4411002EE93F /* AddToCartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1092F9E0216D4411002EE93F /* AddToCartView.xib */; };
 		1092F9E4216DDEA1002EE93F /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */; };
@@ -128,8 +130,8 @@
 		10CF3690216FE12200CA464F /* Cartable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF368F216FE12200CA464F /* Cartable.swift */; };
 		10CF3692216FE40400CA464F /* Storable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF368A216FDB8500CA464F /* Storable.swift */; };
 		10CF3693216FE9EA00CA464F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CF3687216FDB8500CA464F /* RealmManager.swift */; };
-		37496E90828CBF7B114D0316 /* Pods_RetailStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B409E0735B85913E6F77DA54 /* Pods_RetailStore.framework */; };
-		69FB841E5BDC2E1BC6C58319 /* Pods_RetailStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A78C15D3EB8EE048BE78B98 /* Pods_RetailStoreTests.framework */; };
+		B1309EB6522E0F4C5128ADD0 /* Pods_App_RetailStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210EC47013985A6EB17671B9 /* Pods_App_RetailStore.framework */; };
+		F1EC9FF73C6C830649DA8AAB /* Pods_App_RetailStoreTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC0EE58DD852FB6D128C8203 /* Pods_App_RetailStoreTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1060AF0221735B5300240D39 /* RealmTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmTests.swift; sourceTree = "<group>"; };
+		1060AF0521735B6600240D39 /* StoredCartItemsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredCartItemsTests.swift; sourceTree = "<group>"; };
 		1092F9DE216D43FD002EE93F /* AddToCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToCartView.swift; sourceTree = "<group>"; };
 		1092F9E0216D4411002EE93F /* AddToCartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddToCartView.xib; sourceTree = "<group>"; };
 		1092F9E3216DDEA1002EE93F /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
@@ -269,12 +273,12 @@
 		10CF3688216FDB8500CA464F /* StoredCartItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoredCartItem.swift; sourceTree = "<group>"; };
 		10CF368A216FDB8500CA464F /* Storable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storable.swift; sourceTree = "<group>"; };
 		10CF368F216FE12200CA464F /* Cartable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cartable.swift; sourceTree = "<group>"; };
-		1A78C15D3EB8EE048BE78B98 /* Pods_RetailStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetailStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		37A0ED19ADD185A7AB17004A /* Pods-RetailStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore.release.xcconfig"; sourceTree = "<group>"; };
-		9C0C5AA474417FB53EA3F369 /* Pods-RetailStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStoreTests/Pods-RetailStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B409E0735B85913E6F77DA54 /* Pods_RetailStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RetailStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B600DB2390ADB7A68C62E11F /* Pods-RetailStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStoreTests/Pods-RetailStoreTests.release.xcconfig"; sourceTree = "<group>"; };
-		DE9D6D0D5C6F7A4144CE4A68 /* Pods-RetailStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RetailStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore.debug.xcconfig"; sourceTree = "<group>"; };
+		210EC47013985A6EB17671B9 /* Pods_App_RetailStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_RetailStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		58F485D5D04343C9D9EABFA2 /* Pods-App-RetailStoreTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-RetailStoreTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-RetailStoreTests/Pods-App-RetailStoreTests.release.xcconfig"; sourceTree = "<group>"; };
+		76BA297441341613CE5203DA /* Pods-App-RetailStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-RetailStore.release.xcconfig"; path = "Pods/Target Support Files/Pods-App-RetailStore/Pods-App-RetailStore.release.xcconfig"; sourceTree = "<group>"; };
+		76CA4A3C78FE93CD2B8FC6D4 /* Pods-App-RetailStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-RetailStore.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-RetailStore/Pods-App-RetailStore.debug.xcconfig"; sourceTree = "<group>"; };
+		D34A2C28E5C925FC05931728 /* Pods-App-RetailStoreTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-App-RetailStoreTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-App-RetailStoreTests/Pods-App-RetailStoreTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC0EE58DD852FB6D128C8203 /* Pods_App_RetailStoreTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_App_RetailStoreTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -282,7 +286,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37496E90828CBF7B114D0316 /* Pods_RetailStore.framework in Frameworks */,
+				B1309EB6522E0F4C5128ADD0 /* Pods_App_RetailStore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,13 +294,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69FB841E5BDC2E1BC6C58319 /* Pods_RetailStoreTests.framework in Frameworks */,
+				F1EC9FF73C6C830649DA8AAB /* Pods_App_RetailStoreTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1060AF0421735B5C00240D39 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				1060AF0221735B5300240D39 /* RealmTests.swift */,
+				1060AF0521735B6600240D39 /* StoredCartItemsTests.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		1092F9E2216D4415002EE93F /* AddToCartView */ = {
 			isa = PBXGroup;
 			children = (
@@ -354,6 +367,7 @@
 		10A4914A216B68A100E2DBDD /* RetailStoreTests */ = {
 			isa = PBXGroup;
 			children = (
+				1060AF0421735B5C00240D39 /* Realm */,
 				10A4914B216B68A100E2DBDD /* RetailStoreTests.swift */,
 				10A4914D216B68A100E2DBDD /* Info.plist */,
 			);
@@ -602,8 +616,8 @@
 		AF6A969D09A42E2E825849EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B409E0735B85913E6F77DA54 /* Pods_RetailStore.framework */,
-				1A78C15D3EB8EE048BE78B98 /* Pods_RetailStoreTests.framework */,
+				210EC47013985A6EB17671B9 /* Pods_App_RetailStore.framework */,
+				FC0EE58DD852FB6D128C8203 /* Pods_App_RetailStoreTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -611,10 +625,10 @@
 		E671BF7FA24624AE277A8D33 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DE9D6D0D5C6F7A4144CE4A68 /* Pods-RetailStore.debug.xcconfig */,
-				37A0ED19ADD185A7AB17004A /* Pods-RetailStore.release.xcconfig */,
-				9C0C5AA474417FB53EA3F369 /* Pods-RetailStoreTests.debug.xcconfig */,
-				B600DB2390ADB7A68C62E11F /* Pods-RetailStoreTests.release.xcconfig */,
+				76CA4A3C78FE93CD2B8FC6D4 /* Pods-App-RetailStore.debug.xcconfig */,
+				76BA297441341613CE5203DA /* Pods-App-RetailStore.release.xcconfig */,
+				D34A2C28E5C925FC05931728 /* Pods-App-RetailStoreTests.debug.xcconfig */,
+				58F485D5D04343C9D9EABFA2 /* Pods-App-RetailStoreTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -649,6 +663,7 @@
 				10A49143216B68A100E2DBDD /* Sources */,
 				10A49144216B68A100E2DBDD /* Frameworks */,
 				10A49145216B68A100E2DBDD /* Resources */,
+				A6538F92295F00D16D632D4B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -800,20 +815,20 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RetailStoreTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-RetailStoreTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		CE120CC572C84F7F2D06C432 /* [CP] Embed Pods Frameworks */ = {
+		A6538F92295F00D16D632D4B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-App-RetailStoreTests/Pods-App-RetailStoreTests-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 			);
@@ -824,7 +839,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RetailStore/Pods-RetailStore-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App-RetailStoreTests/Pods-App-RetailStoreTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE120CC572C84F7F2D06C432 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-App-RetailStore/Pods-App-RetailStore-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-App-RetailStore/Pods-App-RetailStore-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E8CD51CA0FE1BE9B18096B47 /* [CP] Check Pods Manifest.lock */ = {
@@ -838,7 +873,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RetailStore-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-App-RetailStore-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -907,6 +942,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				10A4914C216B68A100E2DBDD /* RetailStoreTests.swift in Sources */,
+				1060AF0321735B5400240D39 /* RealmTests.swift in Sources */,
+				1060AF0721735FA300240D39 /* StoredCartItemsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,7 +1095,7 @@
 		};
 		10A49151216B68A100E2DBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DE9D6D0D5C6F7A4144CE4A68 /* Pods-RetailStore.debug.xcconfig */;
+			baseConfigurationReference = 76CA4A3C78FE93CD2B8FC6D4 /* Pods-App-RetailStore.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1078,7 +1115,7 @@
 		};
 		10A49152216B68A100E2DBDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 37A0ED19ADD185A7AB17004A /* Pods-RetailStore.release.xcconfig */;
+			baseConfigurationReference = 76BA297441341613CE5203DA /* Pods-App-RetailStore.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -1098,7 +1135,7 @@
 		};
 		10A49154216B68A100E2DBDD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9C0C5AA474417FB53EA3F369 /* Pods-RetailStoreTests.debug.xcconfig */;
+			baseConfigurationReference = D34A2C28E5C925FC05931728 /* Pods-App-RetailStoreTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1119,7 +1156,7 @@
 		};
 		10A49155216B68A100E2DBDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B600DB2390ADB7A68C62E11F /* Pods-RetailStoreTests.release.xcconfig */;
+			baseConfigurationReference = 58F485D5D04343C9D9EABFA2 /* Pods-App-RetailStoreTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
