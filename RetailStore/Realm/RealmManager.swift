@@ -32,7 +32,7 @@ class RealmManager {
 
     public func saveObject<T: Object>(data: [T]) {
         try! realm.write {
-            realm.add(data, update: true)
+            realm.add(data, update: .all)
         }
     }
     

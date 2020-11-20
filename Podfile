@@ -4,8 +4,8 @@ inhibit_all_warnings!
 
 abstract_target 'App' do
     
-    pod 'RealmSwift'
-    
+    pod 'RealmSwift', '~> 4.4.1'
+
     target 'RetailStore' do
 
     end
